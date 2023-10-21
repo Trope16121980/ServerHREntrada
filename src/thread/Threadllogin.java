@@ -92,6 +92,7 @@ public class Threadllogin extends Thread {
                     System.out.println("____________________________________________________________________");
                     System.out.println("Datos de login recibidos:\nLogin : " + login
                             + "\nPass: " + pass);
+                    
                     peticiones.Login dvLogin = new peticiones.Login();
                     user = dvLogin.comprobarCredencialesBD(login, pass);
 
@@ -138,7 +139,6 @@ public class Threadllogin extends Thread {
                                     System.out.println(fecha.fecha_hora());
 
                                     if (palabra.equals(null) || palabra.equalsIgnoreCase("exit")) {
-                                        System.out.println(fecha.fecha_hora());
                                         System.out.println("____________________________________________________________________");
                                         System.out.println("Cliente con código " + codigo + " que pertenece al usuario " + login
                                                 + "\nse ha desconectado correctamente.");
