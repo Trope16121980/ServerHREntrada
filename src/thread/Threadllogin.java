@@ -26,8 +26,8 @@ import peticiones.*;
  */
 public class Threadllogin extends Thread {
 
-    private static final int MAX_INACTIVITY_TIME_SECONDS = 30; // 5 minutos de inactividad
-    private Timer inactivityTimer = new Timer();
+//    private static final int MAX_INACTIVITY_TIME_SECONDS = 30; // 5 minutos de inactividad
+//    private Timer inactivityTimer = new Timer();
     private Socket client;
     private Scanner in;
     private PrintWriter out;
@@ -44,7 +44,7 @@ public class Threadllogin extends Thread {
             this.in = new Scanner(client.getInputStream());
             this.out = new PrintWriter(client.getOutputStream(), true);
             this.logins = logins;
-            inactivityTimer.schedule(new InactivityTimerTask(), MAX_INACTIVITY_TIME_SECONDS * 1000);
+//            inactivityTimer.schedule(new InactivityTimerTask(), MAX_INACTIVITY_TIME_SECONDS * 1000);
         } catch (IOException ex) {
             Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -981,26 +981,26 @@ public class Threadllogin extends Thread {
         }
     }
 
-    private class InactivityTimerTask extends TimerTask {
-
-        @Override
-        public void run() {
-            // Cerrar la conexión por inactividad
-            System.out.println("Cerrando la conexión debido a inactividad.");
-            try {
-                inactivityTimer.cancel(); // Detener el temporizador
-                inactivityTimer.purge();
-                inactivityTimer = null;
-                exit();
-                in.close();
-                out.close();
-                client.close();
-                
-            } catch (IOException ex) {
-                Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }
+//    private class InactivityTimerTask extends TimerTask {
+//
+//        @Override
+//        public void run() {
+//            // Cerrar la conexión por inactividad
+//            System.out.println("Cerrando la conexión debido a inactividad.");
+//            try {
+//                inactivityTimer.cancel(); // Detener el temporizador
+//                inactivityTimer.purge();
+//                inactivityTimer = null;
+//                exit();
+//                in.close();
+//                out.close();
+//                client.close();
+//                
+//            } catch (IOException ex) {
+//                Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
+//    }
 
     
     
