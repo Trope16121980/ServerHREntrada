@@ -7,7 +7,7 @@ import modelo.Empresa;
 
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
 public class InsertEmpresa {
 

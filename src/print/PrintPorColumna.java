@@ -1,16 +1,19 @@
-package peticiones;
+package print;
 
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import modelo.*;
+import peticiones.Listaempleados;
+import peticiones.Listaempresas;
+import peticiones.Listajornada;
+import peticiones.Listausers;
 
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
-public class SelectColumna {
+public class PrintPorColumna {
 
     public void selectColumna(String palabra) throws IOException {
 

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author senor
+ * @author Gustavo_Senorans
  */
 public class Listausers {
       public static ArrayList<Users> listaTotalUsers(){//devuelve el dni

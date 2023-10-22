@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import modelo.Users;
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
 public class InsertUsers {
     

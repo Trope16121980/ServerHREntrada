@@ -1,14 +1,14 @@
 
-package peticiones;
+package print;
 
 import java.util.List;
 import modelo.Empleados;
 
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
-public class SelectEmpleados {
+public class PrintEmpleados {
 
     public String obtenerDatosEmpleados(List<Empleados> listaEmpleados, String columna) {
         StringBuilder datosEmpleados = new StringBuilder();

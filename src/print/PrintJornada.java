@@ -1,14 +1,14 @@
 
-package peticiones;
+package print;
 
 import java.util.List;
 import modelo.Jornada;
 
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
-public class SelectJornada {
+public class PrintJornada {
 
     public String obtenerDatosJornada(List<Jornada> Listajornada, String columna) {
         StringBuilder datosJornadaa = new StringBuilder();

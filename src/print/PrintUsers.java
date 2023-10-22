@@ -1,14 +1,14 @@
 
-package peticiones;
+package print;
 
 import java.util.List;
 import modelo.Users;
 
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
-public class SelectUsers {
+public class PrintUsers {
 
     public String obtenerDatosUsers(List<Users> Listausers, String columna) {
         StringBuilder datosUsers = new StringBuilder();

@@ -1,14 +1,14 @@
 
-package peticiones;
+package print;
 
 import java.util.List;
 import modelo.Empresa;
 
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
-public class SelectEmpresa {
+public class PrintEmpresa {
     
     public String obtenerDatosEmpresa(List<Empresa> Listaempresas, String columna) {
         StringBuilder datosEmpresa = new StringBuilder();

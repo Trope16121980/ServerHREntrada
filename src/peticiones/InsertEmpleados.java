@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
 public class InsertEmpleados {
 
