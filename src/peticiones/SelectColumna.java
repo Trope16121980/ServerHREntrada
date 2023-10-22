@@ -1,4 +1,3 @@
-
 package peticiones;
 
 import java.io.IOException;
@@ -19,7 +18,7 @@ public class SelectColumna {
         frase = palabra.split(",");
 
         if (frase[5].equals("0") || frase[5].equals("1")) {
-            
+
             String crud = frase[1];
             String nombreTabla = frase[2]; //Será el numero de tabla. (ej: 1->empleados 2->users 3-jornada 4-usertipe 5->empresa)
             String columna = frase[3]; //sera la palabra que busquemos(ej: juan,1234567D), si ponemos 0 sera todos los de la tabla
@@ -27,7 +26,7 @@ public class SelectColumna {
             if (crud.equals("0")) {
                 if (!nombreTabla.equals(null) && columna.equals("0")) {
                     switch (nombreTabla) {
-                        case "0" -> {
+                        case "0":
                             List<Empleados> listaEmpleados = new ArrayList<Empleados>();
                             listaEmpleados = Listaempleados.listaTotalEmpleados();
                             for (int i = 0; i < listaEmpleados.size(); i++) {
@@ -42,8 +41,8 @@ public class SelectColumna {
                                         + "Teléfono: " + listaEmpleados.get(i).getTelephon() + "\n");
                                 System.out.println("____________________________________________________________________");
                             }
-                        }
-                        case "1" -> {
+                            break;
+                        case "1":
                             List<Users> listaToUsers = new ArrayList<Users>();
                             listaToUsers = Listausers.listaTotalUsers();
                             for (int i = 0; i < listaToUsers.size(); i++) {
@@ -54,8 +53,8 @@ public class SelectColumna {
                                         + "Dni: " + listaToUsers.get(i).getDni() + "\n");
                                 System.out.println("____________________________________________________________________");
                             }
-                        }
-                        case "2" -> {
+                            break;
+                        case "2":
                             List<Empresa> listaEmpresas = new ArrayList<Empresa>();
                             listaEmpresas = Listaempresas.listaTotalEmpresas();
                             for (int i = 0; i < listaEmpresas.size(); i++) {
@@ -65,8 +64,8 @@ public class SelectColumna {
                                         + "Teléfono: " + listaEmpresas.get(i).getTelephon());
                                 System.out.println("____________________________________________________________________");
                             }
-                        }
-                        case "3" -> {
+                            break;
+                        case "3":
                             List<Jornada> listaJornada = new ArrayList<Jornada>();
                             listaJornada = Listajornada.listaTotalJornada();
                             for (int i = 0; i < listaJornada.size(); i++) {
@@ -81,7 +80,7 @@ public class SelectColumna {
                                         + "Fehca: " + listaJornada.get(i).getFecha() + "\n");
                                 System.out.println("____________________________________________________________________");
                             }
-                        }
+                            break;
                     }
                 }
             }

@@ -87,7 +87,7 @@ public class Threadllogin extends Thread {
                     System.out.println("____________________________________________________________________");
                     System.out.println("Datos de login recibidos:\nLogin : " + login
                             + "\nPass: " + pass);
-                    
+
                     peticiones.Login dvLogin = new peticiones.Login();
                     user = dvLogin.comprobarCredencialesBD(login, pass);
 
@@ -439,7 +439,7 @@ public class Threadllogin extends Thread {
                                                         }
                                                     } else if (!nombreTabla.equals(null) && columna.equals("0")) {
                                                         switch (nombreTabla) {
-                                                            case "0" -> {
+                                                            case "0":
 
                                                                 List<Empleados> listaEmpleados = new ArrayList<Empleados>();
                                                                 listaEmpleados = Listaempleados.listaTotalEmpleados();
@@ -447,8 +447,8 @@ public class Threadllogin extends Thread {
                                                                 outObjeto = new ObjectOutputStream(client.getOutputStream());
                                                                 outObjeto.writeObject(listaEmpleados);
                                                                 outObjeto.flush();
-                                                            }
-                                                            case "1" -> {
+                                                                break;
+                                                            case "1":
 
                                                                 List<Users> listaToUsers = new ArrayList<Users>();
                                                                 listaToUsers = Listausers.listaTotalUsers();
@@ -456,8 +456,8 @@ public class Threadllogin extends Thread {
                                                                 outObjeto = new ObjectOutputStream(client.getOutputStream());
                                                                 outObjeto.writeObject(listaToUsers);
                                                                 outObjeto.flush();
-                                                            }
-                                                            case "2" -> {
+                                                                break;
+                                                            case "2":
 
                                                                 List<Empresa> listaEmpresas = new ArrayList<Empresa>();
                                                                 listaEmpresas = Listaempresas.listaTotalEmpresas();
@@ -465,9 +465,8 @@ public class Threadllogin extends Thread {
                                                                 outObjeto = new ObjectOutputStream(client.getOutputStream());
                                                                 outObjeto.writeObject(listaEmpresas);
                                                                 outObjeto.flush();
-                                                            }
-
-                                                            case "3" -> {
+                                                                break;
+                                                            case "3":
 
                                                                 List<Jornada> listaJornada = new ArrayList<Jornada>();
                                                                 listaJornada = Listajornada.listaTotalJornada();
@@ -475,7 +474,7 @@ public class Threadllogin extends Thread {
                                                                 outObjeto = new ObjectOutputStream(client.getOutputStream());
                                                                 outObjeto.writeObject(listaJornada);
                                                                 outObjeto.flush();
-                                                            }
+                                                                break;
                                                         }
                                                     }
                                                 }
@@ -996,10 +995,6 @@ public class Threadllogin extends Thread {
 //            }
 //        }
 //    }
-
-    
-    
-    
     private void exit() {
         try {
             Users user = null;
@@ -1010,8 +1005,10 @@ public class Threadllogin extends Thread {
             lector.close();
             escriptor.close();
             client.close();
+
         } catch (IOException ex) {
-            Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Threadllogin.class
+                    .getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
