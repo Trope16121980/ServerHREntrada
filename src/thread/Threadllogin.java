@@ -26,6 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.*;
 import java.io.*;
+import java.util.concurrent.ConcurrentHashMap;
 import modelo.*;
 
 public class Threadllogin extends Thread {
@@ -35,12 +36,16 @@ public class Threadllogin extends Thread {
     private Socket client;
     private Scanner in;
     private PrintWriter out;
-    private HashMap logins;
+    private HashMap<String, String> logins;
     private String codigo;
     Fechas fecha = new Fechas();
     boolean salir = false;
     BufferedWriter escriptor;
     BufferedReader lector;
+
+    private static final String ERROR_LOGIN = "-1";
+    private static final String USER_ALREADY_CONNECTED = "-2";
+    private static Set<String> usersConnected = ConcurrentHashMap.newKeySet();
 
     public Threadllogin(Socket client, HashMap<String, String> logins) {
         try {
@@ -59,8 +64,8 @@ public class Threadllogin extends Thread {
         String msg;
         Enviologin soft = new Enviologin();
         String[] codigosLogin = new String[2];
-        codigo = "-1";
-        String dni = "-1";
+        codigo = ERROR_LOGIN;
+        String dni = ERROR_LOGIN;
         Users user = null;
 
         try {
@@ -99,9 +104,10 @@ public class Threadllogin extends Thread {
 
                     try {
                         if (user != null) {
-                            if (logins.containsKey(user.getDni())) {
-                                msg = "-2";
-                                System.out.println("Cliente desconectado, ya esta conectado este usuario.");
+//                            logins.remove(user.getDni());
+                            if (usersConnected.contains(user.getDni())) {
+                                msg = USER_ALREADY_CONNECTED;
+                                System.out.println("Cliente desconectado, ya está conectado este usuario.");
                                 escriptor.write(msg);
                                 escriptor.newLine();
                                 escriptor.flush();
@@ -109,11 +115,11 @@ public class Threadllogin extends Thread {
                                 client.close();
                             } else {
                                 codigo = Codigo.crearCodigoLogin(user.getNumtipe());
+                                usersConnected.add(user.getDni()); // Agregar usuario a la lista de conectados
                             }
-                        }
-                        if (codigo.equalsIgnoreCase("-1")) {
-
-                            msg = "-1";
+                        } 
+                        if (codigo.equalsIgnoreCase(ERROR_LOGIN)) {
+                            msg = ERROR_LOGIN;
                             System.out.println(fecha.fecha_hora());
                             System.out.println("____________________________________________________________________");
                             System.out.println("Ciente desconectado, error en el login");
@@ -219,7 +225,7 @@ public class Threadllogin extends Thread {
                 Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
             } finally {
                 if (user != null) {
-                    logins.remove(user.getDni()); 
+                    logins.remove(user.getDni());
                 }
             }
         } catch (IOException ex) {
@@ -230,7 +236,7 @@ public class Threadllogin extends Thread {
             }
         }
     }
-    
+
     private void handleEmpleadoInsert(String[] insertEmpleado, String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
         String codigoUserRecibido = insertEmpleado[0]; //el codigo recibido tiene que ser el mismo que le hemos asignado
         String crud = insertEmpleado[1];
@@ -514,25 +520,24 @@ public class Threadllogin extends Thread {
     }
 }
 
-
-    //    private class InactivityTimerTask extends TimerTask {
-    //
-    //        @Override
-    //        public void run() {
-    //            // Cerrar la conexión por inactividad
-    //            System.out.println("Cerrando la conexión debido a inactividad.");
-    //            try {
-    //                inactivityTimer.cancel(); // Detener el temporizador
-    //                inactivityTimer.purge();
-    //                inactivityTimer = null;
-    //                exit();
-    //                in.close();
-    //                out.close();
-    //                client.close();
-    //                
-    //            } catch (IOException ex) {
-    //                Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
-    //            }
-    //        }
-    //    }
+//    private class InactivityTimerTask extends TimerTask {
+//
+//        @Override
+//        public void run() {
+//            // Cerrar la conexión por inactividad
+//            System.out.println("Cerrando la conexión debido a inactividad.");
+//            try {
+//                inactivityTimer.cancel(); // Detener el temporizador
+//                inactivityTimer.purge();
+//                inactivityTimer = null;
+//                exit();
+//                in.close();
+//                out.close();
+//                client.close();
+//                
+//            } catch (IOException ex) {
+//                Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
+//    }
 
