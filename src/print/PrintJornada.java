@@ -17,9 +17,9 @@ public class PrintJornada {
             datosJornadaa.append("Dni: ").append(jornada.getDni()).append("\n")
                     .append("Nombre: ").append(jornada.getNom()).append("\n")
                     .append("Apellido: ").append(jornada.getApellido()).append("\n")
-                    .append("Código tarjeta: ").append(jornada.getCodicard()).append("\n")
+                    .append("Codigo tarjeta: ").append(jornada.getCodicard()).append("\n")
                     .append("Hora entrada: ").append(jornada.getHoraentrada()).append("\n")
-                    .append("Jora salida: ").append(jornada.getHorasalida()).append("\n")
+                    .append("Hora salida: ").append(jornada.getHorasalida()).append("\n")
                     .append("Total horas: ").append(jornada.getTotal()).append("\n")
                     .append("Fehca: ").append(jornada.getFecha()).append("\n");
         }
@@ -34,9 +34,9 @@ public class PrintJornada {
             datosJornadaNomApellido.append("Dni: ").append(jornadaNomApellido.getDni()).append("\n")
                     .append("Nombre: ").append(jornadaNomApellido.getNom()).append("\n")
                     .append("Apellido: ").append(jornadaNomApellido.getApellido()).append("\n")
-                    .append("Código tarjeta: ").append(jornadaNomApellido.getCodicard()).append("\n")
+                    .append("Codigo tarjeta: ").append(jornadaNomApellido.getCodicard()).append("\n")
                     .append("Hora entrada: ").append(jornadaNomApellido.getHoraentrada()).append("\n")
-                    .append("Jora salida: ").append(jornadaNomApellido.getHorasalida()).append("\n")
+                    .append("Hora salida: ").append(jornadaNomApellido.getHorasalida()).append("\n")
                     .append("Total horas: ").append(jornadaNomApellido.getTotal()).append("\n")
                     .append("Fehca: ").append(jornadaNomApellido.getFecha()).append("\n");
         }

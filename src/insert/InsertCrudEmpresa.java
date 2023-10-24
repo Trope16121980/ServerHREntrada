@@ -26,7 +26,7 @@ public class InsertCrudEmpresa {
                 System.out.println("____________________________________________________________________");
                 System.out.println("Nombre: " + datoNom + "\n"
                         + "Address: " + datoAddress + "\n"
-                        + "Teléfono: " + Integer.parseInt(datoTelephon) + "\n");
+                        + "Telefono: " + Integer.parseInt(datoTelephon) + "\n");
                 System.out.println("____________________________________________________________________");
                 outObjeto = new ObjectOutputStream(client.getOutputStream());
                 outObjeto.writeObject(insertEmpresa);

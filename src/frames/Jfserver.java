@@ -1,6 +1,4 @@
-
 package frames;
-
 
 /**
  *
@@ -47,7 +45,7 @@ public class Jfserver extends javax.swing.JFrame {
         jTextArea.setEditable(false);
         jTextArea.setBackground(java.awt.Color.white);
         jTextArea.setColumns(20);
-        jTextArea.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextArea.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jTextArea.setRows(5);
         jScrollPane1.setViewportView(jTextArea);
 
@@ -136,11 +134,7 @@ public class Jfserver extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void appendText(String valueOf) {
-        jTextArea.append(valueOf);
-    }
-
-    private void setIconImage(String imgrecorteIcojpg) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        jTextArea.append(valueOf.formatted("UTF-8"));
     }
 
 }

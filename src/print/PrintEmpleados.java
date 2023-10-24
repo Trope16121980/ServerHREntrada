@@ -21,7 +21,7 @@ public class PrintEmpleados {
                     .append("Departamento: ").append(empleado.getDepartament()).append("\n")
                     .append("Codigo tarjeta: ").append(empleado.getCodicard()).append("\n")
                     .append("Mail: ").append(empleado.getMail()).append("\n")
-                    .append("Teléfono: ").append(empleado.getTelephon()).append("\n");
+                    .append("Telefono: ").append(empleado.getTelephon()).append("\n");
         }
         datosEmpleados.append("____________________________________________________________________\n");
         return datosEmpleados.toString();
@@ -39,7 +39,7 @@ public class PrintEmpleados {
                     .append("Departamento: ").append(empleadoNomApellido.getDepartament()).append("\n")
                     .append("Codigo tarjeta: ").append(empleadoNomApellido.getCodicard()).append("\n")
                     .append("Mail: ").append(empleadoNomApellido.getMail()).append("\n")
-                    .append("Teléfono: ").append(empleadoNomApellido.getTelephon()).append("\n");
+                    .append("Telefono: ").append(empleadoNomApellido.getTelephon()).append("\n");
         }
         datosEmpleadosNomApellido.append("____________________________________________________________________\n");
         return datosEmpleadosNomApellido.toString();

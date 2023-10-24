@@ -41,7 +41,7 @@ public class PrintPorColumna {
                                         + "Departamento: " + listaEmpleados.get(i).getDepartament() + "\n"
                                         + "Codigo tarjeta: " + listaEmpleados.get(i).getCodicard() + "\n"
                                         + "Mail: " + listaEmpleados.get(i).getMail() + "\n"
-                                        + "Teléfono: " + listaEmpleados.get(i).getTelephon() + "\n");
+                                        + "Telefono: " + listaEmpleados.get(i).getTelephon() + "\n");
                                 System.out.println("____________________________________________________________________");
                             }
                             break;
@@ -63,8 +63,8 @@ public class PrintPorColumna {
                             for (int i = 0; i < listaEmpresas.size(); i++) {
                                 System.out.println("____________________________________________________________________");
                                 System.out.println("Nombre empresa: " + listaEmpresas.get(i).getNom() + "\n"
-                                        + "Dirección: " + listaEmpresas.get(i).getAddress() + "\n"
-                                        + "Teléfono: " + listaEmpresas.get(i).getTelephon());
+                                        + "Direccion: " + listaEmpresas.get(i).getAddress() + "\n"
+                                        + "Telefono: " + listaEmpresas.get(i).getTelephon());
                                 System.out.println("____________________________________________________________________");
                             }
                             break;
@@ -76,9 +76,9 @@ public class PrintPorColumna {
                                 System.out.println("Dni: " + listaJornada.get(i).getDni() + "\n"
                                         + "Nombre: " + listaJornada.get(i).getNom() + "\n"
                                         + "Apellido: " + listaJornada.get(i).getApellido() + "\n"
-                                        + "Código tarjeta: " + listaJornada.get(i).getCodicard() + "\n"
+                                        + "Codigo tarjeta: " + listaJornada.get(i).getCodicard() + "\n"
                                         + "Hora entrada: " + listaJornada.get(i).getHoraentrada() + "\n"
-                                        + "Jora salida: " + listaJornada.get(i).getHorasalida() + "\n"
+                                        + "Hora salida: " + listaJornada.get(i).getHorasalida() + "\n"
                                         + "Total horas: " + listaJornada.get(i).getTotal() + "\n"
                                         + "Fehca: " + listaJornada.get(i).getFecha() + "\n");
                                 System.out.println("____________________________________________________________________");

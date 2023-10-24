@@ -37,7 +37,7 @@ public class InsertCrudEmpleados {
                         + "Departamento: " + datoDepartament + "\n"
                         + "Codigo tarjeta: " + Integer.parseInt(datoCodicard) + "\n"
                         + "Mail: " + datoMail + "\n"
-                        + "Teléfono: " + Integer.parseInt(datoTelephon) + "\n");
+                        + "Telefono: " + Integer.parseInt(datoTelephon) + "\n");
                 System.out.println("____________________________________________________________________");
                 outObjeto = new ObjectOutputStream(client.getOutputStream());
                 outObjeto.writeObject(insertEmpleados);

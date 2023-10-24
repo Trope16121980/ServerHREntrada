@@ -103,7 +103,7 @@ public class Threadllogin extends Thread {
                         if (user != null) {
                             if (usersConnected.contains(user.getDni())) {
                                 msg = USER_ALREADY_CONNECTED;
-                                System.out.println("Cliente desconectado, ya está conectado este usuario.");
+                                System.out.println("Cliente desconectado, ya esta conectado este usuario.");
                                 escriptor.write(msg);
                                 escriptor.newLine();
                                 escriptor.flush();
@@ -119,7 +119,7 @@ public class Threadllogin extends Thread {
                             msg = ERROR_LOGIN;
                             System.out.println(fecha.fecha_hora());
                             System.out.println("____________________________________________________________________");
-                            System.out.println("Ciente desconectado, error en el login");
+                            System.out.println("Cliente desconectado, error en el login");
                             escriptor.write(msg);//enviamos
                             escriptor.newLine();
                             escriptor.flush();
@@ -136,11 +136,12 @@ public class Threadllogin extends Thread {
 
                             try {
                                 while (!salir) {
+                                    
                                     palabra = lector.readLine();
 
                                     if (palabra.equals(null) || palabra.equalsIgnoreCase("exit")) {
                                         System.out.println("____________________________________________________________________");
-                                        System.out.println("Cliente con código " + codigo + " que pertenece al usuario " + login
+                                        System.out.println("Cliente con codigo " + codigo + " que pertenece al usuario " + login
                                                 + "\nse ha desconectado correctamente.");
                                         usersConnected.remove(user.getDni());
                                         salir = true;
@@ -232,8 +233,8 @@ public class Threadllogin extends Thread {
             }
 
         } catch (IOException ex) {
-            logins.remove(user.getDni());
-            System.err.println("Error de comunicación con el cliente: " + ex.getMessage());
+            usersConnected.remove(user.getDni());
+            System.err.println("Error de comunicacion con el cliente: " + ex.getMessage());
         } finally {
             try {
                 if (user != null) {
@@ -512,7 +513,7 @@ public class Threadllogin extends Thread {
         if (!codigo.equals(codigoUserRecibido)) {
             System.out.println("____________________________________________________________________");
             System.out.println(fecha.fecha_hora());
-            System.out.println("Cliente desconectado, el código no es el correcto");
+            System.out.println("Cliente desconectado, el codigo no es el correcto");
             salir = true;
             escriptor.close();
             lector.close();

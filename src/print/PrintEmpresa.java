@@ -15,8 +15,8 @@ public class PrintEmpresa {
         for (Empresa empresa : Listaempresas) {
             datosEmpresa.append("____________________________________________________________________\n");
             datosEmpresa.append("Nombre empresa: ").append(empresa.getNom()).append("\n")
-                    .append("Dirección: ").append(empresa.getAddress()).append("\n")
-                    .append("Teléfono: ").append(empresa.getTelephon()).append("\n");
+                    .append("Direccion: ").append(empresa.getAddress()).append("\n")
+                    .append("Telefono: ").append(empresa.getTelephon()).append("\n");
         }
         datosEmpresa.append("____________________________________________________________________\n");
         return datosEmpresa.toString();
