@@ -19,7 +19,6 @@ import insert.InsertCrudEmpresa;
 import insert.InsertCrudUsers;
 import print.PrintPorColumna;
 import codigo.Codigo;
-import envio.Enviologin;
 import fecha.Fechas;
 import java.net.Socket;
 import java.util.logging.Level;
@@ -62,8 +61,6 @@ public class Threadllogin extends Thread {
     @Override
     public void run() {
         String msg;
-        Enviologin soft = new Enviologin();
-        String[] codigosLogin = new String[2];
         codigo = ERROR_LOGIN;
         String dni = ERROR_LOGIN;
         Users user = null;
@@ -83,7 +80,7 @@ public class Threadllogin extends Thread {
                 String palabra = lector.readLine();
 
                 if (palabra != null && palabra.equalsIgnoreCase("exit")) {
-                    exit();
+                    exit(user);
                 } else {
                     System.out.println("Bienvenido al ServeHREntrada");
                     System.out.println(fecha.fecha_hora());
@@ -104,7 +101,6 @@ public class Threadllogin extends Thread {
 
                     try {
                         if (user != null) {
-//                            logins.remove(user.getDni());
                             if (usersConnected.contains(user.getDni())) {
                                 msg = USER_ALREADY_CONNECTED;
                                 System.out.println("Cliente desconectado, ya está conectado este usuario.");
@@ -117,8 +113,9 @@ public class Threadllogin extends Thread {
                                 codigo = Codigo.crearCodigoLogin(user.getNumtipe());
                                 usersConnected.add(user.getDni()); // Agregar usuario a la lista de conectados
                             }
-                        } 
-                        if (codigo.equalsIgnoreCase(ERROR_LOGIN)) {
+                        }
+
+                        if (!client.isClosed() && codigo.equalsIgnoreCase(ERROR_LOGIN)) {
                             msg = ERROR_LOGIN;
                             System.out.println(fecha.fecha_hora());
                             System.out.println("____________________________________________________________________");
@@ -128,7 +125,8 @@ public class Threadllogin extends Thread {
                             escriptor.flush();
                             lector.close();
                             client.close();
-                        } else {
+
+                        } else if (!client.isClosed()) {
 
                             msg = codigo;
                             escriptor.write(msg);
@@ -138,20 +136,20 @@ public class Threadllogin extends Thread {
 
                             try {
                                 while (!salir) {
-
                                     palabra = lector.readLine();
-                                    System.out.println(fecha.fecha_hora());
 
                                     if (palabra.equals(null) || palabra.equalsIgnoreCase("exit")) {
                                         System.out.println("____________________________________________________________________");
                                         System.out.println("Cliente con código " + codigo + " que pertenece al usuario " + login
                                                 + "\nse ha desconectado correctamente.");
+                                        usersConnected.remove(user.getDni());
                                         salir = true;
                                         escriptor.close();
                                         lector.close();
                                         client.close();
 
                                     } else {
+                                        System.out.println(fecha.fecha_hora());
                                         System.out.println("____________________________________________________________________");
                                         System.out.println("Contenido a enviar al cliente: " + palabra);
 
@@ -202,14 +200,17 @@ public class Threadllogin extends Thread {
                                         }
                                     }
                                 }
+                                logins.remove(user.getDni());
                                 escriptor.close();
                                 lector.close();
                                 client.close();
                             } catch (IOException ex) {
+                                logins.remove(user.getDni());
                                 Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
                             }
                         }
                     } catch (IOException ex) {
+                        logins.remove(user.getDni());
                         Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
@@ -222,17 +223,34 @@ public class Threadllogin extends Thread {
                 logins.remove(user.getDni());
                 System.out.println("Users conectados: " + logins);
             } catch (IOException ex) {
+                logins.remove(user.getDni());
                 Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
             } finally {
                 if (user != null) {
                     logins.remove(user.getDni());
                 }
             }
+
         } catch (IOException ex) {
-            Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
+            logins.remove(user.getDni());
+            System.err.println("Error de comunicación con el cliente: " + ex.getMessage());
         } finally {
-            if (user != null) {
-                logins.remove(user.getDni());
+            try {
+                if (user != null) {
+                    logins.remove(user.getDni());
+                }
+                // Cerrar todos los recursos relacionados con la conexión del cliente
+                if (lector != null) {
+                    lector.close();
+                }
+                if (escriptor != null) {
+                    escriptor.close();
+                }
+                if (client != null) {
+                    client.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error al cerrar recursos de comunicación: " + e.getMessage());
             }
         }
     }
@@ -502,9 +520,8 @@ public class Threadllogin extends Thread {
         }
     }
 
-    private void exit() {
+    private void exit(Users user) {
         try {
-            Users user = null;
             salir = true;
             if (user != null) {
                 logins.remove(user.getDni());

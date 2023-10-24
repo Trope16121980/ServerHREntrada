@@ -43,26 +43,4 @@ public class Login {
         }
         return user;                 
     }
-    
-    public ArrayList<Users> getUsuario() throws SQLException {
-
-        Connection conn = Conexion.getconexion();
-        Statement stmt;
-        ResultSet rs;
-        ArrayList<Users> listaUsers = new ArrayList<>();
-
-        stmt = conn.createStatement();
-        rs = stmt.executeQuery("select * from users");
-        while (rs.next()){
-            Users user = new Users();
-            user.setLogin(rs.getString("login"));
-            user.setPass(rs.getString("pass"));
-            user.setNumtipe(rs.getInt("numtipe"));
-            user.setDni(rs.getString("dni"));
-            listaUsers.add(user);
-            
-        }
-        return listaUsers;
-    }
-
 }
