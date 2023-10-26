@@ -84,7 +84,7 @@ public class Listaempresas {
         return listaEmpresasAddress;
     }
     
-      public static ArrayList<Empresa> listaEmpresasTelepho(int palabraAbuscar) {//devuelve el dni
+      public static ArrayList<Empresa> listaEmpresasTelepho(int palabraAbuscar) {
         ArrayList<Empresa> listaEmpresasTelepho = new ArrayList<>();
         try {
 

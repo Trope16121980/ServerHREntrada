@@ -42,7 +42,8 @@ public class SearchCrudEmpleados {
 			} else if (nombreTabla.equals("0") && columna.equals("nomempresa")) {
 
 				PrintEmpleados selector = new PrintEmpleados();
-				List<Empleados> listaTotalEmpleadosNomEmpresa = Listaempleados.listaTotalEmpleadosNomEmpresa(palabraAbuscar);
+				List<Empleados> listaTotalEmpleadosNomEmpresa = Listaempleados
+						.listaTotalEmpleadosNomEmpresa(palabraAbuscar);
 				if (!listaTotalEmpleadosNomEmpresa.isEmpty()) {
 
 					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosNomEmpresa, columna);
@@ -82,7 +83,8 @@ public class SearchCrudEmpleados {
 			} else if (nombreTabla.equals("0") && columna.equals("codicard")) {
 
 				PrintEmpleados selector = new PrintEmpleados();
-				List<Empleados> listaTotalEmpleadosCodiCard = Listaempleados.listaTotalEmpleadosCodiCard(Integer.parseInt(palabraAbuscar));
+				List<Empleados> listaTotalEmpleadosCodiCard = Listaempleados
+						.listaTotalEmpleadosCodiCard(Integer.parseInt(palabraAbuscar));
 
 				if (!listaTotalEmpleadosCodiCard.isEmpty()) {
 					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosCodiCard, columna);
@@ -101,34 +103,40 @@ public class SearchCrudEmpleados {
 			} else if (nombreTabla.equals("0") && columna.equals("mail")) {
 
 				PrintEmpleados selector = new PrintEmpleados();
-				List<Empleados> listaTotalEmpleadosMail = new ArrayList<Empleados>();
-				listaTotalEmpleadosMail = Listaempleados.listaTotalEmpleadosMail(palabraAbuscar);
-
-				for (int i = 0; i < listaTotalEmpleadosMail.size(); i++) {
-					if (columna.equals("mail") && palabraAbuscar.equals(listaTotalEmpleadosMail.get(i).getMail())) {
-						String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosMail, columna);
-						System.out.println(datosEmpleados);
-					}
-
+				List<Empleados> listaTotalEmpleadosMail = Listaempleados.listaTotalEmpleadosMail(palabraAbuscar);
+				if (!listaTotalEmpleadosMail.isEmpty()) {
+					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosMail, columna);
+					System.out.println(datosEmpleados);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
 					outObjeto.writeObject(listaTotalEmpleadosMail);
 					outObjeto.flush();
+				} else {
+					Errores error = new Errores();
+					String erroMailEmpleados = error.erroMailEmpleados();
+					System.out.println(erroMailEmpleados);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(erroMailEmpleados);
+					outObjeto.flush();
 				}
+
 			} else if (nombreTabla.equals("0") && columna.equals("telephon")) {
 
 				PrintEmpleados selector = new PrintEmpleados();
-				List<Empleados> listaTotalEmpleadosTelf = new ArrayList<Empleados>();
-				listaTotalEmpleadosTelf = Listaempleados.listaTotalEmpleadosTelf(Integer.parseInt(palabraAbuscar));
+				List<Empleados> listaTotalEmpleadosTelf = Listaempleados
+						.listaTotalEmpleadosTelf(Integer.parseInt(palabraAbuscar));
 
-				for (int i = 0; i < listaTotalEmpleadosTelf.size(); i++) {
-					String telephon = String.valueOf(listaTotalEmpleadosTelf.get(i).getTelephon());
-					if (columna.equals("telephon") && palabraAbuscar.equals(telephon)) {
-						String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosTelf, columna);
-						System.out.println(datosEmpleados);
-					}
-
+				if (!listaTotalEmpleadosTelf.isEmpty()) {
+					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosTelf, columna);
+					System.out.println(datosEmpleados);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
 					outObjeto.writeObject(listaTotalEmpleadosTelf);
+					outObjeto.flush();
+				} else {
+					Errores error = new Errores();
+					String erroTelephonEmpleados = error.erroTelephonEmpleados();
+					System.out.println(erroTelephonEmpleados);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(erroTelephonEmpleados);
 					outObjeto.flush();
 				}
 			}
