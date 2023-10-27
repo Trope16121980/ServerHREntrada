@@ -19,9 +19,9 @@ public class Errores {
 	}
 
 	public String errorNomEmpresaEmpleados() {
-		StringBuilder errorDniEmpleados = new StringBuilder();
-		errorDniEmpleados.append("\nEl nombre de la empresa no existe en el registro");
-		return errorDniEmpleados.toString();
+		StringBuilder errorNomEmpresaEmpleados = new StringBuilder();
+		errorNomEmpresaEmpleados.append("\nEl nombre de la empresa no existe en el registro");
+		return errorNomEmpresaEmpleados.toString();
 	}
 
 	public String erroCodicardEmpleados() {
@@ -76,6 +76,24 @@ public class Errores {
 		StringBuilder erroDniUser = new StringBuilder();
 		erroDniUser.append("\nEl dni no existe en el registro");
 		return erroDniUser.toString();
+	}
+	
+	public String erroNomEmpresa() {
+		StringBuilder erroNomEmpresa = new StringBuilder();
+		erroNomEmpresa.append("\nEl nombre de la empresa no existe en el registro");
+		return erroNomEmpresa.toString();
+	}
+	
+	public String erroAddressEmpresa() {
+		StringBuilder erroAddressEmpresa = new StringBuilder();
+		erroAddressEmpresa.append("\nLa direccion de la empresa no existe en el registro");
+		return erroAddressEmpresa.toString();
+	}
+	
+	public String erroTelephonEmpresa() {
+		StringBuilder erroTelephonEmpresa = new StringBuilder();
+		erroTelephonEmpresa.append("\nEl numero de telefono no existe en el registro");
+		return erroTelephonEmpresa.toString();
 	}
 
 }

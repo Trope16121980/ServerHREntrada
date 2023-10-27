@@ -39,54 +39,53 @@ public class SearchCrudEmpleados {
 					outObjeto.writeObject(errorDniEmpleados);
 					outObjeto.flush();
 				}
-				
-			}else if (nombreTabla.equals("0") && columna.equals("nom")) {
-					PrintEmpleados selector = new PrintEmpleados();
-					List<Empleados> listaTotalEmpleadosNom = Listaempleados.listaTotalEmpleadosNom(palabraAbuscar);
-					if (!listaTotalEmpleadosNom.isEmpty()) {
 
-						String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosNom, columna);
-						System.out.println(datosEmpleados);
-						outObjeto = new ObjectOutputStream(client.getOutputStream());
-						outObjeto.writeObject(listaTotalEmpleadosNom);
-						outObjeto.flush();
+			} else if (nombreTabla.equals("0") && columna.equals("nom")) {
+				PrintEmpleados selector = new PrintEmpleados();
+				List<Empleados> listaTotalEmpleadosNom = Listaempleados.listaTotalEmpleadosNom(palabraAbuscar);
+				if (!listaTotalEmpleadosNom.isEmpty()) {
 
-					} else {
-						Errores error = new Errores();
-						String erroNomEmpleados = error.erroNomEmpleados();
-						System.out.println(erroNomEmpleados);
-						outObjeto = new ObjectOutputStream(client.getOutputStream());
-						outObjeto.writeObject(erroNomEmpleados);
-						outObjeto.flush();
-					}
-				
-				
-			}else if (nombreTabla.equals("0") && columna.equals("apellido")) {
-						PrintEmpleados selector = new PrintEmpleados();
-						List<Empleados> listaTotalEmpleadosApellido = Listaempleados.listaTotalEmpleadosApellido(palabraAbuscar);
-						if (!listaTotalEmpleadosApellido.isEmpty()) {
+					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosNom, columna);
+					System.out.println(datosEmpleados);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(listaTotalEmpleadosNom);
+					outObjeto.flush();
 
-							String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosApellido, columna);
-							System.out.println(datosEmpleados);
-							outObjeto = new ObjectOutputStream(client.getOutputStream());
-							outObjeto.writeObject(listaTotalEmpleadosApellido);
-							outObjeto.flush();
+				} else {
+					Errores error = new Errores();
+					String erroNomEmpleados = error.erroNomEmpleados();
+					System.out.println(erroNomEmpleados);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(erroNomEmpleados);
+					outObjeto.flush();
+				}
 
-						} else {
-							Errores error = new Errores();
-							String erroApellidoEmpleados = error.erroApellidoEmpleados();
-							System.out.println(erroApellidoEmpleados);
-							outObjeto = new ObjectOutputStream(client.getOutputStream());
-							outObjeto.writeObject(erroApellidoEmpleados);
-							outObjeto.flush();
-						}
-				
-					}
-				
+			} else if (nombreTabla.equals("0") && columna.equals("apellido")) {
+				PrintEmpleados selector = new PrintEmpleados();
+				List<Empleados> listaTotalEmpleadosApellido = Listaempleados
+						.listaTotalEmpleadosApellido(palabraAbuscar);
+				if (!listaTotalEmpleadosApellido.isEmpty()) {
+
+					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosApellido, columna);
+					System.out.println(datosEmpleados);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(listaTotalEmpleadosApellido);
+					outObjeto.flush();
+
+				} else {
+					Errores error = new Errores();
+					String erroApellidoEmpleados = error.erroApellidoEmpleados();
+					System.out.println(erroApellidoEmpleados);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(erroApellidoEmpleados);
+					outObjeto.flush();
+				}
+
 			} else if (nombreTabla.equals("0") && columna.equals("nomempresa")) {
 
 				PrintEmpleados selector = new PrintEmpleados();
-				List<Empleados> listaTotalEmpleadosNomEmpresa = Listaempleados.listaTotalEmpleadosNomEmpresa(palabraAbuscar);
+				List<Empleados> listaTotalEmpleadosNomEmpresa = Listaempleados
+						.listaTotalEmpleadosNomEmpresa(palabraAbuscar);
 				if (!listaTotalEmpleadosNomEmpresa.isEmpty()) {
 
 					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosNomEmpresa, columna);
@@ -126,7 +125,8 @@ public class SearchCrudEmpleados {
 			} else if (nombreTabla.equals("0") && columna.equals("codicard")) {
 
 				PrintEmpleados selector = new PrintEmpleados();
-				List<Empleados> listaTotalEmpleadosCodiCard = Listaempleados.listaTotalEmpleadosCodiCard(Integer.parseInt(palabraAbuscar));
+				List<Empleados> listaTotalEmpleadosCodiCard = Listaempleados
+						.listaTotalEmpleadosCodiCard(Integer.parseInt(palabraAbuscar));
 
 				if (!listaTotalEmpleadosCodiCard.isEmpty()) {
 					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosCodiCard, columna);
@@ -161,26 +161,29 @@ public class SearchCrudEmpleados {
 					outObjeto.flush();
 				}
 
-			} else if (nombreTabla.equals("0") && columna.equals("telephon")) {
+			} else {
 
-				PrintEmpleados selector = new PrintEmpleados();
-				List<Empleados> listaTotalEmpleadosTelf = Listaempleados
-						.listaTotalEmpleadosTelf(Integer.parseInt(palabraAbuscar));
+				if (nombreTabla.equals("0") && columna.equals("telephon")) {
+					PrintEmpleados selector = new PrintEmpleados();
+					List<Empleados> listaTotalEmpleadosTelf = Listaempleados
+							.listaTotalEmpleadosTelf(Integer.parseInt(palabraAbuscar));
 
-				if (!listaTotalEmpleadosTelf.isEmpty()) {
-					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosTelf, columna);
-					System.out.println(datosEmpleados);
-					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(listaTotalEmpleadosTelf);
-					outObjeto.flush();
-				} else {
-					Errores error = new Errores();
-					String erroTelephonEmpleados = error.erroTelephonEmpleados();
-					System.out.println(erroTelephonEmpleados);
-					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroTelephonEmpleados);
-					outObjeto.flush();
+					if (!listaTotalEmpleadosTelf.isEmpty()) {
+						String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosTelf, columna);
+						System.out.println(datosEmpleados);
+						outObjeto = new ObjectOutputStream(client.getOutputStream());
+						outObjeto.writeObject(listaTotalEmpleadosTelf);
+						outObjeto.flush();
+					} else {
+						Errores error = new Errores();
+						String erroTelephonEmpleados = error.erroTelephonEmpleados();
+						System.out.println(erroTelephonEmpleados);
+						outObjeto = new ObjectOutputStream(client.getOutputStream());
+						outObjeto.writeObject(erroTelephonEmpleados);
+						outObjeto.flush();
+					}
 				}
 			}
 		}
 	}
+}
