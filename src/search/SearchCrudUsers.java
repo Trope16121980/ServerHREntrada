@@ -5,6 +5,9 @@ import modelo.Users;
 import print.PrintUsers;
 import java.util.ArrayList;
 import java.util.List;
+
+import errores.Errores;
+
 import java.io.ObjectOutputStream;
 import java.io.IOException;
 import java.net.Socket;
@@ -16,58 +19,65 @@ import peticiones.Listausers;
  */
 public class SearchCrudUsers {
 
-    public static void handleSearchRequest(String crud, String nombreTabla, String columna,
-            String palabraAbuscar, ObjectOutputStream outObjeto, Socket client) throws IOException {
+	public static void handleSearchRequest(String crud, String nombreTabla, String columna, String palabraAbuscar,
+			ObjectOutputStream outObjeto, Socket client) throws IOException {
 
-        if (crud.equals("0")) {
-            if (nombreTabla.equals("1") && columna.equals("dni")) {
-                PrintUsers usuarios = new PrintUsers();
-                List<Users> listaToUsersDni = new ArrayList<Users>();
-                listaToUsersDni = Listausers.listaTotalUsersDni(palabraAbuscar);
+		if (crud.equals("0")) {
+			if (nombreTabla.equals("1") && columna.equals("dni")) {
+				PrintUsers usuarios = new PrintUsers();
+				List<Users> listaToUsersDni = Listausers.listaTotalUsersDni(palabraAbuscar);
+				if (!listaToUsersDni.isEmpty()) {
 
-                for (int i = 0; i < listaToUsersDni.size(); i++) {
-                    if (columna.equals("dni") && palabraAbuscar.equals(listaToUsersDni.get(i).getDni())) {
-                        String datosUsers = usuarios.obtenerDatosUsers(listaToUsersDni, columna);
-                        System.out.println(datosUsers);
-                    }
+					String datosUsers = usuarios.obtenerDatosUsers(listaToUsersDni, columna);
+					System.out.println(datosUsers);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(listaToUsersDni);
+					outObjeto.flush();
+				} else {
+					Errores error = new Errores();
+					String erroDniUser = error.erroDniUser();
+					System.out.println(erroDniUser);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(erroDniUser);
+					outObjeto.flush();
+				}
 
-                    outObjeto = new ObjectOutputStream(client.getOutputStream());
-                    outObjeto.writeObject(listaToUsersDni);
-                    outObjeto.flush();
-                }
-            } else if (nombreTabla.equals("1") && columna.equals("login")) {
-                PrintUsers usuarios = new PrintUsers();
-                List<Users> listaTotalUsersLogin = new ArrayList<Users>();
-                listaTotalUsersLogin = Listausers.listaTotalUsersLogin(palabraAbuscar);
+			} else if (nombreTabla.equals("1") && columna.equals("login")) {
+				PrintUsers usuarios = new PrintUsers();
+				List<Users> listaTotalUsersLogin = Listausers.listaTotalUsersLogin(palabraAbuscar);
+				if (!listaTotalUsersLogin.isEmpty()) {
+					String datosUsers = usuarios.obtenerDatosUsers(listaTotalUsersLogin, columna);
+					System.out.println(datosUsers);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(listaTotalUsersLogin);
+					outObjeto.flush();
+				} else {
+					Errores error = new Errores();
+					String erroLoginUser = error.erroLoginUser();
+					System.out.println(erroLoginUser);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(erroLoginUser);
+					outObjeto.flush();
+				}
+			} else if (nombreTabla.equals("1") && columna.equals("numtipe")) {
+				PrintUsers usuarios = new PrintUsers();
+				List<Users> listaTotalUsersTipe = Listausers.listaTotalUsersTipe(Integer.parseInt(palabraAbuscar));
+				if (!listaTotalUsersTipe.isEmpty()) {
+					String datosUsers = usuarios.obtenerDatosUsers(listaTotalUsersTipe, columna);
+					System.out.println(datosUsers);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(listaTotalUsersTipe);
+					outObjeto.flush();
 
-                for (int i = 0; i < listaTotalUsersLogin.size(); i++) {
-                    if (columna.equals("login") && palabraAbuscar.equals(listaTotalUsersLogin.get(i).getLogin())) {
-                        String datosUsers = usuarios.obtenerDatosUsers(listaTotalUsersLogin, columna);
-                        System.out.println(datosUsers);
-                    }
-
-                    outObjeto = new ObjectOutputStream(client.getOutputStream());
-                    outObjeto.writeObject(listaTotalUsersLogin);
-                    outObjeto.flush();
-                }
-            } else if (nombreTabla.equals("1") && columna.equals("numtipe")) {
-                PrintUsers usuarios = new PrintUsers();
-                List<Users> listaTotalUsersTipe = new ArrayList<Users>();
-                listaTotalUsersTipe = Listausers.listaTotalUsersTipe(Integer.parseInt(palabraAbuscar));
-                for (int i = 0; i < listaTotalUsersTipe.size(); i++) {
-
-                    String numtipe = String.valueOf(listaTotalUsersTipe.get(i).getNumtipe());
-
-                    if (columna.equals("numtipe") && palabraAbuscar.equals(numtipe)) {
-                        String datosUsers = usuarios.obtenerDatosUsers(listaTotalUsersTipe, columna);
-                        System.out.println(datosUsers);
-                    }
-
-                    outObjeto = new ObjectOutputStream(client.getOutputStream());
-                    outObjeto.writeObject(listaTotalUsersTipe);
-                    outObjeto.flush();
-                }
-            }
-        }
-    }
+				} else {
+					Errores error = new Errores();
+					String erroNumTipeUser = error.erroNumTipeUser();
+					System.out.println(erroNumTipeUser);
+					outObjeto = new ObjectOutputStream(client.getOutputStream());
+					outObjeto.writeObject(erroNumTipeUser);
+					outObjeto.flush();
+				}
+			}
+		}
+	}
 }

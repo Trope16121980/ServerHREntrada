@@ -126,8 +126,7 @@ public class SearchCrudEmpleados {
 			} else if (nombreTabla.equals("0") && columna.equals("codicard")) {
 
 				PrintEmpleados selector = new PrintEmpleados();
-				List<Empleados> listaTotalEmpleadosCodiCard = Listaempleados
-						.listaTotalEmpleadosCodiCard(Integer.parseInt(palabraAbuscar));
+				List<Empleados> listaTotalEmpleadosCodiCard = Listaempleados.listaTotalEmpleadosCodiCard(Integer.parseInt(palabraAbuscar));
 
 				if (!listaTotalEmpleadosCodiCard.isEmpty()) {
 					String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosCodiCard, columna);
