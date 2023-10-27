@@ -59,23 +59,27 @@ public class SearchCrudEmpresa {
 					outObjeto.writeObject(erroAddressEmpresa);
 					outObjeto.flush();
 				}
-			} else if (nombreTabla.equals("2") && columna.equals("telephon")) {
-				PrintEmpresa empresa = new PrintEmpresa();
-				List<Empresa> listaEmpresasTelepho = Listaempresas.listaEmpresasTelepho(Integer.parseInt(palabraAbuscar));
+				
+			} else {
+				
+				if (nombreTabla.equals("2") && columna.equals("telephon")) {
+					PrintEmpresa empresa = new PrintEmpresa();
+					List<Empresa> listaEmpresasTelepho = Listaempresas.listaEmpresasTelepho(Integer.parseInt(palabraAbuscar));
 
-				if (!listaEmpresasTelepho.isEmpty()) {
-					String datosEmpresa = empresa.obtenerDatosEmpresa(listaEmpresasTelepho, columna);
-					System.out.println(datosEmpresa);
-					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(listaEmpresasTelepho);
-					outObjeto.flush();
-				} else {
-					Errores error = new Errores();
-					String erroTelephonEmpresa = error.erroTelephonEmpresa();
-					System.out.println(erroTelephonEmpresa);
-					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroTelephonEmpresa);
-					outObjeto.flush();
+					if (!listaEmpresasTelepho.isEmpty()) {
+						String datosEmpresa = empresa.obtenerDatosEmpresa(listaEmpresasTelepho, columna);
+						System.out.println(datosEmpresa);
+						outObjeto = new ObjectOutputStream(client.getOutputStream());
+						outObjeto.writeObject(listaEmpresasTelepho);
+						outObjeto.flush();
+					} else {
+						Errores error = new Errores();
+						String erroTelephonEmpresa = error.erroTelephonEmpresa();
+						System.out.println(erroTelephonEmpresa);
+						outObjeto = new ObjectOutputStream(client.getOutputStream());
+						outObjeto.writeObject(erroTelephonEmpresa);
+						outObjeto.flush();
+					}
 				}
 			}
 		}
