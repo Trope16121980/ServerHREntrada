@@ -1,10 +1,9 @@
-
 package search;
 
+import errores.Errores;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.util.ArrayList;
 import java.util.List;
 import modelo.Empleados;
 import peticiones.Listaempleados;
@@ -20,20 +19,26 @@ public class SearchCrudNonApellidoEmpleados {
             String nom, String datoNom, String apellido, String datoApellido,
             String palabraAbuscar, ObjectOutputStream outObjeto, Socket client) throws IOException {
 
-        if (crud.equals("0")) {
-            if (nombreTabla.equals("0") && nom.equals("nom") && apellido.equals("apellido")) {
-                PrintEmpleados selectorNomApellido = new PrintEmpleados();
+        PrintEmpleados selectorNomApellido = new PrintEmpleados();
+        List<Empleados> listaEmpleadosNomApellido = Listaempleados.listaEmpleadosNomApellido(datoNom, datoApellido);
 
-                List<Empleados> listaEmpleadosNomApellido = new ArrayList<Empleados>();
-                listaEmpleadosNomApellido = Listaempleados.listaEmpleadosNomApellido(datoNom, datoApellido);
-                String datosEmpleadosNomApellido = selectorNomApellido.obtenerDatosEmpleadosNomApellido(listaEmpleadosNomApellido, nom, apellido);
-                System.out.println(datosEmpleadosNomApellido);
+        if (!listaEmpleadosNomApellido.isEmpty()) {
 
-                outObjeto = new ObjectOutputStream(client.getOutputStream());
-                outObjeto.writeObject(listaEmpleadosNomApellido);
-                outObjeto.flush();
+            String datosEmpleadosNomApellido = selectorNomApellido.obtenerDatosEmpleadosNomApellido(listaEmpleadosNomApellido, nom, apellido);
+            System.out.println(datosEmpleadosNomApellido);
+            outObjeto = new ObjectOutputStream(client.getOutputStream());
+            outObjeto.writeObject(listaEmpleadosNomApellido);
+            outObjeto.flush();
 
-            }
+        } else {
+
+            Errores error = new Errores();
+            String erroNomApellidoEmpleados = error.erroNomApellidoEmpleados();
+            System.out.println(erroNomApellidoEmpleados);
+            outObjeto = new ObjectOutputStream(client.getOutputStream());
+            outObjeto.writeObject(erroNomApellidoEmpleados);
+            outObjeto.flush();
         }
+
     }
 }

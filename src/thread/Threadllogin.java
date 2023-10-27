@@ -120,7 +120,7 @@ public class Threadllogin extends Thread {
                             System.out.println(fecha.fecha_hora());
                             System.out.println("____________________________________________________________________");
                             System.out.println("Cliente desconectado, error en el login");
-                            escriptor.write(msg);//enviamos
+                            escriptor.write(msg);
                             escriptor.newLine();
                             escriptor.flush();
                             lector.close();
@@ -158,7 +158,7 @@ public class Threadllogin extends Thread {
                                         verificar.selectColumna(palabra);
 
                                         String[] frase = new String[6];
-                                        String[] NomApellido = new String[8];
+                                        String[] nomApellido = new String[8];
                                         String[] insertEmpresas = new String[10];
                                         String[] insertUsuarios = new String[12];
                                         String[] insertEmpleadoMailTelf = new String[16];
@@ -166,7 +166,7 @@ public class Threadllogin extends Thread {
                                         String[] insertEmpleado = new String[20];
 
                                         frase = palabra.split(",");
-                                        NomApellido = palabra.split(",");
+                                        nomApellido = palabra.split(",");
                                         insertEmpresas = palabra.split(",");
                                         insertUsuarios = palabra.split(",");
                                         insertEmpleadoMailTelf = palabra.split(",");
@@ -176,8 +176,8 @@ public class Threadllogin extends Thread {
                                         if (frase[5].equals("0") || frase[5].equals("1")) {
                                             handleSearchRequest(frase, outObjeto, client);
 
-                                        } else if (NomApellido[7].equals("0") || NomApellido[7].equals("1")) {
-                                            handleNomApellidoRequest(NomApellido, palabra, outObjeto, client);
+                                        } else if (nomApellido[7].equals("0") || nomApellido[7].equals("1")) {
+                                            handleNomApellidoRequest(nomApellido, palabra, outObjeto, client);
 
                                         } else if (insertEmpresas[9].equals("0") || insertEmpresas[9].equals("1")) {
                                             handleEmpresaInsert(insertEmpresas, palabra, outObjeto, client);
@@ -240,7 +240,6 @@ public class Threadllogin extends Thread {
                 if (user != null) {
                     logins.remove(user.getDni());
                 }
-                // Cerrar todos los recursos relacionados con la conexión del cliente
                 if (lector != null) {
                     lector.close();
                 }
@@ -493,6 +492,7 @@ public class Threadllogin extends Thread {
         } else if (orden.equals("0") || orden.equals("1")) {
             if (crud.equals("0")) {
                 if ("0".equals(nombreTabla) && ("dni".equals(columna)
+                		|| "nom".equals(columna) || "apellido".equals(columna)
                         || "nomempresa".equals(columna) || "departament".equals(columna)
                         || "codicard".equals(columna) || "mail".equals(columna) || "telephon".equals(columna))) {
                     SearchCrudEmpleados.handleSearchRequest(crud, nombreTabla, columna, palabraAbuscar, outObjeto, client);

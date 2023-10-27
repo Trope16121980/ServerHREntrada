@@ -70,7 +70,70 @@ public class Listaempleados {
         return listaTotalEmpleadosDni;
     }
 
-    public static ArrayList<Empleados> listaTotalEmpleadosNomEmpresa(String palabraAbuscar) {//devuelve el dni
+    
+    public static ArrayList<Empleados> listaTotalEmpleadosNom(String palabraAbuscar) {
+        ArrayList<Empleados> listaTotalEmpleadosNom = new ArrayList<>();
+        try {
+
+            String consulta = "SELECT * FROM empleados where nom = ?";
+            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            preparedStatement.setString(1, palabraAbuscar);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                String dni = resultSet.getString("dni");
+                String nom = resultSet.getString("nom");
+                String apellido = resultSet.getString("apellido");
+                String nomempresa = resultSet.getString("nomempresa");
+                String departament = resultSet.getString("departament");
+                int codicard = resultSet.getInt("codicard");
+                String mail = resultSet.getString("mail");
+                int telephon = resultSet.getInt("telephon");
+                listaTotalEmpleadosNom.add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
+
+            }
+            preparedStatement.close();
+            return listaTotalEmpleadosNom;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listaTotalEmpleadosNom;
+    }
+
+    
+    public static ArrayList<Empleados> listaTotalEmpleadosApellido(String palabraAbuscar) {
+        ArrayList<Empleados> listaTotalEmpleadosApellido = new ArrayList<>();
+        try {
+
+            String consulta = "SELECT * FROM empleados where apellido = ?";
+            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            preparedStatement.setString(1, palabraAbuscar);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                String dni = resultSet.getString("dni");
+                String nom = resultSet.getString("nom");
+                String apellido = resultSet.getString("apellido");
+                String nomempresa = resultSet.getString("nomempresa");
+                String departament = resultSet.getString("departament");
+                int codicard = resultSet.getInt("codicard");
+                String mail = resultSet.getString("mail");
+                int telephon = resultSet.getInt("telephon");
+                listaTotalEmpleadosApellido.add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
+
+            }
+            preparedStatement.close();
+            return listaTotalEmpleadosApellido;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listaTotalEmpleadosApellido;
+    }
+
+    
+    
+    
+    public static ArrayList<Empleados> listaTotalEmpleadosNomEmpresa(String palabraAbuscar) {
         ArrayList<Empleados> listaTotalEmpleadosNomEmpresa = new ArrayList<>();
         try {
 
