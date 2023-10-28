@@ -96,4 +96,69 @@ public class Errores {
 		return erroTelephonEmpresa.toString();
 	}
 
+	public String erroDniJornada() {
+		StringBuilder erroDniJornada = new StringBuilder();
+		erroDniJornada.append("\nEl dni no existe en el registro");
+		return erroDniJornada.toString();
+	}
+
+	public String erroCodicarJornada() {
+		StringBuilder erroCodicarJornada = new StringBuilder();
+		erroCodicarJornada.append("\nEl coodigo de tarjeta no existe en el registro");
+		return erroCodicarJornada.toString();
+	}
+	
+	public String erroFechaJornada() {
+		StringBuilder erroFechaJornada = new StringBuilder();
+		erroFechaJornada.append("\nLa fecha no existe en el registro");
+		return erroFechaJornada.toString();
+	}
+	
+	public String erroNomApellidoJornada() {
+		StringBuilder erroNomApellidoJornada = new StringBuilder();
+		erroNomApellidoJornada.append("\nEl nombre o el apellido no existe en el registro");
+		return erroNomApellidoJornada.toString();
+	}
+	
+	public String erroNomJornada() {
+		StringBuilder erroNomJornada = new StringBuilder();
+		erroNomJornada.append("\nEl nombre no existe en el registro");
+		return erroNomJornada.toString();
+	}
+	
+	public String erroApellidoJornada() {
+		StringBuilder erroApellidoJornada = new StringBuilder();
+		erroApellidoJornada.append("\nEl apellido no existe en el registro");
+		return erroApellidoJornada.toString();
+	}
+	
+	public String erroDniFechaJornada() {
+		StringBuilder erroDniFechaJornada = new StringBuilder();
+		erroDniFechaJornada.append("\nEl dni o la fecha no existe en el registro");
+		return erroDniFechaJornada.toString();
+	}
+	
+	public String erroNomFechaJornada() {
+		StringBuilder erroNomFechaJornada = new StringBuilder();
+		erroNomFechaJornada.append("\nEl nombre o la fecha no existe en el registro");
+		return erroNomFechaJornada.toString();
+	}
+	
+	public String erroApellidoFechaJornada() {
+		StringBuilder erroApellidoFechaJornada = new StringBuilder();
+		erroApellidoFechaJornada.append("\nEl apellido o la fecha no existe en el registro");
+		return erroApellidoFechaJornada.toString();
+	}
+	
+	public String erroCodicardFechaJornada() {
+		StringBuilder erroCodicardFechaJornada = new StringBuilder();
+		erroCodicardFechaJornada.append("\nEl codigo de la tarjeta o la fecha no existe en el registro");
+		return erroCodicardFechaJornada.toString();
+	}
+	
+	public String erroNomApellidoFechaJornada() {
+		StringBuilder erroNomApellidoFechaJornada = new StringBuilder();
+		erroNomApellidoFechaJornada.append("\nEl nombre, apellido o la fecha no existe en el registro");
+		return erroNomApellidoFechaJornada.toString();
+	}
 }

@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Listaempresas {
 
-    public static ArrayList<Empresa> listaTotalEmpresas() {//devuelve el dni
+    public static ArrayList<Empresa> listaTotalEmpresas() {
         ArrayList<Empresa> listaTotalEmpresas = new ArrayList<>();
         try {
 
@@ -84,8 +84,8 @@ public class Listaempresas {
         return listaEmpresasAddress;
     }
     
-      public static ArrayList<Empresa> listaEmpresasTelepho(int palabraAbuscar) {
-        ArrayList<Empresa> listaEmpresasTelepho = new ArrayList<>();
+      public static ArrayList<Empresa> listaEmpresasTelephon(int palabraAbuscar) {
+        ArrayList<Empresa> listaEmpresasTelephon = new ArrayList<>();
         try {
 
             String consulta = "SELECT * FROM empresa where telephon = ?";
@@ -97,15 +97,15 @@ public class Listaempresas {
                 String nom = resultSet.getString("nom");
                 String address = resultSet.getString("address");
                 int telephon = resultSet.getInt("telephon");
-                listaEmpresasTelepho.add(new Empresa(nom, address, telephon));
+                listaEmpresasTelephon.add(new Empresa(nom, address, telephon));
 
             }
             preparedStatement.close();
-            return listaEmpresasTelepho;
+            return listaEmpresasTelephon;
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return listaEmpresasTelepho;
+        return listaEmpresasTelephon;
     }
     
     

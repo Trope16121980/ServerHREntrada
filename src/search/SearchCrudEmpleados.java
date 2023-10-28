@@ -2,7 +2,6 @@ package search;
 
 import modelo.Empleados;
 import print.PrintEmpleados;
-import java.util.ArrayList;
 import java.util.List;
 import java.io.ObjectOutputStream;
 import java.io.IOException;

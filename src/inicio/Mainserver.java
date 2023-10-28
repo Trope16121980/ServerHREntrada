@@ -19,18 +19,15 @@ import java.util.logging.Logger;
  */
 public class Mainserver {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         ServerSocket server;
         Socket socket;
         Fechas fecha = new Fechas();
+        int i = 0;
         try {
-            Jfserver Jfserver = new Jfserver(); // Crear la instancia de jfIni aquí
+            Jfserver Jfserver = new Jfserver();
             Jfserver.setVisible(true);
 
-            // Redirigir System.out a jfIni
             OutputStream outputStream = new OutputStream() {
                 @Override
                 public void write(int b) throws IOException {
@@ -44,7 +41,6 @@ public class Mainserver {
             HashMap<String,String> logins = new HashMap<String,String>();
             System.out.println(fecha.fecha_hora());
             System.out.println("Esperando cliente...");
-            int i = 0;
             boolean inicio = true;
             while (inicio) {
                 socket = server.accept();

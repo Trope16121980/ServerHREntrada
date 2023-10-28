@@ -3,7 +3,6 @@ package search;
 
 import modelo.Users;
 import print.PrintUsers;
-import java.util.ArrayList;
 import java.util.List;
 
 import errores.Errores;
