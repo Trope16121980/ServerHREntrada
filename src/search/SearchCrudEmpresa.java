@@ -58,26 +58,6 @@ public class SearchCrudEmpresa {
 					outObjeto.writeObject(erroAddressEmpresa);
 					outObjeto.flush();
 				}
-
-			} else if (nombreTabla.equals("2") && columna.equals("telephon")) {
-				PrintEmpresa empresa = new PrintEmpresa();
-				List<Empresa> listaEmpresasTelephon = Listaempresas
-						.listaEmpresasTelephon(Integer.parseInt(palabraAbuscar));
-
-				if (!listaEmpresasTelephon.isEmpty()) {
-					String datosEmpresa = empresa.obtenerDatosEmpresa(listaEmpresasTelephon, columna);
-					System.out.println(datosEmpresa);
-					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(listaEmpresasTelephon);
-					outObjeto.flush();
-				} else {
-					Errores error = new Errores();
-					String erroTelephonEmpresa = error.erroTelephonEmpresa();
-					System.out.println(erroTelephonEmpresa);
-					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroTelephonEmpresa);
-					outObjeto.flush();
-				}
 			}
 		}
 	}

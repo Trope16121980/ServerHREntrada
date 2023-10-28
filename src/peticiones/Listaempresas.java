@@ -83,30 +83,4 @@ public class Listaempresas {
         }
         return listaEmpresasAddress;
     }
-    
-      public static ArrayList<Empresa> listaEmpresasTelephon(int palabraAbuscar) {
-        ArrayList<Empresa> listaEmpresasTelephon = new ArrayList<>();
-        try {
-
-            String consulta = "SELECT * FROM empresa where telephon = ?";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
-            preparedStatement.setInt(1, palabraAbuscar);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-           while (resultSet.next()) {
-                String nom = resultSet.getString("nom");
-                String address = resultSet.getString("address");
-                int telephon = resultSet.getInt("telephon");
-                listaEmpresasTelephon.add(new Empresa(nom, address, telephon));
-
-            }
-            preparedStatement.close();
-            return listaEmpresasTelephon;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return listaEmpresasTelephon;
-    }
-    
-    
 }

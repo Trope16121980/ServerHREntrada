@@ -89,12 +89,6 @@ public class Errores {
 		erroAddressEmpresa.append("\nLa direccion de la empresa no existe en el registro");
 		return erroAddressEmpresa.toString();
 	}
-	
-	public String erroTelephonEmpresa() {
-		StringBuilder erroTelephonEmpresa = new StringBuilder();
-		erroTelephonEmpresa.append("\nEl numero de telefono no existe en el registro");
-		return erroTelephonEmpresa.toString();
-	}
 
 	public String erroDniJornada() {
 		StringBuilder erroDniJornada = new StringBuilder();
