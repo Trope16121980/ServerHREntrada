@@ -32,10 +32,10 @@ public class SearchCrudJornada {
 					outObjeto.flush();
 				} else {
 					Errores error = new Errores();
-					String erroDniJornada = error.erroDniJornada();
-					System.out.println(erroDniJornada);
+					String errorDni = error.errorDni();
+					System.out.println(errorDni);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroDniJornada);
+					outObjeto.writeObject(errorDni);
 					outObjeto.flush();
 				}
 				
@@ -51,10 +51,10 @@ public class SearchCrudJornada {
 					outObjeto.flush();
 				} else {
 					Errores error = new Errores();
-					String erroNomJornada = error.erroNomJornada();
-					System.out.println(erroNomJornada);
+					String errorNom = error.errorNom();
+					System.out.println(errorNom);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroNomJornada);
+					outObjeto.writeObject(errorNom);
 					outObjeto.flush();
 				}
 				
@@ -70,10 +70,10 @@ public class SearchCrudJornada {
 					outObjeto.flush();
 				} else {
 					Errores error = new Errores();
-					String erroApellidoJornada = error.erroApellidoJornada();
-					System.out.println(erroApellidoJornada);
+					String errorApellido = error.errorApellido();
+					System.out.println(errorApellido);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroApellidoJornada);
+					outObjeto.writeObject(errorApellido);
 					outObjeto.flush();
 				}
 				
@@ -90,10 +90,10 @@ public class SearchCrudJornada {
 					outObjeto.flush();
 				} else {
 					Errores error = new Errores();
-					String erroCodicarJornada = error.erroCodicarJornada();
-					System.out.println(erroCodicarJornada);
+					String erroCodicard = error.erroCodicard();
+					System.out.println(erroCodicard);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroCodicarJornada);
+					outObjeto.writeObject(erroCodicard);
 					outObjeto.flush();
 				}
 

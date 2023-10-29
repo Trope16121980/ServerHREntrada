@@ -33,10 +33,10 @@ public class SearchCrudNomApellidoJornada {
 		} else {
 
 			Errores error = new Errores();
-			String erroNomApellidoJornada = error.erroNomApellidoJornada();
-			System.out.println(erroNomApellidoJornada);
+			String errorNomApellido = error.errorNomApellido();
+			System.out.println(errorNomApellido);
 			outObjeto = new ObjectOutputStream(client.getOutputStream());
-			outObjeto.writeObject(erroNomApellidoJornada);
+			outObjeto.writeObject(errorNomApellido);
 			outObjeto.flush();
 		}
 	}

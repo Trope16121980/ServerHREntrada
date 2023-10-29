@@ -34,10 +34,10 @@ public class SearchCrudUsers {
 					outObjeto.flush();
 				} else {
 					Errores error = new Errores();
-					String erroDniUser = error.erroDniUser();
-					System.out.println(erroDniUser);
+					String errorDni = error.errorDni();
+					System.out.println(errorDni);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroDniUser);
+					outObjeto.writeObject(errorDni);
 					outObjeto.flush();
 				}
 

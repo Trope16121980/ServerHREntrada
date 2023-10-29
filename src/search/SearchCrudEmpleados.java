@@ -32,10 +32,10 @@ public class SearchCrudEmpleados {
 
 				} else {
 					Errores error = new Errores();
-					String errorDniEmpleados = error.errorDniEmpleados();
-					System.out.println(errorDniEmpleados);
+					String errorDni = error.errorDni();
+					System.out.println(errorDni);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(errorDniEmpleados);
+					outObjeto.writeObject(errorDni);
 					outObjeto.flush();
 				}
 
@@ -52,10 +52,10 @@ public class SearchCrudEmpleados {
 
 				} else {
 					Errores error = new Errores();
-					String erroNomEmpleados = error.erroNomEmpleados();
-					System.out.println(erroNomEmpleados);
+					String errorNom = error.errorNom();
+					System.out.println(errorNom);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroNomEmpleados);
+					outObjeto.writeObject(errorNom);
 					outObjeto.flush();
 				}
 
@@ -73,10 +73,10 @@ public class SearchCrudEmpleados {
 
 				} else {
 					Errores error = new Errores();
-					String erroApellidoEmpleados = error.erroApellidoEmpleados();
-					System.out.println(erroApellidoEmpleados);
+					String errorApellido = error.errorApellido();
+					System.out.println(errorApellido);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroApellidoEmpleados);
+					outObjeto.writeObject(errorApellido);
 					outObjeto.flush();
 				}
 
@@ -95,10 +95,10 @@ public class SearchCrudEmpleados {
 
 				} else {
 					Errores error = new Errores();
-					String errorNomEmpresaEmpleados = error.errorNomEmpresaEmpleados();
-					System.out.println(errorNomEmpresaEmpleados);
+					String erroNomEmpresa = error.erroNomEmpresa();
+					System.out.println(erroNomEmpresa);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(errorNomEmpresaEmpleados);
+					outObjeto.writeObject(erroNomEmpresa);
 					outObjeto.flush();
 				}
 			} else if (nombreTabla.equals("0") && columna.equals("departament")) {
@@ -135,10 +135,10 @@ public class SearchCrudEmpleados {
 					outObjeto.flush();
 				} else {
 					Errores error = new Errores();
-					String erroCodicardEmpleados = error.erroCodicardEmpleados();
-					System.out.println(erroCodicardEmpleados);
+					String erroCodicard = error.erroCodicard();
+					System.out.println(erroCodicard);
 					outObjeto = new ObjectOutputStream(client.getOutputStream());
-					outObjeto.writeObject(erroCodicardEmpleados);
+					outObjeto.writeObject(erroCodicard);
 					outObjeto.flush();
 				}
 			} else if (nombreTabla.equals("0") && columna.equals("mail")) {

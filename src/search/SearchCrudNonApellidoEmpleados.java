@@ -33,10 +33,10 @@ public class SearchCrudNonApellidoEmpleados {
         } else {
 
             Errores error = new Errores();
-            String erroNomApellidoEmpleados = error.erroNomApellidoEmpleados();
-            System.out.println(erroNomApellidoEmpleados);
+            String errorNomApellido = error.errorNomApellido();
+            System.out.println(errorNomApellido);
             outObjeto = new ObjectOutputStream(client.getOutputStream());
-            outObjeto.writeObject(erroNomApellidoEmpleados);
+            outObjeto.writeObject(errorNomApellido);
             outObjeto.flush();
         }
 
