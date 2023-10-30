@@ -99,7 +99,7 @@ public class Threadllogin extends Thread {
                                 client.close();
                             } else {
                                 codigo = Codigo.crearCodigoLogin(user.getNumtipe());
-                                usersConnected.add(user.getDni()); // Agregar usuario a la lista de conectados
+                                usersConnected.add(user.getDni()); 
                             }
                         }
 
@@ -187,7 +187,7 @@ public class Threadllogin extends Thread {
                                         } else if (insertEmpresas[9].equals("0") || insertEmpresas[9].equals("1")) {
                                             if (insertEmpresas[3].equals("nom") && insertEmpresas[5].equals("apellido") && insertEmpresas[7].equals("fecha")) {
                                                 handleNomApellidoFechaRequest(insertEmpresas, palabra, outObjeto, client);
-                                            } else {
+                                            } else  if (insertEmpresas[3].equals("nom") && insertEmpresas[5].equals("address") && insertEmpresas[7].equals("telephon")) {
                                                 handleEmpresaInsert(insertEmpresas, palabra, outObjeto, client);
                                             }
                                         } else if (insertUsuarios[11].equals("0") || insertUsuarios[11].equals("1")) {

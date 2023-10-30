@@ -111,4 +111,10 @@ public class Errores {
 		erroNomApellidoFechaJornada.append("\nEl nombre, apellido o la fecha no existe en el registro");
 		return erroNomApellidoFechaJornada.toString();
 	}
+	
+	public String errorInsertEmpresa() {
+		StringBuilder errorInsertEmpresa = new StringBuilder();
+		errorInsertEmpresa.append("\nAlgo ha fallado en la creacion de la empresa\nrevise la lista de empresas\ny vuelva a intentarlo");
+		return errorInsertEmpresa.toString();
+	}
 }

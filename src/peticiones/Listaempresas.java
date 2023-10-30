@@ -36,7 +36,7 @@ public class Listaempresas {
         return listaTotalEmpresas;
     }
 
-    public static ArrayList<Empresa> listaEmpresasNom(String palabraAbuscar) {//devuelve el dni
+    public static ArrayList<Empresa> listaEmpresasNom(String palabraAbuscar) {
         ArrayList<Empresa> listaEmpresasNom = new ArrayList<>();
         try {
 
