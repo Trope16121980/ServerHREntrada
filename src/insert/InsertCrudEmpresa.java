@@ -6,7 +6,6 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-import errores.Errores;
 import modelo.Empresa;
 import peticiones.InsertEmpresa;
 

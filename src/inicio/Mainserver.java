@@ -4,6 +4,9 @@ package inicio;
 import fecha.Fechas;
 import frames.Jfserver;
 import thread.Threadllogin;
+
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -28,15 +31,19 @@ public class Mainserver {
             Jfserver Jfserver = new Jfserver();
             Jfserver.setVisible(true);
 
+            File outputFile = new File("file/" + fecha.nombre_fichero() + ".txt");
+            FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
+            
             OutputStream outputStream = new OutputStream() {
                 @Override
                 public void write(int b) throws IOException {
                     Jfserver.appendText(String.valueOf((char) b));
+                    fileOutputStream.write(b);
                 }
             };
             PrintStream printStream = new PrintStream(outputStream);
             System.setOut(printStream);
-
+            
             server = new ServerSocket(8888);
             HashMap<String,String> logins = new HashMap<String,String>();
             System.out.println(fecha.fecha_hora());
