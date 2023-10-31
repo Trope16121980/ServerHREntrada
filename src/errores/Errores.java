@@ -114,7 +114,15 @@ public class Errores {
 	
 	public String errorInsertEmpresa() {
 		StringBuilder errorInsertEmpresa = new StringBuilder();
-		errorInsertEmpresa.append("\nAlgo ha fallado en la creacion de la empresa\nrevise la lista de empresas y vuelva a intentarlo");
+		errorInsertEmpresa.append("\nLa empresa que intenta crear ya esta\ndada de alta.\nRevise la lista de empresas.");
 		return errorInsertEmpresa.toString();
+	}
+	
+	public String errorInsertUsers() {
+		StringBuilder errorInsertUsers = new StringBuilder();
+		errorInsertUsers.append("\nEl empleado que utilizara este usuario\n"
+				+ "no esta dado de alta como empleado.\nRevise la lista de empleados y cree\n"
+				+ "el empleado antes de crear el usuario.");
+		return errorInsertUsers.toString();
 	}
 }

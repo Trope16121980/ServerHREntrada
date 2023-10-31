@@ -2,7 +2,7 @@
 package inicio;
 
 import fecha.Fechas;
-import frames.Jfserver;
+import frames.WindowServer;
 import thread.Threadllogin;
 
 import java.io.File;
@@ -28,8 +28,8 @@ public class Mainserver {
         Fechas fecha = new Fechas();
         int i = 0;
         try {
-            Jfserver Jfserver = new Jfserver();
-            Jfserver.setVisible(true);
+            WindowServer WindowServer = new WindowServer();
+            WindowServer.setVisible(true);
 
             File outputFile = new File("file/" + fecha.nombre_fichero() + ".txt");
             FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
@@ -37,7 +37,7 @@ public class Mainserver {
             OutputStream outputStream = new OutputStream() {
                 @Override
                 public void write(int b) throws IOException {
-                    Jfserver.appendText(String.valueOf((char) b));
+                    WindowServer.appendText(String.valueOf((char) b));
                     fileOutputStream.write(b);
                 }
             };
@@ -55,7 +55,7 @@ public class Mainserver {
                 new Threadllogin(socket,logins).start();
             }
         } catch (IOException ex) {
-            Logger.getLogger(Jfserver.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(WindowServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
