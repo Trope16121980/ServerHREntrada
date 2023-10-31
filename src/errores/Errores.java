@@ -114,7 +114,7 @@ public class Errores {
 	
 	public String errorInsertEmpresa() {
 		StringBuilder errorInsertEmpresa = new StringBuilder();
-		errorInsertEmpresa.append("\nAlgo ha fallado en la creacion de la empresa\nrevise la lista de empresas\ny vuelva a intentarlo");
+		errorInsertEmpresa.append("\nAlgo ha fallado en la creacion de la empresa\nrevise la lista de empresas y vuelva a intentarlo");
 		return errorInsertEmpresa.toString();
 	}
 }
