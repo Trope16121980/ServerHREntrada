@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author gsenorans
+ * @author Gustavo_Senorans
  */
 public class WindowServer extends javax.swing.JFrame {
 

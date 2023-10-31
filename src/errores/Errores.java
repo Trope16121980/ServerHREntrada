@@ -125,4 +125,20 @@ public class Errores {
 				+ "el empleado antes de crear el usuario.");
 		return errorInsertUsers.toString();
 	}
+	
+	public String errorInsertUsersDni() {
+		StringBuilder errorInsertUsersLogin = new StringBuilder();
+		errorInsertUsersLogin.append("\nEl dni que intenta utilizar ya\n"
+				+ "se esta utilizando por otro usuario,\n"
+				+ "revise la lista de usuarios y vuelva a intentarlo.");
+		return errorInsertUsersLogin.toString();
+	}
+	
+	public String errorInsertUsersLogin() {
+		StringBuilder errorInsertUsersLogin = new StringBuilder();
+		errorInsertUsersLogin.append("\nEl login que intenta utilizar ya\n"
+				+ "se esta utilizando por otro usuario,\n"
+				+ "revise la lista de usuarios y vuelva a intentarlo.");
+		return errorInsertUsersLogin.toString();
+	}
 }

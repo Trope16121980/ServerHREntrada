@@ -1,0 +1,173 @@
+01/11/2023-00:37:36
+Esperando cliente...
+Bienvenido al ServeHREntrada
+01/11/2023-00:37:51
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+01/11/2023-00:37:58
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,0,1,0,0,0
+____________________________________________________________________
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+____________________________________________________________________
+____________________________________________________________________
+Login: user
+Pass: user
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+____________________________________________________________________
+Login: juan
+Pass: juan
+Tipo de usuario: 1
+Dni: 1A
+
+____________________________________________________________________
+01/11/2023-00:38:21
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,1,1,login,juan,pass,assd,numtipe,1,dni,1B,0
+
+
+
+El login que intenta utilizar ya
+se esta utilizando por otro usuario,
+revise la lista de usuarios y vuelva a intentarlo.
+____________________________________________________________________
+01/11/2023-00:39:43
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,1,1,login,jaasd,pass,assd,numtipe,1,dni,1C,0
+
+
+
+El empleado que utilizara este usuario
+no esta dado de alta como empleado.
+Revise la lista de empleados y cree
+el empleado antes de crear el usuario.
+____________________________________________________________________
+01/11/2023-00:41:00
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,1,1,login,pedro,pass,pedro,numtipe,1,dni,1A,0
+
+
+
+El dni que intenta utilizar ya
+se esta utilizando por otro usuario,
+revise la lista de usuarios y vuelva a intentarlo.
+____________________________________________________________________
+01/11/2023-00:42:41
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,0,0,0,0,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+____________________________________________________________________
+Dni: 1A
+Nombre: Juan
+Apellido: Perez
+Nombre empresa: Toyota
+Departamento: Mecanica
+Codigo tarjeta: 3
+Mail: Juan.Perez@gmail.com
+Telefono: 123485789
+
+____________________________________________________________________
+____________________________________________________________________
+Dni: 1B
+Nombre: Pedro
+Apellido: Herrera
+Nombre empresa: Toyota
+Departamento: Administracion
+Codigo tarjeta: 4
+Mail: Pedro.Herrera@gmail.com
+Telefono: 458965256
+
+____________________________________________________________________
+01/11/2023-00:43:02
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,1,1,login,pedro,pass,pedro,numtipe,0,dni,1B,0
+
+
+Empleado creado correctamente, sus datos son: 
+
+Login: pedro
+Pass: pedro
+Num Tipe: 0
+Dni: 1B
+
+____________________________________________________________________
+01/11/2023-00:43:48
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,0,2,0,0,0
+____________________________________________________________________
+Nombre empresa: HREntrada
+Direccion: Barcelona
+Telefono: 933123123
+____________________________________________________________________
+____________________________________________________________________
+Nombre empresa: Pascual
+Direccion: Lugo
+Telefono: 985867867
+____________________________________________________________________
+____________________________________________________________________
+Nombre empresa: Central Lechera Asturiana
+Direccion: Oviedo
+Telefono: 645374837
+____________________________________________________________________
+____________________________________________________________________
+Nombre empresa: Mercedes
+Direccion: El Clot
+Telefono: 234345456
+____________________________________________________________________
+____________________________________________________________________
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: 900900900
+____________________________________________________________________
+01/11/2023-00:44:09
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,1,2,nom,Toyota,address,asdf,telephon,1234,0
+
+La empresa que intenta crear ya esta
+dada de alta.
+Revise la lista de empresas.
+____________________________________________________________________
+01/11/2023-00:45:22
+____________________________________________________________________
+Contenido a enviar al cliente: U50883,1,2,nom,La Maquinista,address,Sant Andreu,telephon,765654543,0
+Empresa creada correctamente, sus datos son:
+
+____________________________________________________________________
+Nombre: La Maquinista
+Address: Sant Andreu
+Telefono: 765654543
+
+____________________________________________________________________
+____________________________________________________________________
+Cliente con codigo U50883 que pertenece al usuario user
+se ha desconectado correctamente.
