@@ -4,7 +4,6 @@
  */
 package frames;
 
-import javax.swing.ImageIcon;
 
 /**
  *
@@ -145,7 +144,7 @@ public class WindowServer extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void appendText(String valueOf) {
-        jTextArea.append(valueOf.formatted("ISO-8859-1"));
+        jTextArea.append(valueOf.formatted("UTF-8"));
     }
 
 }

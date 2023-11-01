@@ -1,0 +1,32 @@
+01/11/2023-15:18:12
+Esperando cliente...
+Bienvenido al ServeHREntrada
+01/11/2023-15:18:29
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+01/11/2023-15:18:46
+____________________________________________________________________
+Contenido a enviar al cliente: U41133,1,1,login,anna,pass,anna,numtipe,2,dni,5467A,0
+
+
+El tipo de usuario solo puede ser 0 o 1.
+ejemplo:
+admin = 0
+user = 1.
+Revise bien en tipo de usuario y vuelva a intentarlo.
+____________________________________________________________________
+01/11/2023-15:19:54
+____________________________________________________________________
+Contenido a enviar al cliente: U41133,1,1,login,anna,pass,anna,numtipe,0,dni,5467A,0
+
+
+Empleado creado correctamente, sus datos son: 
+
+Login: anna
+Pass: anna
+Num Tipe: 0
+Dni: 5467A
+
+____________________________________________________________________

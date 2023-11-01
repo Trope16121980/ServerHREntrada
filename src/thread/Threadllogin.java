@@ -151,16 +151,12 @@ public class Threadllogin extends Thread {
                                         String[] nomApellido = new String[8];
                                         String[] insertEmpresas = new String[10];
                                         String[] insertUsuarios = new String[12];
-                                        String[] insertEmpleadoMailTelf = new String[16];
-                                        String[] insertEmpleadoMT = new String[18];
                                         String[] insertEmpleado = new String[20];
 
                                         frase = palabra.split(",");
                                         nomApellido = palabra.split(",");
                                         insertEmpresas = palabra.split(",");
                                         insertUsuarios = palabra.split(",");
-                                        insertEmpleadoMailTelf = palabra.split(",");
-                                        insertEmpleadoMT = palabra.split(",");
                                         insertEmpleado = palabra.split(",");
 
                                         if (frase[5].equals("0") || frase[5].equals("1")) {
@@ -192,23 +188,6 @@ public class Threadllogin extends Thread {
                                             }
                                         } else if (insertUsuarios[11].equals("0") || insertUsuarios[11].equals("1")) {
                                             handleUsersInsert(insertUsuarios, palabra, outObjeto, client);
-
-                                        } else if (insertEmpleadoMailTelf[15].equals("0")
-                                                || insertEmpleadoMailTelf[15].equals("1")) {
-                                            handleEmpleadoMailTelfInsert(insertEmpleadoMailTelf, palabra, outObjeto,
-                                                    client);
-
-                                        } else if (insertEmpleadoMT[17].equals("0")
-                                                && insertEmpleadoMT[15].equals("mail")
-                                                || insertEmpleadoMT[17].equals("1")
-                                                && insertEmpleadoMT[15].equals("mail")) {
-                                            handleEmpleadoMailInsert(insertEmpleadoMT, palabra, outObjeto, client);
-
-                                        } else if (insertEmpleadoMT[17].equals("0")
-                                                && insertEmpleadoMT[15].equals("telephon")
-                                                || insertEmpleadoMT[17].equals("1")
-                                                && insertEmpleadoMT[15].equals("telephon")) {
-                                            handleEmpleadoTelfInsert(insertEmpleadoMT, palabra, outObjeto, client);
 
                                         } else if (insertEmpleado[19].equals("0") || insertEmpleado[19].equals("1")) {
                                             handleEmpleadoInsert(insertEmpleado, palabra, outObjeto, client);
@@ -299,114 +278,9 @@ public class Threadllogin extends Thread {
             System.out.println(fecha.fecha_hora());
             if (crud.equals("1")) {
                 if (nombreTabla.equals("0")) {
-                    InsertCrudEmpleados.handleInsertRequest(crud, nombreTabla, dni, datoDni, nom, datoNom, apellido,
-                            datoApellido, nomempresa, datoNomempresa, departament, datoDepartament, codicard,
-                            datoCodicard, mail, datoMail, telephon, datoTelephon, palabra, outObjeto, client);
-                }
-            }
-        }
-    }
-
-    private void handleEmpleadoTelfInsert(String[] insertEmpleadoMT, String palabra, ObjectOutputStream outObjeto,
-            Socket client) throws IOException {
-        String codigoUserRecibido = insertEmpleadoMT[0];
-        String crud = insertEmpleadoMT[1];
-        String nombreTabla = insertEmpleadoMT[2];
-        String dni = insertEmpleadoMT[3];
-        String datoDni = insertEmpleadoMT[4];
-        String nom = insertEmpleadoMT[5];
-        String datoNom = insertEmpleadoMT[6];
-        String apellido = insertEmpleadoMT[7];
-        String datoApellido = insertEmpleadoMT[8];
-        String nomempresa = insertEmpleadoMT[9];
-        String datoNomempresa = insertEmpleadoMT[10];
-        String departament = insertEmpleadoMT[11];
-        String datoDepartament = insertEmpleadoMT[12];
-        String codicard = insertEmpleadoMT[13];
-        String datoCodicard = insertEmpleadoMT[14];
-        String telephon = insertEmpleadoMT[15];
-        String datoTelephon = insertEmpleadoMT[16];
-        String orden = insertEmpleadoMT[17];
-
-        if (!codigo.equals(codigoUserRecibido)) {
-            verificarCodigoCliente(codigoUserRecibido);
-
-        } else if (orden.equals("0") || orden.equals("1")) {
-            System.out.println(fecha.fecha_hora());
-            if (crud.equals("1")) {
-                if (nombreTabla.equals("0")) {
-                    InsertCrudEmpleadosTelf.handleInsertRequest(crud, nombreTabla, dni, datoDni, nom, datoNom, apellido,
-                            datoApellido, nomempresa, datoNomempresa, departament, datoDepartament, codicard,
-                            datoCodicard, telephon, datoTelephon, palabra, outObjeto, client);
-                }
-            }
-        }
-    }
-
-    private void handleEmpleadoMailInsert(String[] insertEmpleadoMT, String palabra, ObjectOutputStream outObjeto,
-            Socket client) throws IOException {
-        String codigoUserRecibido = insertEmpleadoMT[0];
-        String crud = insertEmpleadoMT[1];
-        String nombreTabla = insertEmpleadoMT[2];
-        String dni = insertEmpleadoMT[3];
-        String datoDni = insertEmpleadoMT[4];
-        String nom = insertEmpleadoMT[5];
-        String datoNom = insertEmpleadoMT[6];
-        String apellido = insertEmpleadoMT[7];
-        String datoApellido = insertEmpleadoMT[8];
-        String nomempresa = insertEmpleadoMT[9];
-        String datoNomempresa = insertEmpleadoMT[10];
-        String departament = insertEmpleadoMT[11];
-        String datoDepartament = insertEmpleadoMT[12];
-        String codicard = insertEmpleadoMT[13];
-        String datoCodicard = insertEmpleadoMT[14];
-        String mail = insertEmpleadoMT[15];
-        String datoMail = insertEmpleadoMT[16];
-        String orden = insertEmpleadoMT[17];
-
-        if (!codigo.equals(codigoUserRecibido)) {
-            verificarCodigoCliente(codigoUserRecibido);
-        } else if (orden.equals("0") || orden.equals("1")) {
-            System.out.println(fecha.fecha_hora());
-            if (crud.equals("1")) {
-                if (nombreTabla.equals("0")) {
-                    InsertCrudEmpleadosMail.handleInsertRequest(crud, nombreTabla, dni, datoDni, nom, datoNom, apellido,
-                            datoApellido, nomempresa, datoNomempresa, departament, datoDepartament, codicard,
-                            datoCodicard, mail, datoMail, palabra, outObjeto, client);
-                }
-            }
-        }
-    }
-
-    private void handleEmpleadoMailTelfInsert(String[] insertEmpleadoMailTelf, String palabra,
-            ObjectOutputStream outObjeto, Socket client) throws IOException {
-        String codigoUserRecibido = insertEmpleadoMailTelf[0];
-        String crud = insertEmpleadoMailTelf[1];
-        String nombreTabla = insertEmpleadoMailTelf[2];
-        String dni = insertEmpleadoMailTelf[3];
-        String datoDni = insertEmpleadoMailTelf[4];
-        String nom = insertEmpleadoMailTelf[5];
-        String datoNom = insertEmpleadoMailTelf[6];
-        String apellido = insertEmpleadoMailTelf[7];
-        String datoApellido = insertEmpleadoMailTelf[8];
-        String nomempresa = insertEmpleadoMailTelf[9];
-        String datoNomempresa = insertEmpleadoMailTelf[10];
-        String departament = insertEmpleadoMailTelf[11];
-        String datoDepartament = insertEmpleadoMailTelf[12];
-        String codicard = insertEmpleadoMailTelf[13];
-        String datoCodicard = insertEmpleadoMailTelf[14];
-        String orden = insertEmpleadoMailTelf[15];
-
-        if (!codigo.equals(codigoUserRecibido)) {
-            verificarCodigoCliente(codigoUserRecibido);
-
-        } else if (orden.equals("0") || orden.equals("1")) {
-            System.out.println(fecha.fecha_hora());
-            if (crud.equals("1")) {
-                if (nombreTabla.equals("0")) {
-                    InsertCrudEmpleadosMailTelf.handleInsertRequest(crud, nombreTabla, dni, datoDni, nom, datoNom,
-                            apellido, datoApellido, nomempresa, datoNomempresa, departament, datoDepartament, codicard,
-                            datoCodicard, palabra, outObjeto, client);
+                    InsertCrudEmpleados.handleInsertRequest(crud, nombreTabla, dni, datoDni, nom, datoNom,
+                    		apellido, datoApellido, nomempresa, datoNomempresa, departament, 
+                    		datoDepartament, codicard, Integer.parseInt(datoCodicard), mail, datoMail, telephon, datoTelephon, palabra, outObjeto, client);;
                 }
             }
         }

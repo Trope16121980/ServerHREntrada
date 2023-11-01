@@ -129,16 +129,48 @@ public class Errores {
 	public String errorInsertUsersDni() {
 		StringBuilder errorInsertUsersLogin = new StringBuilder();
 		errorInsertUsersLogin.append("\nEl dni que intenta utilizar ya\n"
-				+ "se esta utilizando por otro usuario,\n"
-				+ "revise la lista de usuarios y vuelva a intentarlo.");
+				+ "se esta utilizando por otro usuario.\n"
+				+ "Revise la lista de usuarios y vuelva a intentarlo.");
 		return errorInsertUsersLogin.toString();
 	}
 	
 	public String errorInsertUsersLogin() {
 		StringBuilder errorInsertUsersLogin = new StringBuilder();
 		errorInsertUsersLogin.append("\nEl login que intenta utilizar ya\n"
-				+ "se esta utilizando por otro usuario,\n"
-				+ "revise la lista de usuarios y vuelva a intentarlo.");
+				+ "se esta utilizando por otro usuario.\n"
+				+ "Revise la lista de usuarios y vuelva a intentarlo.");
 		return errorInsertUsersLogin.toString();
+	}
+	
+	public String errorInsertEmpleadoDni() {
+		StringBuilder errorInsertEmpleadoDni = new StringBuilder();
+		errorInsertEmpleadoDni.append("\nEl dni que intenta utilizar ya\n"
+				+ "se esta utilizando por otro empleado.\n"
+				+ "Revise la lista de empleados y vuelva a intentarlo.");
+		return errorInsertEmpleadoDni.toString();
+	}
+	
+	public String errorInsertEmpleadoNomempresa() {
+		StringBuilder errorInsertEmpleadoNomempresa = new StringBuilder();
+		errorInsertEmpleadoNomempresa.append("\nLa empresa en la que intenta añadir\n"
+				+ "el empleado no existe.\n"
+				+ "Revise la lista de empresas y vuelva a intentarlo.");
+		return errorInsertEmpleadoNomempresa.toString();
+	}
+	
+	public String errorInsertEmpleadoCodicard() {
+		StringBuilder errorInsertEmpleadoCodicard = new StringBuilder();
+		errorInsertEmpleadoCodicard.append("\nEl codigo de tarjeta que intenta añadir\n"
+				+ "ya existe en la lista de empleados.\n"
+				+ "Revise la lista de empleados y vuelva a intentarlo.");
+		return errorInsertEmpleadoCodicard.toString();
+	}
+	
+	public String errorInsertEmpleadoNumtipe() {
+		StringBuilder errorInsertEmpleadoNumtipe = new StringBuilder();
+		errorInsertEmpleadoNumtipe.append("El tipo de usuario solo puede ser 0 o 1.\n"
+				+ "ejemplo:\nadmin = 0\nuser = 1.\n"
+				+ "Revise bien en tipo de usuario y vuelva a intentarlo.");
+		return errorInsertEmpleadoNumtipe.toString();
 	}
 }
