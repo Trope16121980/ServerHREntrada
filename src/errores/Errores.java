@@ -180,4 +180,12 @@ public class Errores {
 				+ "ya la tiene iniciada.\nRevise las jornada del dia de hoy.");
 		return errorInsertJornadaDentro.toString();
 	}
+	
+	public String errorUpdateEmpresa() {
+		StringBuilder errorUpdateEmpresa = new StringBuilder();
+		errorUpdateEmpresa.append("\nEl nuevo nombre de empresa que quiere utilizar\n"
+				+ "ya esta en la lista de empresas\n"
+				+ "Revise la lista de empresas y vuelva a intentarlo.");
+		return errorUpdateEmpresa.toString();
+	}
 }

@@ -5,6 +5,7 @@ package thread;
  * @author Gustavo_Senorans
  */
 import search.*;
+import update.UpdateCrudNomEmpresa;
 import insert.*;
 import print.*;
 import codigo.Codigo;
@@ -171,11 +172,15 @@ public class Threadllogin extends Thread {
 											handleSearchRequest(frase, outObjeto, client);
 
 										} else if (nomApellido[7].equals("0") || nomApellido[7].equals("1")) {
+
 											if (nomApellido[3].equals("dni") && nomApellido[5].equals("fecha")) {
 												handleDniFechaRequest(nomApellido, palabra, outObjeto, client);
 
 											} else if (nomApellido[3].equals("nom") && nomApellido[5].equals("fecha")) {
 												handleNomFechaRequest(nomApellido, palabra, outObjeto, client);
+											} else if (nomApellido[3].equals("nomNuevo")
+													&& nomApellido[5].equals("nom")) {
+												handleUpdateNomEmpresaRequest(nomApellido, palabra, outObjeto, client);
 
 											} else if (nomApellido[3].equals("apellido")
 													&& nomApellido[5].equals("fecha")) {
@@ -188,6 +193,7 @@ public class Threadllogin extends Thread {
 											} else {
 												handleNomApellidoRequest(nomApellido, palabra, outObjeto, client);
 											}
+
 										} else if (insertEmpresas[9].equals("0") || insertEmpresas[9].equals("1")) {
 											if (insertEmpresas[3].equals("nom") && insertEmpresas[5].equals("apellido")
 													&& insertEmpresas[7].equals("fecha")) {
@@ -342,7 +348,6 @@ public class Threadllogin extends Thread {
 							datoApellido, nomempresa, datoNomempresa, departament, datoDepartament, codicard,
 							Integer.parseInt(datoCodicard), mail, datoMail, telephon, datoTelephon, palabra, outObjeto,
 							client);
-					;
 				}
 			}
 		}
@@ -447,6 +452,26 @@ public class Threadllogin extends Thread {
 				SearchCrudNomFechaJornada.handleSearchRequest(crud, nombreTabla, nom, datoNom, fechas, datoFecha,
 						palabra, outObjeto, client);
 			}
+		}
+	}
+
+	private void handleUpdateNomEmpresaRequest(String[] NomApellido, String palabra, ObjectOutputStream outObjeto,
+			Socket client) throws IOException {
+		String codigoUserRecibido = NomApellido[0];
+		String crud = NomApellido[1];
+		String nombreTabla = NomApellido[2];
+		String nomNuevo = NomApellido[3];
+		String datoNomnuevo = NomApellido[4];
+		String nom = NomApellido[5];
+		String datoNom = NomApellido[6];
+		String orden = NomApellido[7];
+		if (!codigo.equals(codigoUserRecibido)) {
+			verificarCodigoCliente(codigoUserRecibido);
+			
+		} else if (orden.equals("0") || orden.equals("1")) {
+			System.out.println(fecha.fecha_hora());
+			UpdateCrudNomEmpresa.handleSearchRequest(crud, nombreTabla, nomNuevo, datoNomnuevo, nom, datoNom, palabra,
+					outObjeto, client);
 		}
 	}
 
