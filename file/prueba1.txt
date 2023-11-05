@@ -1,0 +1,96 @@
+05/11/2023-15:27:02
+Esperando cliente...
+Bienvenido al ServeHREntrada
+05/11/2023-15:27:12
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+05/11/2023-15:27:20
+____________________________________________________________________
+Contenido a enviar al cliente: U95152,1,3,dni,12345678A,0
+05/11/2023-15:27:20
+Jornada creada correctamente:
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 15:27
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/11/05
+____________________________________________________________________
+05/11/2023-15:27:27
+____________________________________________________________________
+Contenido a enviar al cliente: U95152,1,3,codicard,2,0
+05/11/2023-15:27:27
+Jornada creada correctamente:
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Codigo tarjeta: 2
+Hora entrada: 15:27
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/11/05
+____________________________________________________________________
+05/11/2023-15:27:36
+____________________________________________________________________
+Contenido a enviar al cliente: U95152,1,3,dni,12345678A,0
+05/11/2023-15:27:36
+El empleado que intenta iniciar jornada
+ya la tiene iniciada.
+Revise las jornada del dia de hoy.
+____________________________________________________________________
+05/11/2023-15:27:41
+____________________________________________________________________
+Contenido a enviar al cliente: U95152,1,3,codicard,2,0
+05/11/2023-15:27:41
+El empleado que intenta iniciar jornada
+ya la tiene iniciada.
+Revise las jornada del dia de hoy.
+____________________________________________________________________
+05/11/2023-15:27:50
+____________________________________________________________________
+Contenido a enviar al cliente: U95152,1,3,dni,12345678A,0
+05/11/2023-15:27:50
+El empleado que intenta iniciar jornada
+ya la tiene iniciada.
+Revise las jornada del dia de hoy.
+____________________________________________________________________
+05/11/2023-15:27:55
+____________________________________________________________________
+Contenido a enviar al cliente: U95152,1,3,dni,asdfas,0
+05/11/2023-15:27:55
+
+El Dni no existe en el registro
+____________________________________________________________________
+05/11/2023-15:28:03
+____________________________________________________________________
+Contenido a enviar al cliente: U95152,1,3,codicard,2345,0
+05/11/2023-15:28:03
+
+El codigo de tarjeta no existe en el registro
+____________________________________________________________________
+05/11/2023-15:28:15
+____________________________________________________________________
+Contenido a enviar al cliente: U95152,0,1,0,0,0
+____________________________________________________________________
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+____________________________________________________________________
+____________________________________________________________________
+Login: user
+Pass: user
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+____________________________________________________________________
+Cliente con codigo U95152 que pertenece al usuario user
+se ha desconectado correctamente.
