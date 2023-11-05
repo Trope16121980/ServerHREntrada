@@ -17,7 +17,7 @@ public class Listaempresas {
         ArrayList<Empresa> listaTotalEmpresas = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM empresa";
+            String consulta = "SELECT * FROM empresa ORDER BY nom";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -40,7 +40,7 @@ public class Listaempresas {
         ArrayList<Empresa> listaEmpresasNom = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM empresa where nom = ?";
+            String consulta = "SELECT * FROM empresa where nom = ? ORDER BY nom";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -64,7 +64,7 @@ public class Listaempresas {
         ArrayList<Empresa> listaEmpresasAddress = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM empresa where address = ?";
+            String consulta = "SELECT * FROM empresa where address = ? ORDER BY nom";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();

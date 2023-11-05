@@ -17,7 +17,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleados = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados";
+			String consulta = "SELECT * FROM empleados ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -46,7 +46,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleadosDni = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where dni = ?";
+			String consulta = "SELECT * FROM empleados where dni = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setString(1, palabraAbuscar);
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -76,7 +76,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleadosNom = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where nom = ?";
+			String consulta = "SELECT * FROM empleados where nom = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setString(1, palabraAbuscar);
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -106,7 +106,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleadosApellido = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where apellido = ?";
+			String consulta = "SELECT * FROM empleados where apellido = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setString(1, palabraAbuscar);
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -136,7 +136,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleadosNomEmpresa = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where nomempresa = ?";
+			String consulta = "SELECT * FROM empleados where nomempresa = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setString(1, palabraAbuscar);
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -166,7 +166,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleadosDepart = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where departament = ?";
+			String consulta = "SELECT * FROM empleados where departament = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setString(1, palabraAbuscar);
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -196,7 +196,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleadosCodiCard = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where codicard = ?";
+			String consulta = "SELECT * FROM empleados where codicard = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setInt(1, palabraAbuscar);
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -226,7 +226,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleadosMail = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where mail = ?";
+			String consulta = "SELECT * FROM empleados where mail = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setString(1, palabraAbuscar);
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -256,7 +256,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaTotalEmpleadosTelf = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where telephon = ?";
+			String consulta = "SELECT * FROM empleados where telephon = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setInt(1, palabraAbuscar);
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -286,7 +286,7 @@ public class Listaempleados {
 		ArrayList<Empleados> listaEmpleadosNomApellido = new ArrayList<>();
 		try {
 
-			String consulta = "SELECT * FROM empleados where nom = ? and apellido = ?";
+			String consulta = "SELECT * FROM empleados where nom = ? and apellido = ? ORDER BY nom";
 			PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
 			preparedStatement.setString(1, datoNom);
 			preparedStatement.setString(2, datoApellido);

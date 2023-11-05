@@ -12,11 +12,11 @@ import java.util.ArrayList;
  * @author Gustavo_Senorans
  */
 public class Listausers {
-      public static ArrayList<Users> listaTotalUsers(){//devuelve el dni
+      public static ArrayList<Users> listaTotalUsers(){
          ArrayList<Users> listaToUsers = new ArrayList<>();
         try {
          
-            String consulta = "SELECT * FROM users" ;
+            String consulta = "SELECT * FROM users ORDER BY login" ;
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             ResultSet resultSet = preparedStatement.executeQuery();
     
@@ -36,11 +36,11 @@ public class Listausers {
         return listaToUsers;                 
     }
       
-       public static ArrayList<Users> listaTotalUsersDni(String palabraAbuscar) {//devuelve el dni
+       public static ArrayList<Users> listaTotalUsersDni(String palabraAbuscar) {
         ArrayList<Users> listaToUsersDni = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM users where dni = ?";
+            String consulta = "SELECT * FROM users where dni = ? ORDER BY login";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -60,11 +60,11 @@ public class Listausers {
         return listaToUsersDni;
     }
        
-       public static ArrayList<Users> listaTotalUsersLogin(String palabraAbuscar) {//devuelve el dni
+       public static ArrayList<Users> listaTotalUsersLogin(String palabraAbuscar) {
         ArrayList<Users> listaTotalUsersLogin = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM users where login = ?";
+            String consulta = "SELECT * FROM users where login = ? ORDER BY login";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -84,11 +84,11 @@ public class Listausers {
         return listaTotalUsersLogin;
     }
 
-       public static ArrayList<Users> listaTotalUsersTipe(int palabraAbuscar) {//devuelve el dni
+       public static ArrayList<Users> listaTotalUsersTipe(int palabraAbuscar) {
         ArrayList<Users> listaTotalUsersTipe = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM users where numtipe = ?";
+            String consulta = "SELECT * FROM users where numtipe = ?  ORDER BY login";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();

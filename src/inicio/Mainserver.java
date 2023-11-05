@@ -22,40 +22,52 @@ import java.util.logging.Logger;
  */
 public class Mainserver {
 
-    public static void main(String[] args) {
-        ServerSocket server;
-        Socket socket;
-        Fechas fecha = new Fechas();
-        int i = 0;
-        try {
-            WindowServer WindowServer = new WindowServer();
-            WindowServer.setVisible(true);
+	public static void main(String[] args) {
+		ServerSocket server;
+		Socket socket;
+		Fechas fecha = new Fechas();
+		String nombreBase = "prueba";
+		String extension = ".txt";
+		int contador = 1;
+		File archivo;
+		FileOutputStream fileOutputStream;
+		int i = 0;
 
-            File outputFile = new File("file/" + fecha.nombre_fichero() + ".txt");
-            FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
-            
-            OutputStream outputStream = new OutputStream() {
-                @Override
-                public void write(int b) throws IOException {
-                    WindowServer.appendText(String.valueOf((char) b));
-                    fileOutputStream.write(b);
-                }
-            };
-            PrintStream printStream = new PrintStream(outputStream);
-            System.setOut(printStream);
-            
-            server = new ServerSocket(8888);
-            HashMap<String,String> logins = new HashMap<String,String>();
-            System.out.println(fecha.fecha_hora());
-            System.out.println("Esperando cliente...");
-            boolean inicio = true;
-            while (inicio) {
-                socket = server.accept();
-                i++;
-                new Threadllogin(socket,logins).start();
-            }
-        } catch (IOException ex) {
-            Logger.getLogger(WindowServer.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+		try {
+			WindowServer WindowServer = new WindowServer();
+			WindowServer.setVisible(true);
+
+			do {
+				String nombreArchivo = nombreBase + contador + extension;
+				archivo = new File("file/" + nombreArchivo);
+				contador++;
+			} while (archivo.exists());
+			archivo.createNewFile();
+
+			fileOutputStream = new FileOutputStream(archivo);
+
+			OutputStream outputStream = new OutputStream() {
+				@Override
+				public void write(int b) throws IOException {
+					WindowServer.appendText(String.valueOf((char) b));
+					fileOutputStream.write(b);
+				}
+			};
+			PrintStream printStream = new PrintStream(outputStream);
+			System.setOut(printStream);
+
+			server = new ServerSocket(8888);
+			HashMap<String, String> logins = new HashMap<String, String>();
+			System.out.println(fecha.fecha_hora());
+			System.out.println("Esperando cliente...");
+			boolean inicio = true;
+			while (inicio) {
+				socket = server.accept();
+				i++;
+				new Threadllogin(socket, logins).start();
+			}
+		} catch (IOException ex) {
+			Logger.getLogger(WindowServer.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
 }

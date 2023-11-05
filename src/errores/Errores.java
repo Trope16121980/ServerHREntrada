@@ -173,4 +173,11 @@ public class Errores {
 				+ "Revise bien en tipo de usuario y vuelva a intentarlo.");
 		return errorInsertEmpleadoNumtipe.toString();
 	}
+	
+	public String errorInsertJornadaDentro() {
+		StringBuilder errorInsertJornadaDentro = new StringBuilder();
+		errorInsertJornadaDentro.append("El empleado que intenta iniciar jornada\n"
+				+ "ya la tiene iniciada.\nRevise las jornada del dia de hoy.");
+		return errorInsertJornadaDentro.toString();
+	}
 }

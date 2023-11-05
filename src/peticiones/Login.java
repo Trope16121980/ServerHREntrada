@@ -12,7 +12,7 @@ import java.sql.SQLException;
  */
 public class Login {
 
-     public Users comprobarCredencialesBD(String login, String pass){//devuelve el dni
+     public Users comprobarCredencialesBD(String login, String pass){
         Users user = null;
         String dni="-1";
         String numtipe = "-1";

@@ -17,7 +17,7 @@ public class Listajornada {
         ArrayList<Jornada> listaTotalJornada = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada";
+            String consulta = "SELECT * FROM jornada ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -45,7 +45,7 @@ public class Listajornada {
         ArrayList<Jornada> listaTotalJornadaDni = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where dni = ?";
+            String consulta = "SELECT * FROM jornada where dni = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -73,7 +73,7 @@ public class Listajornada {
         ArrayList<Jornada> listaTotalJornadaNom = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where nom = ?";
+            String consulta = "SELECT * FROM jornada where nom = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -101,7 +101,7 @@ public class Listajornada {
         ArrayList<Jornada> listaTotalJornadaApellido = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where apellido = ?";
+            String consulta = "SELECT * FROM jornada where apellido = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -129,7 +129,7 @@ public class Listajornada {
         ArrayList<Jornada> listaJornadaCodiCard = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where codicard = ?";
+            String consulta = "SELECT * FROM jornada where codicard = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -157,7 +157,7 @@ public class Listajornada {
         ArrayList<Jornada> listaTotalJornadaFecha = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where fecha = ?";
+            String consulta = "SELECT * FROM jornada where fecha = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -185,7 +185,7 @@ public class Listajornada {
         ArrayList<Jornada> listaJornadaNomApellido = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where nom = ? and apellido = ?";
+            String consulta = "SELECT * FROM jornada where nom = ? and apellido = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoNom);
             preparedStatement.setString(2, datoApellido);
@@ -214,7 +214,7 @@ public class Listajornada {
         ArrayList<Jornada> listaJornadaDniFecha = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where dni = ? and fecha = ?";
+            String consulta = "SELECT * FROM jornada where dni = ? and fecha = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoDni);
             preparedStatement.setString(2, datoFecha);
@@ -243,7 +243,7 @@ public class Listajornada {
         ArrayList<Jornada> listaJornadaNomFecha = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where nom = ? and fecha = ?";
+            String consulta = "SELECT * FROM jornada where nom = ? and fecha = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoNom);
             preparedStatement.setString(2, datoFecha);
@@ -272,7 +272,7 @@ public class Listajornada {
         ArrayList<Jornada> listaJornadaApellidoFecha = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where apellido = ? and fecha = ?";
+            String consulta = "SELECT * FROM jornada where apellido = ? and fecha = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoApellido);
             preparedStatement.setString(2, datoFecha);
@@ -301,7 +301,7 @@ public class Listajornada {
         ArrayList<Jornada> listaJornadaCodiCardFecha = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where codicard = ? and fecha = ?";
+            String consulta = "SELECT * FROM jornada where codicard = ? and fecha = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, codicardDato);
             preparedStatement.setString(2, datoFecha);
@@ -330,7 +330,7 @@ public class Listajornada {
         ArrayList<Jornada> listaJornadaNomApellidoFecha = new ArrayList<>();
         try {
 
-            String consulta = "SELECT * FROM jornada where nom = ? and apellido = ? and fecha = ?";
+            String consulta = "SELECT * FROM jornada where nom = ? and apellido = ? and fecha = ? ORDER BY fecha";
             PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoNom);
             preparedStatement.setString(2, datoApellido);

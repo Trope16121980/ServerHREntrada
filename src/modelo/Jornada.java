@@ -19,6 +19,15 @@ public class Jornada implements Serializable{
     private String total;
     private String fecha;
 
+    public Jornada(String dni, String nom, String apellido, int codicard, String horaentrada, String fecha) {
+        this.dni = dni;
+        this.nom = nom;
+        this.apellido = apellido;
+        this.codicard = codicard;
+        this.horaentrada = horaentrada;
+        this.fecha = fecha;
+    }
+    
     public Jornada(String dni, String nom, String apellido, int codicard, String horaentrada, String horasalida, String total, String fecha) {
         this.dni = dni;
         this.nom = nom;
@@ -29,6 +38,7 @@ public class Jornada implements Serializable{
         this.total = total;
         this.fecha = fecha;
     }
+    
 
     public String getDni() {
         return dni;

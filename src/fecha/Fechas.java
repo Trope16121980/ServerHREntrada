@@ -30,6 +30,13 @@ public class Fechas {
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
         return formatoFecha.format(fecha_actual);
     }
+    
+    public String fecha_Jornada() {
+
+        Date fecha_actual = new Date();
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy/MM/dd");
+        return formatoFecha.format(fecha_actual);
+    }
 
     public String hora() {
 
