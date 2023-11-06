@@ -1,0 +1,19 @@
+06/11/2023-22:27:14
+Esperando cliente...
+Bienvenido al ServeHREntrada
+06/11/2023-22:27:37
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+06/11/2023-22:27:50
+____________________________________________________________________
+Contenido a enviar al cliente: U87829,0,0,dni,12345678A,0
+06/11/2023-22:27:50
+Bienvenido al ServeHREntrada
+06/11/2023-22:28:27
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.

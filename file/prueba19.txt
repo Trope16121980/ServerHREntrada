@@ -1,0 +1,79 @@
+06/11/2023-22:42:46
+Esperando cliente...
+Bienvenido al ServeHREntrada
+06/11/2023-22:42:56
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+06/11/2023-22:43:04
+____________________________________________________________________
+Contenido a enviar al cliente: U58957,0,0,0,0,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+06/11/2023-22:43:29
+____________________________________________________________________
+Contenido a enviar al cliente: U58957,0,0,mail,Usser.HREntrada@gmail.com,0
+
+El mail no existe en el registro
+06/11/2023-22:43:44
+____________________________________________________________________
+Contenido a enviar al cliente: U58957,0,0,mail,User.HREntrada@gmail.com,0
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+06/11/2023-22:44:00
+____________________________________________________________________
+Contenido a enviar al cliente: U58957,0,0,telephon,933456789,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+06/11/2023-22:44:21
+____________________________________________________________________
+Contenido a enviar al cliente: U58957,0,0,dni,12345678A,0
+06/11/2023-22:44:21

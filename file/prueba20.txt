@@ -1,0 +1,72 @@
+06/11/2023-22:47:34
+Esperando cliente...
+Bienvenido al ServeHREntrada
+06/11/2023-22:47:50
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+06/11/2023-22:48:07
+____________________________________________________________________
+Contenido a enviar al cliente: U47416,0,0,0,0,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+06/11/2023-22:48:22
+____________________________________________________________________
+Contenido a enviar al cliente: U47416,0,0,nom,Administrador,apellido,HREntrada,0
+06/11/2023-22:48:22
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+06/11/2023-22:48:47
+____________________________________________________________________
+Contenido a enviar al cliente: U47416,0,1,login,user,0
+____________________________________________________________________
+Login: user
+Pass: user
+Tipo de usuario: 1
+Dni: 12345679B
+____________________________________________________________________
+
+06/11/2023-22:49:03
+____________________________________________________________________
+Contenido a enviar al cliente: U47416,0,1,numtipe,0,0
+____________________________________________________________________
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+____________________________________________________________________
+
+06/11/2023-22:49:19
+____________________________________________________________________
+Contenido a enviar al cliente: U47416,0,1,dni,12345678A,0
+06/11/2023-22:49:19

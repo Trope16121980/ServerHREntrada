@@ -1,0 +1,100 @@
+06/11/2023-22:32:41
+Esperando cliente...
+Bienvenido al ServeHREntrada
+06/11/2023-22:32:50
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+06/11/2023-22:33:06
+____________________________________________________________________
+Contenido a enviar al cliente: U54198,0,0,nom,Administrador,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+06/11/2023-22:36:35
+____________________________________________________________________
+Contenido a enviar al cliente: U54198,0,0,nomempresa,Pascual,0
+
+El nombre de la empresa no existe en el registro
+06/11/2023-22:37:13
+____________________________________________________________________
+Contenido a enviar al cliente: U54198,0,0,apellido,HREntrada,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+06/11/2023-22:37:33
+____________________________________________________________________
+Contenido a enviar al cliente: U54198,0,0,nomempresa,HREntrada,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+06/11/2023-22:37:49
+____________________________________________________________________
+Contenido a enviar al cliente: U54198,0,0,departament,Informatica,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+06/11/2023-22:38:01
+____________________________________________________________________
+Contenido a enviar al cliente: U54198,0,0,codicard,1,0
+06/11/2023-22:38:01

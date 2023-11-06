@@ -161,36 +161,45 @@ public class Threadllogin extends Thread {
 										insertUsuarios = palabra.split(",");
 										insertEmpleado = palabra.split(",");
 
-										if (frase[5].equals("0") && frase[3].equals("dni")
-												|| frase[5].equals("1") && frase[3].equals("dni")) {
+										if (frase[1].equals("1") && frase[5].equals("0") && frase[3].equals("dni") || frase[5].equals("1") && frase[3].equals("dni")) {
+											
 											handleDniJornadaInsert(frase, palabra, outObjeto, client);
-										} else if (frase[5].equals("0") && frase[3].equals("codicard")
-												|| frase[5].equals("1") && frase[3].equals("codicard")) {
+											
+										} else if (frase[1].equals("1") && frase[5].equals("0") && frase[3].equals("codicard") || frase[5].equals("1") && frase[3].equals("codicard")) {
+											
 											handleDniJornadaCodicardInsert(frase, palabra, outObjeto, client);
 
 										} else if (frase[5].equals("0") || frase[5].equals("1")) {
+											
 											handleSearchRequest(frase, outObjeto, client);
 
 										} else if (nomApellido[7].equals("0") || nomApellido[7].equals("1")) {
 
 											if (nomApellido[3].equals("dni") && nomApellido[5].equals("fecha")) {
+												
 												handleDniFechaRequest(nomApellido, palabra, outObjeto, client);
 
 											} else if (nomApellido[3].equals("nom") && nomApellido[5].equals("fecha")) {
+												
 												handleNomFechaRequest(nomApellido, palabra, outObjeto, client);
+												
 											} else if (nomApellido[3].equals("nomNuevo")
 													&& nomApellido[5].equals("nom")) {
+												
 												handleUpdateNomEmpresaRequest(nomApellido, palabra, outObjeto, client);
 
 											} else if (nomApellido[3].equals("apellido")
 													&& nomApellido[5].equals("fecha")) {
+												
 												handleApellidoFechaRequest(nomApellido, palabra, outObjeto, client);
 
 											} else if (nomApellido[3].equals("codicard")
 													&& nomApellido[5].equals("fecha")) {
+												
 												handleCodicardFechaRequest(nomApellido, palabra, outObjeto, client);
 
 											} else {
+												
 												handleNomApellidoRequest(nomApellido, palabra, outObjeto, client);
 											}
 

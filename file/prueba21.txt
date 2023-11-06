@@ -1,0 +1,36 @@
+06/11/2023-22:58:45
+Esperando cliente...
+Bienvenido al ServeHREntrada
+06/11/2023-22:58:55
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+06/11/2023-22:59:09
+____________________________________________________________________
+Contenido a enviar al cliente: U42276,0,0,dni,12345678A,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+06/11/2023-22:59:24
+____________________________________________________________________
+Contenido a enviar al cliente: U42276,0,0,codicard,1,0
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
