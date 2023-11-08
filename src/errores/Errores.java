@@ -188,4 +188,13 @@ public class Errores {
 				+ "Revise la lista de empresas y vuelva a intentarlo.");
 		return errorUpdateEmpresa.toString();
 	}
+        
+        public String errorUpdateEmpleadoDni() {
+		StringBuilder errorUpdateEmpleadoDni = new StringBuilder();
+		errorUpdateEmpleadoDni.append("\nEl nuevo dni del empleado que quiere utilizar\n"
+				+ "ya esta en la lista de empleados\n"
+				+ "Revise la lista de empleados y vuelva a intentarlo.");
+		return errorUpdateEmpleadoDni.toString();
+	}
+        
 }

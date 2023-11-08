@@ -30,8 +30,7 @@ public class Listaempleados {
 				int codicard = resultSet.getInt("codicard");
 				String mail = resultSet.getString("mail");
 				int telephon = resultSet.getInt("telephon");
-				listaTotalEmpleados
-						.add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
+				listaTotalEmpleados.add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
 			}
 			preparedStatement.close();
