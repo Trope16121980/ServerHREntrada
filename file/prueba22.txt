@@ -1,0 +1,59 @@
+12/11/2023-21:46:23
+Esperando cliente...
+Bienvenido al ServeHREntrada
+12/11/2023-21:46:30
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Bienvenido al ServeHREntrada
+12/11/2023-21:46:39
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:46:46
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:46:51
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+12/11/2023-21:47:02
+____________________________________________________________________
+____________________________________________________________________
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+____________________________________________________________________
+____________________________________________________________________
+Login: user
+Pass: user
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+Bienvenido al ServeHREntrada
+12/11/2023-21:47:12
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:47:31
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.

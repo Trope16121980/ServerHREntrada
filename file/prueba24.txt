@@ -1,83 +1,105 @@
-09/11/2023-18:34:41
+12/11/2023-21:51:38
 Esperando cliente...
 Bienvenido al ServeHREntrada
-09/11/2023-18:35:47
+12/11/2023-21:51:49
 ____________________________________________________________________
 Datos de login recibidos:
-Login : user
-Pass: user
-09/11/2023-18:36:01
+Login : admin
+Pass: admin
+12/11/2023-21:51:58
 ____________________________________________________________________
 ____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
 Nombre empresa: HREntrada
-Direccion: Barcelona
-Telefono: 933123123
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrador.HREntrada@gmail.com
+Telefono: 933456789
+
 ____________________________________________________________________
 ____________________________________________________________________
-Nombre empresa: Netsle
-Direccion: Martorell
-Telefono: 1234
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
 ____________________________________________________________________
-____________________________________________________________________
-Nombre empresa: Pascual
-Direccion: Lugo
-Telefono: 123412
-____________________________________________________________________
-____________________________________________________________________
-Nombre empresa: Toyota
-Direccion: El Prat
-Telefono: 933300300
-____________________________________________________________________
-____________________________________________________________________
-Cliente con codigo U2993 que pertenece al usuario user
-se ha desconectado correctamente.
 Bienvenido al ServeHREntrada
-09/11/2023-18:36:52
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Bienvenido al ServeHREntrada
-09/11/2023-18:37:09
-____________________________________________________________________
-Datos de login recibidos:
-Login : admin
-Pass: admin
-Bienvenido al ServeHREntrada
-09/11/2023-18:38:36
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-09/11/2023-18:39:05
+12/11/2023-21:52:11
 ____________________________________________________________________
 Datos de login recibidos:
 Login : admin
 Pass: admin
 Cliente desconectado, ya esta conectado este usuario.
 Bienvenido al ServeHREntrada
-09/11/2023-18:39:35
+12/11/2023-21:52:21
 ____________________________________________________________________
 Datos de login recibidos:
-Login : useasdf
-Pass: user
-09/11/2023-18:39:35
-____________________________________________________________________
-Cliente desconectado, error en el login
+Login : admin
+Pass: admin
+Cliente desconectado, ya esta conectado este usuario.
 Bienvenido al ServeHREntrada
-09/11/2023-18:39:46
+12/11/2023-21:52:27
 ____________________________________________________________________
 Datos de login recibidos:
-Login : asdsfas
+Login : asdfasd
 Pass: fasdfa
-09/11/2023-18:39:46
+12/11/2023-21:52:28
 ____________________________________________________________________
 Cliente desconectado, error en el login
+Bienvenido al ServeHREntrada
+12/11/2023-21:52:37
 ____________________________________________________________________
-Cliente con codigo A11838 que pertenece al usuario admin
-se ha desconectado correctamente.
+Datos de login recibidos:
+Login : admin
+Pass: admin
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:52:54
 ____________________________________________________________________
-Cliente con codigo U28877 que pertenece al usuario user
-se ha desconectado correctamente.
+Datos de login recibidos:
+Login : admin
+Pass: admin
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:53:20
+____________________________________________________________________
+Datos de login recibidos:
+Login : admin
+Pass: admin
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:53:27
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Bienvenido al ServeHREntrada
+12/11/2023-21:53:35
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: usr
+12/11/2023-21:53:35
+____________________________________________________________________
+Cliente desconectado, error en el login
+Bienvenido al ServeHREntrada
+12/11/2023-21:53:42
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:53:52
+____________________________________________________________________
+Datos de login recibidos:
+Login : admin
+Pass: admin
+Cliente desconectado, ya esta conectado este usuario.

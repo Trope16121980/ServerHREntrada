@@ -145,7 +145,6 @@ public class Threadllogin extends Thread {
                                         System.out.println(fecha.fecha_hora());
                                         System.out.println(
                                                 "____________________________________________________________________");
-                                           
 
                                         PrintPorColumna verificar = new PrintPorColumna();
                                         verificar.selectColumna(palabra);
@@ -154,6 +153,7 @@ public class Threadllogin extends Thread {
                                         String[] nomApellido = new String[8];
                                         String[] insertEmpresas = new String[10];
                                         String[] insertUsuarios = new String[12];
+                                        String[] updateUsers = new String[14];
                                         String[] insertEmpleado = new String[20];
                                         String[] updateEmpleado = new String[22];
 
@@ -161,6 +161,7 @@ public class Threadllogin extends Thread {
                                         nomApellido = palabra.split(",");
                                         insertEmpresas = palabra.split(",");
                                         insertUsuarios = palabra.split(",");
+                                        updateUsers = palabra.split(",");
                                         insertEmpleado = palabra.split(",");
                                         updateEmpleado = palabra.split(",");
 
@@ -217,11 +218,14 @@ public class Threadllogin extends Thread {
                                                 || insertUsuarios[1].equals("2") && insertUsuarios[9].equals("nom") && insertUsuarios[11].equals("1")) {
                                             handleUpdateEmpresaRequest(insertUsuarios, palabra, outObjeto, client);
 
+                                        } else if (updateUsers[1].equals("2") && updateUsers[2].equals("1") && updateUsers[11].equals("dni") && updateUsers[13].equals("0")
+                                                || updateUsers[1].equals("2") && updateUsers[2].equals("1") && updateUsers[11].equals("dni") && updateUsers[13].equals("1")) {
+                                            handleUpdateUsersRequest(updateUsers, palabra, outObjeto, client);
+
                                         } else if (insertEmpleado[19].equals("0")
                                                 && insertEmpleado[9].equals("nomempresa")
                                                 || insertEmpleado[19].equals("1")
                                                 && insertEmpleado[9].equals("nomempresa")) {
-
                                             handleEmpleadoInsert(insertEmpleado, palabra, outObjeto, client);
 
                                         } else if (updateEmpleado[1].equals("2") && updateEmpleado[2].equals("0") && updateEmpleado[19].equals("dni") && updateEmpleado[21].equals("0")
@@ -247,10 +251,12 @@ public class Threadllogin extends Thread {
             } catch (NullPointerException e) {
                 System.out.println("NullPointerException thrown!");
                 logins.remove(user.getDni());
+                usersConnected.remove(user.getDni());
                 System.out.println("Users conectados: " + logins);
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("NullPointerException thrown!");
                 logins.remove(user.getDni());
+                usersConnected.remove(user.getDni());
                 System.out.println("Users conectados: " + logins);
             } catch (IOException ex) {
                 logins.remove(user.getDni());
@@ -281,6 +287,36 @@ public class Threadllogin extends Thread {
             } catch (IOException e) {
                 System.out.println("Error al cerrar recursos de comunicación: " + e.getMessage());
             }
+        }
+    }
+
+    private void handleUpdateUsersRequest(String[] updateUsers, String palabra, ObjectOutputStream outObjeto,
+            Socket client) throws IOException {
+        String codigoUserRecibido = updateUsers[0];
+        String crud = updateUsers[1];
+        String nombreTabla = updateUsers[2];
+        String loginNuevo = updateUsers[3];
+        String datoLoginNuevo = updateUsers[4];
+        String passNuevo = updateUsers[5];
+        String datoPassNuevo = updateUsers[6];
+        String numtipeNuevo = updateUsers[7];
+        String datoNumtipeNuevo = updateUsers[8];
+        String dniNuevo = updateUsers[9];
+        String datoDniNuevo = updateUsers[10];
+        String dni = updateUsers[11];
+        String datoDni = updateUsers[12];
+        String orden = updateUsers[13];
+        if (!codigo.equals(codigoUserRecibido)) {
+            verificarCodigoCliente(codigoUserRecibido);
+
+        } else if (orden.equals("0") || orden.equals("1")) {
+            System.out.println(fecha.fecha_hora());
+            UpdateCrudUsers.handleSearchRequest(crud, nombreTabla, loginNuevo, datoLoginNuevo,
+                    passNuevo, datoPassNuevo,
+                    numtipeNuevo, Integer.parseInt(datoNumtipeNuevo),
+                    dniNuevo, datoDniNuevo,
+                    dni, datoDni,
+                    palabra, palabra, outObjeto, client);
         }
     }
 

@@ -1,0 +1,45 @@
+12/11/2023-21:09:37
+Esperando cliente...
+Bienvenido al ServeHREntrada
+12/11/2023-21:09:49
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Bienvenido al ServeHREntrada
+12/11/2023-21:09:56
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:10:02
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:10:07
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:10:11
+____________________________________________________________________
+Datos de login recibidos:
+Login : asdfas
+Pass: dfasdf
+12/11/2023-21:10:11
+____________________________________________________________________
+Cliente desconectado, error en el login
+Bienvenido al ServeHREntrada
+12/11/2023-21:10:22
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.

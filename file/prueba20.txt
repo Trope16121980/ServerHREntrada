@@ -1,0 +1,69 @@
+12/11/2023-21:43:19
+Esperando cliente...
+Bienvenido al ServeHREntrada
+12/11/2023-21:43:36
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+12/11/2023-21:43:44
+____________________________________________________________________
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrador.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+Bienvenido al ServeHREntrada
+12/11/2023-21:43:48
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:43:54
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:44:01
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
+Bienvenido al ServeHREntrada
+12/11/2023-21:44:05
+____________________________________________________________________
+Datos de login recibidos:
+Login : f
+Pass: asdfasf
+12/11/2023-21:44:05
+____________________________________________________________________
+Cliente desconectado, error en el login
+Bienvenido al ServeHREntrada
+12/11/2023-21:44:17
+____________________________________________________________________
+Datos de login recibidos:
+Login : user
+Pass: user
+Cliente desconectado, ya esta conectado este usuario.
