@@ -5,11 +5,23 @@ import java.util.List;
 import modelo.Jornada;
 
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
+
 public class PrintJornada {
 
+      /**
+     * Este método imprime la lista de jornada que hemos
+     * buscado en el metodo listaTotalJornada del paquete peticiones he
+     * imprime los dato en el textArea del JFrame del servidor
+     *
+     * @param Listajornada List de las jornadas completas
+     * @param columna el nombre de la columna
+     * @return devuelve los datos de las jornada
+     */
+    
     public String obtenerDatosJornada(List<Jornada> Listajornada, String columna) {
         StringBuilder datosJornadaa = new StringBuilder();
         for (Jornada jornada : Listajornada) {
@@ -27,6 +39,16 @@ public class PrintJornada {
         return datosJornadaa.toString();
     }
 
+     /**
+     * Este método imprime la lista de jornada que hemos
+     * buscado en el metodo listaJornadaNomApellido del paquete peticiones he
+     * imprime los dato en el textArea del JFrame del servidor
+     *
+     * @param listaJornadaNomApellido List de las jornadas por nombre y apellido
+     * @param columna el nombre de la columna
+     * @param apellido el apellido a buscar
+     * @return devuelve los datos de las jornada
+     */
     public String obtenerDatosJornadaNomApellido(List<Jornada> listaJornadaNomApellido, String columna, String apellido) {
         StringBuilder datosJornadaNomApellido = new StringBuilder();
         for (Jornada jornadaNomApellido : listaJornadaNomApellido) {
@@ -43,6 +65,17 @@ public class PrintJornada {
         datosJornadaNomApellido.append("____________________________________________________________________\n");
         return datosJornadaNomApellido.toString();
     }
+    
+     /**
+     * Este método imprime la lista de jornada que hemos
+     * buscado en el metodo listaJornadaDniFecha del paquete peticiones he
+     * imprime los dato en el textArea del JFrame del servidor
+     *
+     * @param listaJornadaDniFecha List de las jornadas por dni y fecha
+     * @param dni el dni a buscar
+     * @param fecha la fecha a buscar
+     * @return devuelve los datos de las jornada
+     */
     
     public String obtenerDatosJornadaDniFecha(List<Jornada> listaJornadaDniFecha, String dni, String fecha) {
         StringBuilder datosJornadaDniFecha = new StringBuilder();
@@ -61,6 +94,16 @@ public class PrintJornada {
         return datosJornadaDniFecha.toString();
     }
     
+     /**
+     * Este método imprime la lista de jornada que hemos
+     * buscado en el metodo listaJornadaNomFecha del paquete peticiones he
+     * imprime los dato en el textArea del JFrame del servidor
+     *
+     * @param listaJornadaNomFecha List de las jornadas por nombre y fecha
+     * @param nom el nombre a buscar
+     * @param fecha la fecha de la buscar
+     * @return devuelve los datos de las jornada
+     */
     public String obtenerDatosJornadaNomFecha(List<Jornada> listaJornadaNomFecha, String nom, String fecha) {
         StringBuilder datosJornadaNomFecha = new StringBuilder();
         for (Jornada jornadaNomFecha : listaJornadaNomFecha) {
@@ -78,6 +121,16 @@ public class PrintJornada {
         return datosJornadaNomFecha.toString();
     }
     
+     /**
+     * Este método imprime la lista de jornada que hemos
+     * buscado en el metodo listaJornadaApellidoFecha del paquete peticiones he
+     * imprime los dato en el textArea del JFrame del servidor
+     *
+     * @param listaJornadaApellidoFecha List de las jornadas por apellido y fecha
+     * @param apellido el apellido a buscar
+     * @param fecha fecha de la jornada
+     * @return devuelve los datos de las jornada
+     */
     public String obtenerDatosJornadaApellidoFecha(List<Jornada> listaJornadaApellidoFecha, String apellido, String fecha) {
         StringBuilder datosJornadaApellidoFecha = new StringBuilder();
         for (Jornada jornadaApellidoFecha : listaJornadaApellidoFecha) {
@@ -95,6 +148,16 @@ public class PrintJornada {
         return datosJornadaApellidoFecha.toString();
     }
     
+     /**
+     * Este método imprime la lista de jornada que hemos
+     * buscado en el metodo listaJornadaCodicardFecha del paquete peticiones he
+     * imprime los dato en el textArea del JFrame del servidor
+     *
+     * @param listaJornadaCodicardFecha List de las jornadas por codigo de tarjeta y fecha
+     * @param codicard el codigo de tarjeta a bucar
+     * @param fecha la fecha a buscar
+     * @return devuelve los datos de las jornada
+     */
     public String obtenerDatosJornadaCodicardFecha(List<Jornada> listaJornadaCodicardFecha, String codicard, String fecha) {
         StringBuilder datosJornadaCodicardFecha = new StringBuilder();
         for (Jornada jornadaCodicardFecha : listaJornadaCodicardFecha) {
@@ -112,6 +175,17 @@ public class PrintJornada {
         return datosJornadaCodicardFecha.toString();
     }
     
+     /**
+     * Este método imprime la lista de jornada que hemos
+     * buscado en el metodo listaJornadaNomApellidoFecha del paquete peticiones he
+     * imprime los dato en el textArea del JFrame del servidor
+     *
+     * @param listaJornadaNomApellidoFecha List de las jornadas por nombre, apellido y fecha
+     * @param nom el nombre a buscar
+     * @param apellido el apellido a buscar
+     * @param fecha la fecha a buscar
+     * @return devuelve los datos de las jornada
+     */
     public String obtenerDatosJornadaNomApellidoFecha(List<Jornada> listaJornadaNomApellidoFecha, String nom, String apellido, String fecha) {
         StringBuilder datosJornadaNomApellidoFecha = new StringBuilder();
         for (Jornada jornadaNomApellidoFecha : listaJornadaNomApellidoFecha) {

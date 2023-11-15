@@ -1,9 +1,5 @@
 package thread;
 
-/**
- *
- * @author Gustavo_Senorans
- */
 import search.*;
 import update.*;
 import insert.*;
@@ -17,9 +13,13 @@ import java.util.*;
 import java.io.*;
 import java.util.concurrent.ConcurrentHashMap;
 import modelo.*;
-import peticiones.*;
 import update.UpdateCrudEmpresa;
 
+/**
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
+ */
 public class Threadllogin extends Thread {
 
 //    private static final int MAX_INACTIVITY_TIME_SECONDS = 30; // 5 minutos de inactividad
@@ -38,6 +38,13 @@ public class Threadllogin extends Thread {
     private static final String USER_ALREADY_CONNECTED = "-2";
     private static Set<String> usersConnected = ConcurrentHashMap.newKeySet();
 
+    /**
+     * Este método guarda los datos del socket del cliente, el hashmap para el
+     * codigo del usuario conectado
+     *
+     * @param client el socket del cliente
+     * @param logins los datos del usuario conectado
+     */
     public Threadllogin(Socket client, HashMap<String, String> logins) {
         try {
             this.client = client;
@@ -50,6 +57,10 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Metodo run que genera la conexión con el cliente para gestionar el envio
+     * y recepción de datos
+     */
     @Override
     public void run() {
         String msg;
@@ -58,10 +69,16 @@ public class Threadllogin extends Thread {
         Users user = null;
 
         try {
-
+            /**
+             * Creamos las distinsta variables para la lectura de datos del
+             * cliente y el envio de los datos
+             */
             escriptor = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
             lector = new BufferedReader(new InputStreamReader(client.getInputStream()));
 
+            /**
+             * Creamos el objeto que contendra la lista de las clases
+             */
             ObjectOutputStream outObjeto = null;
             msg = "";
             escriptor.write(msg);
@@ -71,9 +88,17 @@ public class Threadllogin extends Thread {
             try {
                 String palabra = lector.readLine();
 
+                /**
+                 * Verificamos la entrada de datos del cliente si es exit
+                 * cerramos conexión
+                 */
                 if (palabra != null && palabra.equalsIgnoreCase("exit")) {
                     exit(user);
                 } else {
+                    /**
+                     * Generamos la conexión con el cliente y le damos la
+                     * bienvenida
+                     */
                     System.out.println("Bienvenido al ServeHREntrada");
                     System.out.println(fecha.fecha_hora());
                     String[] datos = new String[2];
@@ -84,6 +109,9 @@ public class Threadllogin extends Thread {
                         login = datos[0];
                         pass = datos[1];
                     }
+                    /**
+                     * Imprimimos los datos del cliente conectado
+                     */
                     System.out.println("____________________________________________________________________");
                     System.out.println("Datos de login recibidos:\nLogin : " + login + "\nPass: " + pass);
 
@@ -91,6 +119,9 @@ public class Threadllogin extends Thread {
                     user = dvLogin.comprobarCredencialesBD(login, pass);
 
                     try {
+                        /**
+                         * Se verifica si el usuario esta conectado
+                         */
                         if (user != null) {
                             if (usersConnected.contains(user.getDni())) {
                                 msg = USER_ALREADY_CONNECTED;
@@ -106,6 +137,10 @@ public class Threadllogin extends Thread {
                             }
                         }
 
+                        /**
+                         * Se verifica si el socket del cliente esta cerrado o
+                         * no y si el codigo de usuario es correcto
+                         */
                         if (!client.isClosed() && codigo.equalsIgnoreCase(ERROR_LOGIN)) {
                             msg = ERROR_LOGIN;
                             System.out.println(fecha.fecha_hora());
@@ -130,6 +165,11 @@ public class Threadllogin extends Thread {
 
                                     palabra = lector.readLine();
 
+                                    /**
+                                     * Si el codigo es correcto y hay conexión
+                                     * con el servidor se le envia el codigo al
+                                     * cliente
+                                     */
                                     if (palabra.equals(null) || palabra.equalsIgnoreCase("exit")) {
                                         System.out.println(
                                                 "____________________________________________________________________");
@@ -149,6 +189,11 @@ public class Threadllogin extends Thread {
                                         PrintPorColumna verificar = new PrintPorColumna();
                                         verificar.selectColumna(palabra);
 
+                                        /**
+                                         * Dependiendo de los datos recibido
+                                         * desde el cliente los introducimos en
+                                         * un array o en otro
+                                         */
                                         String[] frase = new String[6];
                                         String[] nomApellido = new String[8];
                                         String[] insertEmpresas = new String[10];
@@ -290,6 +335,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param updateUsers array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleUpdateUsersRequest(String[] updateUsers, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = updateUsers[0];
@@ -320,6 +374,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param insertJornada array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleDniJornadaInsert(String[] insertJornada, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = insertJornada[0];
@@ -342,6 +405,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param insertJornadaCodicard array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleDniJornadaCodicardInsert(String[] insertJornadaCodicard, String palabra,
             ObjectOutputStream outObjeto, Socket client) throws IOException {
         String codigoUserRecibido = insertJornadaCodicard[0];
@@ -365,6 +437,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param insertEmpleado array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleEmpleadoInsert(String[] insertEmpleado, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = insertEmpleado[0];
@@ -404,6 +485,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param insertUsuarios array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleUsersInsert(String[] insertUsuarios, String palabra, ObjectOutputStream outObjeto, Socket client)
             throws IOException {
         String codigoUserRecibido = insertUsuarios[0];
@@ -433,6 +523,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param insertEmpresas array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleEmpresaInsert(String[] insertEmpresas, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = insertEmpresas[0];
@@ -459,6 +558,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param NomApellido array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleNomApellidoRequest(String[] NomApellido, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = NomApellido[0];
@@ -484,6 +592,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param NomApellido array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleNomFechaRequest(String[] NomApellido, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = NomApellido[0];
@@ -506,6 +623,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param insertUsuarios array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleUpdateEmpresaRequest(String[] insertUsuarios, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = insertUsuarios[0];
@@ -534,6 +660,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param updateEmpleado array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleUpdateEmpleadosRequest(String[] updateEmpleado, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = updateEmpleado[0];
@@ -575,6 +710,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param NomApellido array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleApellidoFechaRequest(String[] NomApellido, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = NomApellido[0];
@@ -597,6 +741,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param NomApellido array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleCodicardFechaRequest(String[] NomApellido, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = NomApellido[0];
@@ -619,6 +772,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param NomApellido array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleDniFechaRequest(String[] NomApellido, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = NomApellido[0];
@@ -641,6 +803,15 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param insertEmpresas array que contiene los datos
+     * @param palabra datos recibidos del cliente
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleNomApellidoFechaRequest(String[] insertEmpresas, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = insertEmpresas[0];
@@ -665,6 +836,14 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método envia los datos recibido del cliente a verificar
+     *
+     * @param insertEmpresas array que contiene los datos
+     * @param outObjeto objeto que contiene la lista para el envio
+     * @param client socket del cliente
+     * @throws IOException controla los errores
+     */
     private void handleSearchRequest(String[] data, ObjectOutputStream outObjeto, Socket client) throws IOException {
         String codigoUserRecibido = data[0];
         String crud = data[1];
@@ -713,6 +892,12 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Verifica el codigo del cliente para realizar su desconexión
+     *
+     * @param codigoUserRecibido codigo de usuario recibido desde el cliente
+     * @throws IOException
+     */
     private void verificarCodigoCliente(String codigoUserRecibido) throws IOException {
         if (!codigo.equals(codigoUserRecibido)) {
             System.out.println("____________________________________________________________________");
@@ -725,6 +910,11 @@ public class Threadllogin extends Thread {
         }
     }
 
+    /**
+     * Este método realiza la salida correcta del usuario
+     *
+     * @param user datos del usuario
+     */
     private void exit(Users user) {
         try {
             salir = true;

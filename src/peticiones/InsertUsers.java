@@ -12,11 +12,35 @@ import errores.Errores;
 import modelo.Users;
 
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class InsertUsers {
 
+    /**
+     * Conecta con la BBDD HREntrad para realizar la inserción de los datos del
+     * usuario y envia los datos al cliente o un mensaje de error
+     * Objeto a recibir del cliente: codiUser,1,1,login,datoLogin,pass,datoPass,numTipe,datooNumTipe,dni,datoDni,0
+     * 
+     * @param crud en este caso es 1 para el insert
+     * @param nombreTabla el número de la tabla en este caso 1, ya que se
+     * refiere al usuario
+     * @param login el nombre de la columna de la tabla
+     * @param datoLogin el login del usuario que quiere insertar
+     * @param pass el nombre de la columna de la tabla
+     * @param datoPass el password del usuario que quiere insertar
+     * @param numTipe el nombre de la columna de la tabla
+     * @param datoNumTipe el tipo de usuario que quiere insertar
+     * @param dni el nombre de la columna de la tabla
+     * @param datoDni el dni del empleado que quiere insertar para que u pueda
+     * iniciar sesión como admin o user generico
+     * @param palabraAbuscar al array que contiene los datos
+     * @param outObjeto el objeto que contiene el array
+     * @param client el socket del cliente al que se le envían los datos
+     * @return devuelve los datos del usuario que se ha insertado si es corecto
+     * @throws IOException controla los errores
+     */
     public static ArrayList<Users> insertUser(String crud, String nombreTabla, String login, String datoLogin,
             String pass, String datoPass, String numTipe, String datoNumTipe, String dni, String datoDni,
             String palabraAbuscar, ObjectOutputStream outObjeto, Socket client) throws IOException {

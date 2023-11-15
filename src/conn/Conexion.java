@@ -1,4 +1,3 @@
-
 package conn;
 
 import java.sql.Connection;
@@ -8,8 +7,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class Conexion {
 
@@ -17,13 +17,18 @@ public class Conexion {
     private String user = "admin";
     private String password = "admin";
     private String url = "jdbc:postgresql://localhost:5432/HREntrada";
-    //private String url = "jdbc:postgresql://localhost:5432/hrentrada";
 
+    /**
+     * Genera la conexión con la BBDD HREntrada
+     *
+     * @throws SQLException en el proceso de conexión con BBDD HREntrada
+     * @return devuelve true si la conexión es correcta o false si la conexion
+     * es fallida
+     */
     public static Connection getconexion() throws SQLException {
         String user = "admin";
         String password = "admin";
         String url = "jdbc:postgresql://localhost:5432/HREntrada";
-        //String url = "jdbc:postgresql://localhost:5432/hrentrada";
         Connection conn = null;
         conn = DriverManager.getConnection(url, user, password);
         return conn;
@@ -37,6 +42,13 @@ public class Conexion {
         }
     }
 
+    /**
+     * Metodo para la conexión
+     *
+     * @param user nombre de usuario de la BBDD HREntrada
+     * @param password del usuario de BBDD HREntrada
+     * @param url la dirección de conexión con la BBDD HREntrada
+     */
     public Conexion(String user, String password, String url) {
         try {
             conn = DriverManager.getConnection(url, user, password);

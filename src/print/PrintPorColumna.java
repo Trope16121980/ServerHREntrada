@@ -10,11 +10,19 @@ import peticiones.Listajornada;
 import peticiones.Listausers;
 
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class PrintPorColumna {
 
+    /**
+     * Imprime los datos en el textArea del servidor según el crud que utilice
+     * el nombre de la tabla he imprime las listas completas
+     *
+     * @param palabra lista recibida del cliente
+     * @throws IOException controla los errores
+     */
     public void selectColumna(String palabra) throws IOException {
 
         String[] frase = new String[6];

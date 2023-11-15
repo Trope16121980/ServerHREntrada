@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package peticiones;
 
 import errores.Errores;
@@ -15,11 +11,39 @@ import java.util.ArrayList;
 import modelo.Users;
 
 /**
- *
- * @author gsenorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class UpdateUsers {
 
+    /**
+     * Este método conecta con la BBDD HREntrada para realizar la modificación
+     * de los datos del usuario y realizar el envío de los mismo o un error
+     *
+     * Objeto a recibir del cliente:  codiUser,2,1,loginNuevo,datoLoginNuevo,passNuevo,
+     * datoPassNuevo,numtipeNuevo,datoNumtipeNuevo,dni,datoDni,0
+     *
+     * @param crud en este caso es 2 para el update
+     * @param nombreTabla el número de la tabla en este caso 1, ya que se
+     * refiere al usuarios
+     * @param loginNuevo el nombre de la columna de la tabla nombretabla+Nuevo
+     * @param datoLoginNuevo el login nuevo a insertar
+     * @param passNuevo el nombre de la columna de la tabla nombretabla+Nuevo
+     * @param datoPassNuevo el password nuevo a insertar
+     * @param numtipeNuevo el nombre de la columna de la tabla nombretabla+Nuevo
+     * @param datoNumtipeNuevo el tipo de usuario nuevo a insertar
+     * @param dniNuevo el nombre de la columna de la tabla nombretabla+Nuevo
+     * @param datoDniNuevo el dni nuevo a insertar
+     * @param dni el nombre de la columna original de la tabla
+     * @param datoDni el dni original del usuario a modificar
+     * @param palabraAbuscar al array que contiene los datos
+     * @param palabra variable necesaria para las modificaciones
+     * @param outObjeto el objeto que contiene el array
+     * @param client el socket del cliente al que se le envían los datos
+     * @return devuelve los datos del usuario que se ha modificado si es corecto
+     * @throws IOException controla los errores
+     */
     public static ArrayList<Users> updateUsers(String crud, String nombreTabla,
             String loginNuevo, String datoLoginNuevo,
             String passNuevo, String datoPassNuevo,

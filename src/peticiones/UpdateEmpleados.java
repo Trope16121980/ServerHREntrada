@@ -1,9 +1,5 @@
 package peticiones;
 
-/**
- *
- * @author gsenorans
- */
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -15,8 +11,59 @@ import java.util.ArrayList;
 import errores.Errores;
 import modelo.*;
 
+/**
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
+ */
 public class UpdateEmpleados {
 
+    /**
+     * Este método conecta con la BBDD HREntrada para realizar la modificación
+     * de los datos del empleado y realizar el envío de los mismo o un error
+     * 
+     * codiUser,2,0,dniNuevo,datoDniNuevo,nomNuevo,datoNomNuevo,apellidoNuevo,datoApellidoNuevo
+     * nomempresaNuevo,datoNomempresaNuevo,departamentNuevo,datoDepartamentNuevo,codicarNuevo,
+     * datoCodicardNuevo,mailNuevo,datoMailNuevo,telephonNuevo,datoTelephonNuevo,dni,datoDni,0
+     *
+     * @param crud en este caso es 2 para el update
+     * @param nombreTabla el número de la tabla en este caso 0, ya que se
+     * refiere al empleado
+     * @param dniNuevo el nombre de la columna de la tabla nombretabla+Nuevo
+     * @param datoDniNuevo el dni nuevo del empleado a modificar
+     * @param nomNuevo el nombre de la columna de la tabla nombretabla+Nuevo
+     * @param datoNomNuevo el nombre nuevo del empleado a modificar
+     * @param apellidoNuevo el nombre de la columna de la tabla
+     * nombretabla+Nuevo
+     * @param datoApellidoNuevo el apellido nuevo del empleado a modificar
+     * @param nomempresaNuevo el nombre de la columna de la tabla
+     * nombretabla+Nuevo
+     * @param datoNomempresaNuevo el nombre nuevo de la empresa del empleado a
+     * modificar
+     * @param departamentNuevo el nombre de la columna de la tabla
+     * nombretabla+Nuevo
+     * @param datoDepartamentNuevo el departamento nuevo del empleado a
+     * modificar
+     * @param codicardNuevo el nombre de la columna de la tabla
+     * nombretabla+Nuevo
+     * @param datoCodicardNuevo el codigo de tarjeta nuevo del empleado a
+     * modificar
+     * @param mailNuevo el nombre de la columna de la tabla nombretabla+Nuevo
+     * @param datoMailNuevo el mail nuevo del empleado a modificar
+     * @param telephonNuevo el nombre de la columna de la tabla
+     * nombretabla+Nuevo
+     * @param datoTelephonNuevo el número de teléfono nuevo del empleado a
+     * modificar
+     * @param dni el nombre de la columna original de la tabla
+     * @param datoDni el dni original del empleado a modificar
+     * @param palabraAbuscar al array que contiene los datos
+     * @param palabra variable necesaria para las modificaciones
+     * @param outObjeto el objeto que contiene el array
+     * @param client el socket del cliente al que se le envían los datos
+     * @return devuelve los datos del empleado que se ha modificado si es
+     * corecto
+     * @throws IOException controla los errores
+     */
     public static ArrayList<Empleados> updateEmpleados(String crud, String nombreTabla,
             String dniNuevo, String datoDniNuevo,
             String nomNuevo, String datoNomNuevo,

@@ -4,17 +4,17 @@
  */
 package frames;
 
-
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class WindowServer extends javax.swing.JFrame {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Creates new form WindowServer
+     * Inicia los componentes de JFrame del servidor
      */
     public WindowServer() {
         initComponents();
@@ -128,6 +128,9 @@ public class WindowServer extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Acción del botón salir
+     */
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
@@ -143,6 +146,11 @@ public class WindowServer extends javax.swing.JFrame {
     private javax.swing.JTextField txtEstado;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Evalua todo el texto que pasa por el text area del JFrame
+     *
+     * @param valueOf evalua el lenguaje en este caso UTF-8
+     */
     public void appendText(String valueOf) {
         jTextArea.append(valueOf.formatted("UTF-8"));
     }

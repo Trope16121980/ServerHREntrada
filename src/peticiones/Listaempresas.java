@@ -1,4 +1,3 @@
-
 package peticiones;
 
 import modelo.Empresa;
@@ -8,11 +7,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class Listaempresas {
 
+    /**
+     * Este método hace la busqueda total de la tabla Empresa y envía los datos
+     * ordenados por su nombre 
+     * Objeto a recibir del cliente: codiUser,0,2,0,0,0
+     *
+     * @return devuelve la listaTotalEmpresas, todos los datos de todos los
+     * empleados
+     */
     public static ArrayList<Empresa> listaTotalEmpresas() {
         ArrayList<Empresa> listaTotalEmpresas = new ArrayList<>();
         try {
@@ -36,6 +44,15 @@ public class Listaempresas {
         return listaTotalEmpresas;
     }
 
+    /**
+     * Este método hace la busqueda de los Empresa por su nombre y envía los
+     * datos ordenados por su nombre
+     *
+     * @param palabraAbuscar el array que contiene los datos a buscar
+     * codiUser,0,2,nom,datoNom,0
+     * @return devuelve la listaEmpresasNom, la lista que genera el select a la
+     * BBDD HREntrada
+     */
     public static ArrayList<Empresa> listaEmpresasNom(String palabraAbuscar) {
         ArrayList<Empresa> listaEmpresasNom = new ArrayList<>();
         try {
@@ -60,6 +77,15 @@ public class Listaempresas {
         return listaEmpresasNom;
     }
 
+    /**
+     * Este método hace la busqueda de los Empresa por su dirección ordenados y
+     * envía los datos ordenados por su nombre
+     *
+     * @param palabraAbuscar el array que contiene los datos a buscar
+     * codiUser,0,2,address,datoAddress,0
+     * @return devuelve la listaEmpresasAddress, la lista que genera el select a
+     * la BBDD HREntrada
+     */
     public static ArrayList<Empresa> listaEmpresasAddress(String palabraAbuscar) {
         ArrayList<Empresa> listaEmpresasAddress = new ArrayList<>();
         try {

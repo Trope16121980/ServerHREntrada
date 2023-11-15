@@ -1,4 +1,3 @@
-
 package search;
 
 import java.io.IOException;
@@ -14,12 +13,26 @@ import peticiones.Listaempleados;
 import peticiones.Listaempresas;
 import peticiones.Listajornada;
 import peticiones.Listausers;
+
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class SearchCrudTablasCompleta {
 
+    /**
+     * Este método verifica los datos y hace el envio de los datos al cliente en
+     * forma de objeto al cliente
+     *
+     * @param crud en este caso es el 0 de select
+     * @param nombreTabla en este caso puede ser el 1, 2, 3
+     * @param columna en este caso 0
+     * @param palabraAbuscar el array con los datos
+     * @param outObjeto el objeto a enviar al cliente
+     * @param client el socket del cliente
+     * @throws IOException controla los errores
+     */
     public static void handleSearchRequest(String crud, String nombreTabla, String columna,
             String palabraAbuscar, ObjectOutputStream outObjeto, Socket client) throws IOException {
 

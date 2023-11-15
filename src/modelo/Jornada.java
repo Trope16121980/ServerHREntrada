@@ -4,10 +4,16 @@ package modelo;
 import java.io.Serializable;
 
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
+
 public class Jornada implements Serializable{
+    
+    /**
+     * @param serialVersionUID número de identificación de la clase Jornada
+     */
     private static final long serialVersionUID = 6529685098267757690L;
     
     private String dni;
@@ -19,6 +25,18 @@ public class Jornada implements Serializable{
     private String total;
     private String fecha;
 
+    /**
+     * Clase Jornada
+     * @param dni dni del empleado que quiere
+     * iniciar la jornada y para que esto se pueda
+     * llevar a caba anteriomente hay que insertar el 
+     * empleado en la tabla empleado
+     * @param nom nombre del empleado
+     * @param apellido apellido del empleado
+     * @param codicard codigo de tarjeta del empleado
+     * @param horaentrada hora de inicio de jornada del empleado
+     * @param fecha fecha de inicio de jornada del empleado
+     */
     public Jornada(String dni, String nom, String apellido, int codicard, String horaentrada, String fecha) {
         this.dni = dni;
         this.nom = nom;
@@ -28,6 +46,19 @@ public class Jornada implements Serializable{
         this.fecha = fecha;
     }
     
+    /**
+      * @param dni dni del empleado que quiere
+     * iniciar la jornada y para que esto se pueda
+     * llevar a caba anteriomente hay que insertar el 
+     * empleado en la tabla empleado
+     * @param nom nombre del empleado
+     * @param apellido apellido del empleado
+     * @param codicard codigo de tarjeta del empleado
+     * @param horaentrada hora de inicio de jornada del empleado
+     * @param horasalida hora de finalización de la jornada laboral
+     * @param total tiempo total de la jornada laboral
+     * @param fecha fecha de inicio de jornada del empleado
+     */
     public Jornada(String dni, String nom, String apellido, int codicard, String horaentrada, String horasalida, String total, String fecha) {
         this.dni = dni;
         this.nom = nom;

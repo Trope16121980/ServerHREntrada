@@ -5,11 +5,21 @@ import java.util.List;
 import modelo.Users;
 
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class PrintUsers {
 
+    /**
+     /**
+     * Imprime los datos en el textArea del servidor según el crud que utilice
+     * el nombre de la tabla he imprime las listas completas
+     *
+     * @param Listausers lista de usuarios
+     * @param columna en este caso es el 1 que pertenece a users
+     * @return devuelve la lista de usuarios completa
+     */
     public String obtenerDatosUsers(List<Users> Listausers, String columna) {
         StringBuilder datosUsers = new StringBuilder();
         for (Users users : Listausers) {

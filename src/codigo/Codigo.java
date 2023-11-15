@@ -1,10 +1,24 @@
 package codigo;
+
 /**
- *
- * @author Gustavo_Senorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @see documento "Normas de programación v1.0"
+ * @since jdk 17
+ */
+/**
+ * @author Gustavo Senoráns Varela
  */
 public class Codigo {
 
+    /**
+     * Crea un código aleatorio de inicio de sesión único basado en un tipo de
+     * usuario.
+     *
+     * @param tipouser define el tipo de usuario 0 = admin / 1 = user
+     * @return genera el codigo de usuario segun el tipo de usuarios ya sea
+     * Admin o User
+     */
     public static String crearCodigoLogin(int tipouser) {
         String codigo = "-1";
 
