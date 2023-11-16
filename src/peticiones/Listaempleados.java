@@ -26,7 +26,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -62,7 +62,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where dni = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -101,7 +101,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where nom = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -140,7 +140,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where apellido = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -179,7 +179,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where nomempresa = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -218,7 +218,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where departament = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -257,7 +257,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where codicard = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -296,7 +296,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where mail = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -335,7 +335,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where telephon = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -375,7 +375,7 @@ public class Listaempleados {
         try {
 
             String consulta = "SELECT * FROM empleados where nom = ? and apellido = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoNom);
             preparedStatement.setString(2, datoApellido);
             ResultSet resultSet = preparedStatement.executeQuery();

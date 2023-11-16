@@ -56,7 +56,7 @@ public class UpdateUsers {
 
         try {
             String nombreNuevo = "SELECT * FROM users where dni = ?";
-            PreparedStatement psNom = conn.Conexion.getconexion().prepareStatement(nombreNuevo);
+            PreparedStatement psNom = controladores.Conexion.getconexion().prepareStatement(nombreNuevo);
             psNom.setString(1, datoDni);
             ResultSet rsNom = psNom.executeQuery();
             if (!rsNom.next()) {
@@ -70,7 +70,7 @@ public class UpdateUsers {
                 psNom.close();
                 try {
                     String consultaDni = "SELECT * FROM empleados where dni = ?";
-                    PreparedStatement psDniNueno = conn.Conexion.getconexion().prepareStatement(consultaDni);
+                    PreparedStatement psDniNueno = controladores.Conexion.getconexion().prepareStatement(consultaDni);
                     psDniNueno.setString(1, datoDniNuevo);
                     ResultSet rsDniNuevo = psDniNueno.executeQuery();
                     if (rsDniNuevo.next() && !datoDniNuevo.equals(datoDni)) {
@@ -85,7 +85,7 @@ public class UpdateUsers {
 
                         try {
                             String consultaNomempresa = "SELECT * FROM users where login = ?";
-                            PreparedStatement psNomempresaNuevo = conn.Conexion.getconexion().prepareStatement(consultaNomempresa);
+                            PreparedStatement psNomempresaNuevo = controladores.Conexion.getconexion().prepareStatement(consultaNomempresa);
                             psNomempresaNuevo.setString(1, datoLoginNuevo);
                             ResultSet rsNomempresaNuevo = psNomempresaNuevo.executeQuery();
                             if (!rsNomempresaNuevo.next() && !datoLoginNuevo.equals(rsNomempresaNuevo.getString("login"))) {
@@ -99,7 +99,7 @@ public class UpdateUsers {
                                 psNomempresaNuevo.close();
 
                                 String consulta = "UPDATE users SET login = ?, pass = ?, numtipe = ?, dni = ? WHERE dni = ?";
-                                PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+                                PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
                                 preparedStatement.setString(1, datoLoginNuevo);
                                 preparedStatement.setString(2, datoPassNuevo);
                                 preparedStatement.setInt(3, datoNumtipeNuevo);

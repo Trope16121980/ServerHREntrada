@@ -53,7 +53,7 @@ public class UpdateEmpresa {
         ArrayList<Empresa> empresa = new ArrayList<Empresa>();
         try {
             String nombreNuevo = "SELECT * FROM empresa where nom = ?";
-            PreparedStatement psNom = conn.Conexion.getconexion().prepareStatement(nombreNuevo);
+            PreparedStatement psNom = controladores.Conexion.getconexion().prepareStatement(nombreNuevo);
             psNom.setString(1, datoNom);
             ResultSet rsNom = psNom.executeQuery();
             if (!rsNom.next()) {
@@ -67,7 +67,7 @@ public class UpdateEmpresa {
                 datoNom = rsNom.getString("nom");
 
                 String consulta = "UPDATE empresa SET nom = ?, address = ?, telephon = ? WHERE nom = ?";
-                PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+                PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
                 preparedStatement.setString(1, datoNomnuevo);
                 preparedStatement.setString(2, datoAddressNuevo);
                 preparedStatement.setInt(3, datoTelephonNuevo);

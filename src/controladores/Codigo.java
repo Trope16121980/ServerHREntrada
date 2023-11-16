@@ -1,4 +1,4 @@
-package codigo;
+package controladores;
 
 /**
  * @author Gustavo Senoráns Varela

@@ -1,4 +1,4 @@
-package conn;
+package controladores;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

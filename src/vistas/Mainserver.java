@@ -1,8 +1,8 @@
-package inicio;
+package vistas;
 
 import fecha.Fechas;
-import frames.WindowServer;
-import thread.Threadllogin;
+import vistas.WindowServer;
+import controladores.Threadllogin;
 
 import java.io.File;
 import java.io.FileOutputStream;

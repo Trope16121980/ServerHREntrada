@@ -26,7 +26,7 @@ public class Listaempresas {
         try {
 
             String consulta = "SELECT * FROM empresa ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -58,7 +58,7 @@ public class Listaempresas {
         try {
 
             String consulta = "SELECT * FROM empresa where nom = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -91,7 +91,7 @@ public class Listaempresas {
         try {
 
             String consulta = "SELECT * FROM empresa where address = ? ORDER BY nom";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 

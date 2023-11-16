@@ -25,7 +25,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -62,7 +62,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where dni = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -99,7 +99,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where nom = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -136,7 +136,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where apellido = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -173,7 +173,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where codicard = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -210,7 +210,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where fecha = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -248,7 +248,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where nom = ? and apellido = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoNom);
             preparedStatement.setString(2, datoApellido);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -287,7 +287,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where dni = ? and fecha = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoDni);
             preparedStatement.setString(2, datoFecha);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -326,7 +326,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where nom = ? and fecha = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoNom);
             preparedStatement.setString(2, datoFecha);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -365,7 +365,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where apellido = ? and fecha = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoApellido);
             preparedStatement.setString(2, datoFecha);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -404,7 +404,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where codicard = ? and fecha = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, codicardDato);
             preparedStatement.setString(2, datoFecha);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -445,7 +445,7 @@ public class Listajornada {
         try {
 
             String consulta = "SELECT * FROM jornada where nom = ? and apellido = ? and fecha = ? ORDER BY fecha";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoNom);
             preparedStatement.setString(2, datoApellido);
             preparedStatement.setString(3, datoFecha);

@@ -44,7 +44,7 @@ public class InsertJornada {
         ArrayList<Jornada> insertJornada = new ArrayList<>();
         try {
             String consulta = "SELECT * FROM empleados where dni = ?";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoDni);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (!resultSet.next()) {
@@ -59,7 +59,7 @@ public class InsertJornada {
 
                 try {
                     String horasalidaNull = "SELECT * FROM jornada where dni = ? and horasalida = ?";
-                    PreparedStatement psHorasalida = conn.Conexion.getconexion().prepareStatement(horasalidaNull);
+                    PreparedStatement psHorasalida = controladores.Conexion.getconexion().prepareStatement(horasalidaNull);
                     psHorasalida.setString(1, datoDni);
                     psHorasalida.setString(2, "nulo");
                     ResultSet rsHorasalida = psHorasalida.executeQuery();
@@ -81,7 +81,7 @@ public class InsertJornada {
                         String datoFecha = fecha.fecha_Jornada();
 
                         String insert = "INSERT INTO jornada (dni,nom,apellido,codicard,horaentrada,horasalida,total,fecha) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                        preparedStatement = conn.Conexion.getconexion().prepareStatement(insert);
+                        preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
                         preparedStatement.setString(1, datoDni);
                         preparedStatement.setString(2, datoNom);
                         preparedStatement.setString(3, datoApellido);
@@ -143,7 +143,7 @@ public class InsertJornada {
         ArrayList<Jornada> insertJornadaCodicard = new ArrayList<>();
         try {
             String consulta = "SELECT * FROM empleados where codicard = ?";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, datoCodicard);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (!resultSet.next()) {
@@ -158,7 +158,7 @@ public class InsertJornada {
 
                 try {
                     String horasalidaNull = "SELECT * FROM jornada where codicard = ? and horasalida = ?";
-                    PreparedStatement psHorasalida = conn.Conexion.getconexion().prepareStatement(horasalidaNull);
+                    PreparedStatement psHorasalida = controladores.Conexion.getconexion().prepareStatement(horasalidaNull);
                     psHorasalida.setInt(1, datoCodicard);
                     psHorasalida.setString(2, "nulo");
                     ResultSet rsHorasalida = psHorasalida.executeQuery();
@@ -180,7 +180,7 @@ public class InsertJornada {
                         String datoFecha = fecha.fecha_Jornada();
 
                         String insert = "INSERT INTO jornada (dni,nom,apellido,codicard,horaentrada,horasalida,total,fecha) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                        preparedStatement = conn.Conexion.getconexion().prepareStatement(insert);
+                        preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
                         preparedStatement.setString(1, datoDni);
                         preparedStatement.setString(2, datoNom);
                         preparedStatement.setString(3, datoApellido);

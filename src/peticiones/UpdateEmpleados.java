@@ -80,7 +80,7 @@ public class UpdateEmpleados {
 
         try {
             String nombreNuevo = "SELECT * FROM empleados where dni = ?";
-            PreparedStatement psNom = conn.Conexion.getconexion().prepareStatement(nombreNuevo);
+            PreparedStatement psNom = controladores.Conexion.getconexion().prepareStatement(nombreNuevo);
             psNom.setString(1, datoDni);
             ResultSet rsNom = psNom.executeQuery();
             if (!rsNom.next()) {
@@ -94,7 +94,7 @@ public class UpdateEmpleados {
                 psNom.close();
                 try {
                     String consultaDni = "SELECT * FROM empleados where dni = ?";
-                    PreparedStatement psDniNueno = conn.Conexion.getconexion().prepareStatement(consultaDni);
+                    PreparedStatement psDniNueno = controladores.Conexion.getconexion().prepareStatement(consultaDni);
                     psDniNueno.setString(1, datoDniNuevo);
                     ResultSet rsDniNuevo = psDniNueno.executeQuery();
                     if (rsDniNuevo.next() && !datoDniNuevo.equals(datoDni)) {
@@ -109,7 +109,7 @@ public class UpdateEmpleados {
 
                         try {
                             String consultaNomempresa = "SELECT * FROM empresa where nom = ?";
-                            PreparedStatement psNomempresaNuevo = conn.Conexion.getconexion().prepareStatement(consultaNomempresa);
+                            PreparedStatement psNomempresaNuevo = controladores.Conexion.getconexion().prepareStatement(consultaNomempresa);
                             psNomempresaNuevo.setString(1, datoNomempresaNuevo);
                             ResultSet rsNomempresaNuevo = psNomempresaNuevo.executeQuery();
                             if (!rsNomempresaNuevo.next()) {
@@ -124,7 +124,7 @@ public class UpdateEmpleados {
 
                                 try {
                                     String consultaCodicard = "SELECT * FROM empleados where codicard = ?";
-                                    PreparedStatement psCodicardNuevo = conn.Conexion.getconexion().prepareStatement(consultaCodicard);
+                                    PreparedStatement psCodicardNuevo = controladores.Conexion.getconexion().prepareStatement(consultaCodicard);
                                     psCodicardNuevo.setInt(1, datoCodicardNuevo);
                                     ResultSet rsCodicardNuevo = psCodicardNuevo.executeQuery();
                                     if (rsCodicardNuevo.next() && !String.valueOf(datoCodicardNuevo).equals(rsCodicardNuevo.getString("codicard"))) {
@@ -138,7 +138,7 @@ public class UpdateEmpleados {
                                         psCodicardNuevo.close();
 
                                         String consulta = "UPDATE empleados SET dni = ?, nom = ?, apellido = ?, nomempresa = ?, departament = ?, codicard = ?, mail = ?, telephon = ? WHERE dni = ?";
-                                        PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+                                        PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
                                         preparedStatement.setString(1, datoDniNuevo);
                                         preparedStatement.setString(2, datoNomNuevo);
                                         preparedStatement.setString(3, datoApellidoNuevo);

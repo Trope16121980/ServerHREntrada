@@ -46,7 +46,7 @@ public class InsertEmpresa {
 
         try {
             String consulta = "SELECT * FROM empresa where nom = ?";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoNom);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
@@ -58,7 +58,7 @@ public class InsertEmpresa {
                 outObjeto.flush();
             } else {
                 String insert = "INSERT INTO empresa (nom, address, telephon) VALUES (?, ?, ?)";
-                preparedStatement = conn.Conexion.getconexion().prepareStatement(insert);
+                preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
                 preparedStatement.setString(1, datoNom);
                 preparedStatement.setString(2, datoAddress);
                 preparedStatement.setInt(3, Integer.parseInt(datoTelephon));

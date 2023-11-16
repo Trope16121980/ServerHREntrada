@@ -62,7 +62,7 @@ public class InsertEmpleados {
         try {
 
             String dniEmpleado = "SELECT * FROM empleados where dni = ?";
-            PreparedStatement prDni = conn.Conexion.getconexion().prepareStatement(dniEmpleado);
+            PreparedStatement prDni = controladores.Conexion.getconexion().prepareStatement(dniEmpleado);
             prDni.setString(1, datoDni);
             ResultSet rsDni = prDni.executeQuery();
             if (rsDni.next()) {
@@ -75,7 +75,7 @@ public class InsertEmpleados {
             } else {
                 try {
                     String nomempresaEmpleado = "SELECT * FROM empresa where nom = ?";
-                    PreparedStatement psNomempresa = conn.Conexion.getconexion().prepareStatement(nomempresaEmpleado);
+                    PreparedStatement psNomempresa = controladores.Conexion.getconexion().prepareStatement(nomempresaEmpleado);
                     psNomempresa.setString(1, datoNomempresa);
                     ResultSet rsNomempresa = psNomempresa.executeQuery();
                     if (!rsNomempresa.next()) {
@@ -94,7 +94,7 @@ public class InsertEmpleados {
                             }
 
                             String codicardEmpleado = "SELECT * FROM empleados where codicard = ?";
-                            PreparedStatement psCodicard = conn.Conexion.getconexion()
+                            PreparedStatement psCodicard = controladores.Conexion.getconexion()
                                     .prepareStatement(codicardEmpleado);
                             psCodicard.setInt(1, datoCodicard);
                             ResultSet rsCodicard = psCodicard.executeQuery();
@@ -108,7 +108,7 @@ public class InsertEmpleados {
                             } else {
 
                                 String insert = "INSERT INTO empleados (dni, nom, apellido, nomempresa, departament, codicard, mail, telephon) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                                PreparedStatement preparedStatement = conn.Conexion.getconexion()
+                                PreparedStatement preparedStatement = controladores.Conexion.getconexion()
                                         .prepareStatement(insert);
                                 preparedStatement.setString(1, datoDni);
                                 preparedStatement.setString(2, datoNom);

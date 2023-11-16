@@ -29,7 +29,7 @@ public class Login {
         try {
 
             String consulta = "SELECT * FROM users where login = ? and  pass =?";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, login);
             preparedStatement.setString(2, pass);
             ResultSet resultSet = preparedStatement.executeQuery();

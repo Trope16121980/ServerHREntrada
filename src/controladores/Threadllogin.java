@@ -1,10 +1,10 @@
-package thread;
+package controladores;
 
 import search.*;
 import update.*;
 import insert.*;
 import print.*;
-import codigo.Codigo;
+import controladores.Codigo;
 import fecha.Fechas;
 import java.net.Socket;
 import java.util.logging.Level;

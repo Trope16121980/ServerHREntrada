@@ -24,7 +24,7 @@ public class Listausers {
         try {
 
             String consulta = "SELECT * FROM users ORDER BY login";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -57,7 +57,7 @@ public class Listausers {
         try {
 
             String consulta = "SELECT * FROM users where dni = ? ORDER BY login";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -90,7 +90,7 @@ public class Listausers {
         try {
 
             String consulta = "SELECT * FROM users where login = ? ORDER BY login";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -123,7 +123,7 @@ public class Listausers {
         try {
 
             String consulta = "SELECT * FROM users where numtipe = ?  ORDER BY login";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setInt(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 

@@ -49,7 +49,7 @@ public class InsertUsers {
 
         try {
             String consulta = "SELECT * FROM empleados where dni = ?";
-            PreparedStatement preparedStatement = conn.Conexion.getconexion().prepareStatement(consulta);
+            PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
             preparedStatement.setString(1, datoDni);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (!resultSet.next()) {
@@ -63,7 +63,7 @@ public class InsertUsers {
 
                 try {
                     String dniUser = "SELECT * FROM users where dni = ?";
-                    PreparedStatement psDni = conn.Conexion.getconexion().prepareStatement(dniUser);
+                    PreparedStatement psDni = controladores.Conexion.getconexion().prepareStatement(dniUser);
                     psDni.setString(1, datoDni);
                     ResultSet rsDni = psDni.executeQuery();
                     if (rsDni.next()) {
@@ -77,7 +77,7 @@ public class InsertUsers {
 
                         try {
                             String loginUser = "SELECT * FROM users where login = ?";
-                            PreparedStatement psLogin = conn.Conexion.getconexion().prepareStatement(loginUser);
+                            PreparedStatement psLogin = controladores.Conexion.getconexion().prepareStatement(loginUser);
                             psLogin.setString(1, datoLogin);
                             ResultSet rsLogin = psLogin.executeQuery();
                             if (rsLogin.next()) {
@@ -93,7 +93,7 @@ public class InsertUsers {
                                 if (numTipeValue == 0 || numTipeValue == 1) {
 
                                     String insert = "INSERT INTO users (login, pass, numtipe, dni) VALUES (?, ?, ?, ?)";
-                                    preparedStatement = conn.Conexion.getconexion().prepareStatement(insert);
+                                    preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
                                     preparedStatement.setString(1, datoLogin);
                                     preparedStatement.setString(2, datoPass);
                                     preparedStatement.setInt(3, Integer.parseInt(datoNumTipe));
