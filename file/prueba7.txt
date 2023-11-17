@@ -1,45 +1,12 @@
-12/11/2023-21:08:20
+17/11/2023-20:28:56
 Esperando cliente...
 Bienvenido al ServeHREntrada
-12/11/2023-21:08:29
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: use
-12/11/2023-21:08:29
-____________________________________________________________________
-Cliente desconectado, error en el login
-Bienvenido al ServeHREntrada
-12/11/2023-21:08:36
+17/11/2023-20:29:06
 ____________________________________________________________________
 Datos de login recibidos:
 Login : user
 Pass: user
-Bienvenido al ServeHREntrada
-12/11/2023-21:08:44
+17/11/2023-20:29:25
 ____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-12/11/2023-21:08:51
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-12/11/2023-21:08:57
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-12/11/2023-21:09:07
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
+NullPointerException thrown!
+Users conectados: {}

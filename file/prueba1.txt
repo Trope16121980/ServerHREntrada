@@ -1,83 +1,60 @@
-09/11/2023-18:34:41
+16/11/2023-18:25:41
 Esperando cliente...
 Bienvenido al ServeHREntrada
-09/11/2023-18:35:47
+16/11/2023-18:26:00
 ____________________________________________________________________
 Datos de login recibidos:
 Login : user
 Pass: user
-09/11/2023-18:36:01
+16/11/2023-18:26:08
+____________________________________________________________________
+____________________________________________________________________
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrador.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+____________________________________________________________________
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+16/11/2023-18:26:12
+____________________________________________________________________
+____________________________________________________________________
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+____________________________________________________________________
+____________________________________________________________________
+Login: user
+Pass: user
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+16/11/2023-18:26:17
 ____________________________________________________________________
 ____________________________________________________________________
 Nombre empresa: HREntrada
 Direccion: Barcelona
 Telefono: 933123123
 ____________________________________________________________________
-____________________________________________________________________
-Nombre empresa: Netsle
-Direccion: Martorell
-Telefono: 1234
+16/11/2023-18:26:21
 ____________________________________________________________________
 ____________________________________________________________________
-Nombre empresa: Pascual
-Direccion: Lugo
-Telefono: 123412
-____________________________________________________________________
-____________________________________________________________________
-Nombre empresa: Toyota
-Direccion: El Prat
-Telefono: 933300300
-____________________________________________________________________
-____________________________________________________________________
-Cliente con codigo U2993 que pertenece al usuario user
-se ha desconectado correctamente.
-Bienvenido al ServeHREntrada
-09/11/2023-18:36:52
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Bienvenido al ServeHREntrada
-09/11/2023-18:37:09
-____________________________________________________________________
-Datos de login recibidos:
-Login : admin
-Pass: admin
-Bienvenido al ServeHREntrada
-09/11/2023-18:38:36
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-09/11/2023-18:39:05
-____________________________________________________________________
-Datos de login recibidos:
-Login : admin
-Pass: admin
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-09/11/2023-18:39:35
-____________________________________________________________________
-Datos de login recibidos:
-Login : useasdf
-Pass: user
-09/11/2023-18:39:35
-____________________________________________________________________
-Cliente desconectado, error en el login
-Bienvenido al ServeHREntrada
-09/11/2023-18:39:46
-____________________________________________________________________
-Datos de login recibidos:
-Login : asdsfas
-Pass: fasdfa
-09/11/2023-18:39:46
-____________________________________________________________________
-Cliente desconectado, error en el login
-____________________________________________________________________
-Cliente con codigo A11838 que pertenece al usuario admin
-se ha desconectado correctamente.
-____________________________________________________________________
-Cliente con codigo U28877 que pertenece al usuario user
+Cliente con codigo U84259 que pertenece al usuario user
 se ha desconectado correctamente.

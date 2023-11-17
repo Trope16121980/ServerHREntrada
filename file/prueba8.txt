@@ -1,45 +1,30 @@
-12/11/2023-21:09:37
+17/11/2023-20:32:11
 Esperando cliente...
 Bienvenido al ServeHREntrada
-12/11/2023-21:09:49
+17/11/2023-20:32:21
 ____________________________________________________________________
 Datos de login recibidos:
 Login : user
 Pass: user
-Bienvenido al ServeHREntrada
-12/11/2023-21:09:56
+17/11/2023-20:32:41
 ____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-12/11/2023-21:10:02
+
+
+Empleado creado correctamente, sus datos son: 
+
+Login: admin
+Pass: admin
+Num Tipe: 0
+Dni: 12345678A
+
 ____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-12/11/2023-21:10:07
+17/11/2023-20:33:46
 ____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.
-Bienvenido al ServeHREntrada
-12/11/2023-21:10:11
+Empresa creada correctamente, sus datos son:
+
 ____________________________________________________________________
-Datos de login recibidos:
-Login : asdfas
-Pass: dfasdf
-12/11/2023-21:10:11
+Nombre: Toyota
+Address: El Prat
+Telefono: 124578
+
 ____________________________________________________________________
-Cliente desconectado, error en el login
-Bienvenido al ServeHREntrada
-12/11/2023-21:10:22
-____________________________________________________________________
-Datos de login recibidos:
-Login : user
-Pass: user
-Cliente desconectado, ya esta conectado este usuario.

@@ -1,8 +1,12 @@
-09/11/2023-18:41:22
+17/11/2023-19:57:13
 Esperando cliente...
 Bienvenido al ServeHREntrada
-09/11/2023-18:41:43
+17/11/2023-19:58:31
 ____________________________________________________________________
 Datos de login recibidos:
-Login : admin
-Pass: admin
+Login : user
+Pass: user
+17/11/2023-20:01:31
+____________________________________________________________________
+NullPointerException thrown!
+Users conectados: {}

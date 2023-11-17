@@ -13,6 +13,7 @@ import java.util.*;
 import java.io.*;
 import java.util.concurrent.ConcurrentHashMap;
 import modelo.*;
+import peticiones.*;
 import update.UpdateCrudEmpresa;
 
 /**
@@ -259,9 +260,9 @@ public class Threadllogin extends Thread {
                                                     && insertEmpresas[7].equals("telephon")) {
                                                 handleEmpresaInsert(insertEmpresas, palabra, outObjeto, client);
                                             }
-                                        } else if (insertUsuarios[1].equals("2") && insertUsuarios[9].equals("nom") && insertUsuarios[11].equals("0")
-                                                || insertUsuarios[1].equals("2") && insertUsuarios[9].equals("nom") && insertUsuarios[11].equals("1")) {
-                                            handleUpdateEmpresaRequest(insertUsuarios, palabra, outObjeto, client);
+                                        } else if (insertUsuarios[1].equals("1") && insertUsuarios[9].equals("dni") && insertUsuarios[11].equals("0")
+                                                || insertUsuarios[1].equals("1") && insertUsuarios[9].equals("dni") && insertUsuarios[11].equals("1")) {
+                                            handleUsersInsert(insertUsuarios, palabra, outObjeto, client);
 
                                         } else if (updateUsers[1].equals("2") && updateUsers[2].equals("1") && updateUsers[11].equals("dni") && updateUsers[13].equals("0")
                                                 || updateUsers[1].equals("2") && updateUsers[2].equals("1") && updateUsers[11].equals("dni") && updateUsers[13].equals("1")) {
