@@ -32,7 +32,7 @@ public class Listaempresas {
             while (resultSet.next()) {
                 String nom = resultSet.getString("nom");
                 String address = resultSet.getString("address");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpresas.add(new Empresa(nom, address, telephon));
 
             }
@@ -65,7 +65,7 @@ public class Listaempresas {
             while (resultSet.next()) {
                 String nom = resultSet.getString("nom");
                 String address = resultSet.getString("address");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaEmpresasNom.add(new Empresa(nom, address, telephon));
 
             }
@@ -98,7 +98,7 @@ public class Listaempresas {
             while (resultSet.next()) {
                 String nom = resultSet.getString("nom");
                 String address = resultSet.getString("address");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaEmpresasAddress.add(new Empresa(nom, address, telephon));
 
             }

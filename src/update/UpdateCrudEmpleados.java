@@ -58,9 +58,9 @@ public class UpdateCrudEmpleados {
             String apellidoNuevo, String datoApellidoNuevo,
             String nomempresaNuevo, String datoNomempresaNuevo,
             String departamentNuevo, String datoDepartamentNuevo,
-            String codicardNuevo, int datoCodicardNuevo,
+            String codicardNuevo, String datoCodicardNuevo,
             String mailNuevo, String datoMailNuevo,
-            String telephonNuevo, int datoTelephonNuevo,
+            String telephonNuevo, String datoTelephonNuevo,
             String dni, String datoDni,
             String palabraAbuscar, String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
 
@@ -78,9 +78,8 @@ public class UpdateCrudEmpleados {
                         palabraAbuscar, palabra, outObjeto, client);
 
                 if (!updateEmpleados.isEmpty()) {
-                    System.out.println("Empleado modificado correctamente:");
-                    System.out.println("____________________________________________________________________");
-                    System.out.println("Dni: " + datoDniNuevo);
+                    System.out.println("\nEmpleado modificado correctamente:");
+                    System.out.println("\nDni: " + datoDniNuevo);
                     System.out.println("Nombre: " + datoNomNuevo);
                     System.out.println("Apellido: " + datoApellidoNuevo);
                     System.out.println("Nombre empresa: " + datoNomempresaNuevo);

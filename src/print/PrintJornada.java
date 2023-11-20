@@ -25,8 +25,7 @@ public class PrintJornada {
     public String obtenerDatosJornada(List<Jornada> Listajornada, String columna) {
         StringBuilder datosJornadaa = new StringBuilder();
         for (Jornada jornada : Listajornada) {
-            datosJornadaa.append("____________________________________________________________________\n");
-            datosJornadaa.append("Dni: ").append(jornada.getDni()).append("\n")
+            datosJornadaa.append("\nDni: ").append(jornada.getDni()).append("\n")
                     .append("Nombre: ").append(jornada.getNom()).append("\n")
                     .append("Apellido: ").append(jornada.getApellido()).append("\n")
                     .append("Codigo tarjeta: ").append(jornada.getCodicard()).append("\n")
@@ -52,8 +51,7 @@ public class PrintJornada {
     public String obtenerDatosJornadaNomApellido(List<Jornada> listaJornadaNomApellido, String columna, String apellido) {
         StringBuilder datosJornadaNomApellido = new StringBuilder();
         for (Jornada jornadaNomApellido : listaJornadaNomApellido) {
-            datosJornadaNomApellido.append("____________________________________________________________________\n");
-            datosJornadaNomApellido.append("Dni: ").append(jornadaNomApellido.getDni()).append("\n")
+            datosJornadaNomApellido.append("\nDni: ").append(jornadaNomApellido.getDni()).append("\n")
                     .append("Nombre: ").append(jornadaNomApellido.getNom()).append("\n")
                     .append("Apellido: ").append(jornadaNomApellido.getApellido()).append("\n")
                     .append("Codigo tarjeta: ").append(jornadaNomApellido.getCodicard()).append("\n")
@@ -80,8 +78,7 @@ public class PrintJornada {
     public String obtenerDatosJornadaDniFecha(List<Jornada> listaJornadaDniFecha, String dni, String fecha) {
         StringBuilder datosJornadaDniFecha = new StringBuilder();
         for (Jornada jornadaDniFecha : listaJornadaDniFecha) {
-        	datosJornadaDniFecha.append("____________________________________________________________________\n");
-        	datosJornadaDniFecha.append("Dni: ").append(jornadaDniFecha.getDni()).append("\n")
+        	datosJornadaDniFecha.append("\nDni: ").append(jornadaDniFecha.getDni()).append("\n")
                     .append("Nombre: ").append(jornadaDniFecha.getNom()).append("\n")
                     .append("Apellido: ").append(jornadaDniFecha.getApellido()).append("\n")
                     .append("Codigo tarjeta: ").append(jornadaDniFecha.getCodicard()).append("\n")
@@ -107,8 +104,7 @@ public class PrintJornada {
     public String obtenerDatosJornadaNomFecha(List<Jornada> listaJornadaNomFecha, String nom, String fecha) {
         StringBuilder datosJornadaNomFecha = new StringBuilder();
         for (Jornada jornadaNomFecha : listaJornadaNomFecha) {
-        	datosJornadaNomFecha.append("____________________________________________________________________\n");
-        	datosJornadaNomFecha.append("Dni: ").append(jornadaNomFecha.getDni()).append("\n")
+        	datosJornadaNomFecha.append("\nDni: ").append(jornadaNomFecha.getDni()).append("\n")
                     .append("Nombre: ").append(jornadaNomFecha.getNom()).append("\n")
                     .append("Apellido: ").append(jornadaNomFecha.getApellido()).append("\n")
                     .append("Codigo tarjeta: ").append(jornadaNomFecha.getCodicard()).append("\n")
@@ -134,8 +130,7 @@ public class PrintJornada {
     public String obtenerDatosJornadaApellidoFecha(List<Jornada> listaJornadaApellidoFecha, String apellido, String fecha) {
         StringBuilder datosJornadaApellidoFecha = new StringBuilder();
         for (Jornada jornadaApellidoFecha : listaJornadaApellidoFecha) {
-        	datosJornadaApellidoFecha.append("____________________________________________________________________\n");
-        	datosJornadaApellidoFecha.append("Dni: ").append(jornadaApellidoFecha.getDni()).append("\n")
+        	datosJornadaApellidoFecha.append("\nDni: ").append(jornadaApellidoFecha.getDni()).append("\n")
                     .append("Nombre: ").append(jornadaApellidoFecha.getNom()).append("\n")
                     .append("Apellido: ").append(jornadaApellidoFecha.getApellido()).append("\n")
                     .append("Codigo tarjeta: ").append(jornadaApellidoFecha.getCodicard()).append("\n")
@@ -161,8 +156,7 @@ public class PrintJornada {
     public String obtenerDatosJornadaCodicardFecha(List<Jornada> listaJornadaCodicardFecha, String codicard, String fecha) {
         StringBuilder datosJornadaCodicardFecha = new StringBuilder();
         for (Jornada jornadaCodicardFecha : listaJornadaCodicardFecha) {
-        	datosJornadaCodicardFecha.append("____________________________________________________________________\n");
-        	datosJornadaCodicardFecha.append("Dni: ").append(jornadaCodicardFecha.getDni()).append("\n")
+        	datosJornadaCodicardFecha.append("\nDni: ").append(jornadaCodicardFecha.getDni()).append("\n")
                     .append("Nombre: ").append(jornadaCodicardFecha.getNom()).append("\n")
                     .append("Apellido: ").append(jornadaCodicardFecha.getApellido()).append("\n")
                     .append("Codigo tarjeta: ").append(jornadaCodicardFecha.getCodicard()).append("\n")
@@ -189,8 +183,7 @@ public class PrintJornada {
     public String obtenerDatosJornadaNomApellidoFecha(List<Jornada> listaJornadaNomApellidoFecha, String nom, String apellido, String fecha) {
         StringBuilder datosJornadaNomApellidoFecha = new StringBuilder();
         for (Jornada jornadaNomApellidoFecha : listaJornadaNomApellidoFecha) {
-        	datosJornadaNomApellidoFecha.append("____________________________________________________________________\n");
-        	datosJornadaNomApellidoFecha.append("Dni: ").append(jornadaNomApellidoFecha.getDni()).append("\n")
+        	datosJornadaNomApellidoFecha.append("\nDni: ").append(jornadaNomApellidoFecha.getDni()).append("\n")
                     .append("Nombre: ").append(jornadaNomApellidoFecha.getNom()).append("\n")
                     .append("Apellido: ").append(jornadaNomApellidoFecha.getApellido()).append("\n")
                     .append("Codigo tarjeta: ").append(jornadaNomApellidoFecha.getCodicard()).append("\n")

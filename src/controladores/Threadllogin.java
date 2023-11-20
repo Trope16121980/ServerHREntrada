@@ -100,7 +100,7 @@ public class Threadllogin extends Thread {
                      * Generamos la conexión con el cliente y le damos la
                      * bienvenida
                      */
-                    System.out.println("Bienvenido al ServeHREntrada");
+                    System.out.println("\nBienvenido al ServeHREntrada");
                     System.out.println(fecha.fecha_hora());
                     String[] datos = new String[2];
                     String login = "-1";
@@ -113,8 +113,7 @@ public class Threadllogin extends Thread {
                     /**
                      * Imprimimos los datos del cliente conectado
                      */
-                    System.out.println("____________________________________________________________________");
-                    System.out.println("Datos de login recibidos:\nLogin : " + login + "\nPass: " + pass);
+                    System.out.println("\nDatos de login recibidos:\nLogin : " + login + "\nPass: " + pass);
 
                     peticiones.Login dvLogin = new peticiones.Login();
                     user = dvLogin.comprobarCredencialesBD(login, pass);
@@ -126,7 +125,7 @@ public class Threadllogin extends Thread {
                         if (user != null) {
                             if (usersConnected.contains(user.getDni())) {
                                 msg = USER_ALREADY_CONNECTED;
-                                System.out.println("Cliente desconectado, ya esta conectado este usuario.");
+                                System.out.println("\nCliente desconectado, ya esta conectado este usuario.");
                                 escriptor.write(msg);
                                 escriptor.newLine();
                                 escriptor.flush();
@@ -145,8 +144,7 @@ public class Threadllogin extends Thread {
                         if (!client.isClosed() && codigo.equalsIgnoreCase(ERROR_LOGIN)) {
                             msg = ERROR_LOGIN;
                             System.out.println(fecha.fecha_hora());
-                            System.out.println("____________________________________________________________________");
-                            System.out.println("Cliente desconectado, error en el login");
+                            System.out.println("\nCliente desconectado, error en el login");
                             escriptor.write(msg);
                             escriptor.newLine();
                             escriptor.flush();
@@ -172,9 +170,7 @@ public class Threadllogin extends Thread {
                                      * cliente
                                      */
                                     if (palabra.equals(null) || palabra.equalsIgnoreCase("exit")) {
-                                        System.out.println(
-                                                "____________________________________________________________________");
-                                        System.out.println("Cliente con codigo " + codigo + " que pertenece al usuario "
+                                        System.out.println("\nCliente con codigo " + codigo + " que pertenece al usuario "
                                                 + login + "\nse ha desconectado correctamente.");
                                         usersConnected.remove(user.getDni());
                                         salir = true;
@@ -199,7 +195,6 @@ public class Threadllogin extends Thread {
                                         String[] nomApellido = new String[8];
                                         String[] insertEmpresas = new String[10];
                                         String[] insertUsuarios = new String[12];
-                                        String[] updateUsers = new String[14];
                                         String[] insertEmpleado = new String[20];
                                         String[] updateEmpleado = new String[22];
 
@@ -207,7 +202,6 @@ public class Threadllogin extends Thread {
                                         nomApellido = palabra.split(",");
                                         insertEmpresas = palabra.split(",");
                                         insertUsuarios = palabra.split(",");
-                                        updateUsers = palabra.split(",");
                                         insertEmpleado = palabra.split(",");
                                         updateEmpleado = palabra.split(",");
 
@@ -259,15 +253,17 @@ public class Threadllogin extends Thread {
                                                     && insertEmpresas[5].equals("address")
                                                     && insertEmpresas[7].equals("telephon")) {
                                                 handleEmpresaInsert(insertEmpresas, palabra, outObjeto, client);
+                                            } else if (insertEmpresas[1].equals("2") && insertEmpresas[2].equals("1")) {
+                                                handleUpdateUsersRequest(insertEmpresas, palabra, outObjeto, client);
                                             }
+
                                         } else if (insertUsuarios[1].equals("1") && insertUsuarios[9].equals("dni") && insertUsuarios[11].equals("0")
                                                 || insertUsuarios[1].equals("1") && insertUsuarios[9].equals("dni") && insertUsuarios[11].equals("1")) {
                                             handleUsersInsert(insertUsuarios, palabra, outObjeto, client);
-
-                                        } else if (updateUsers[1].equals("2") && updateUsers[2].equals("1") && updateUsers[11].equals("dni") && updateUsers[13].equals("0")
-                                                || updateUsers[1].equals("2") && updateUsers[2].equals("1") && updateUsers[11].equals("dni") && updateUsers[13].equals("1")) {
-                                            handleUpdateUsersRequest(updateUsers, palabra, outObjeto, client);
-
+                                            
+                                        } else if (insertUsuarios[1].equals("2") && insertUsuarios[2].equals("2") && insertUsuarios[11].equals("0")
+                                                || insertUsuarios[1].equals("2") && insertUsuarios[1].equals("2") && insertUsuarios[11].equals("1")) {
+                                            handleUpdateEmpresaRequest(insertUsuarios, palabra, outObjeto, client);
                                         } else if (insertEmpleado[19].equals("0")
                                                 && insertEmpleado[9].equals("nomempresa")
                                                 || insertEmpleado[19].equals("1")
@@ -350,28 +346,20 @@ public class Threadllogin extends Thread {
         String codigoUserRecibido = updateUsers[0];
         String crud = updateUsers[1];
         String nombreTabla = updateUsers[2];
-        String loginNuevo = updateUsers[3];
-        String datoLoginNuevo = updateUsers[4];
-        String passNuevo = updateUsers[5];
-        String datoPassNuevo = updateUsers[6];
-        String numtipeNuevo = updateUsers[7];
-        String datoNumtipeNuevo = updateUsers[8];
-        String dniNuevo = updateUsers[9];
-        String datoDniNuevo = updateUsers[10];
-        String dni = updateUsers[11];
-        String datoDni = updateUsers[12];
-        String orden = updateUsers[13];
+        String passNuevo = updateUsers[3];
+        String datoPassNuevo = updateUsers[4];
+        String numtipeNuevo = updateUsers[5];
+        String datoNumtipeNuevo = updateUsers[6];
+        String login = updateUsers[7];
+        String datoLogin = updateUsers[8];
+        String orden = updateUsers[9];
         if (!codigo.equals(codigoUserRecibido)) {
             verificarCodigoCliente(codigoUserRecibido);
 
         } else if (orden.equals("0") || orden.equals("1")) {
             System.out.println(fecha.fecha_hora());
-            UpdateCrudUsers.handleSearchRequest(crud, nombreTabla, loginNuevo, datoLoginNuevo,
-                    passNuevo, datoPassNuevo,
-                    numtipeNuevo, Integer.parseInt(datoNumtipeNuevo),
-                    dniNuevo, datoDniNuevo,
-                    dni, datoDni,
-                    palabra, palabra, outObjeto, client);
+            UpdateCrudUsers.handleSearchRequest(crud, nombreTabla, passNuevo, datoPassNuevo, numtipeNuevo, Integer.parseInt(datoNumtipeNuevo),
+                    login, datoLogin, palabra, palabra, outObjeto, client);
         }
     }
 
@@ -432,7 +420,7 @@ public class Threadllogin extends Thread {
             if (crud.equals("1")) {
                 if (nombreTabla.equals("3")) {
                     InsertCrudJornada.handleInsertCodicardRequest(crud, nombreTabla, codicard,
-                            Integer.parseInt(datoCodicard), palabra, outObjeto, client);
+                            datoCodicard, palabra, outObjeto, client);
                 }
             }
         }
@@ -479,7 +467,7 @@ public class Threadllogin extends Thread {
                 if (nombreTabla.equals("0")) {
                     InsertCrudEmpleados.handleInsertRequest(crud, nombreTabla, dni, datoDni, nom, datoNom, apellido,
                             datoApellido, nomempresa, datoNomempresa, departament, datoDepartament, codicard,
-                            Integer.parseInt(datoCodicard), mail, datoMail, telephon, datoTelephon, palabra, outObjeto,
+                            datoCodicard, mail, datoMail, telephon, datoTelephon, palabra, outObjeto,
                             client);
                 }
             }
@@ -655,7 +643,7 @@ public class Threadllogin extends Thread {
             UpdateCrudEmpresa.handleSearchRequest(crud, nombreTabla,
                     nomNuevo, datoNomnuevo,
                     addressNuevo, datoAddressNuevo,
-                    telephonNuevo, Integer.parseInt(datoTelephonNuevo),
+                    telephonNuevo, datoTelephonNuevo,
                     nom, datoNom,
                     palabra, palabra, outObjeto, client);
         }
@@ -703,9 +691,9 @@ public class Threadllogin extends Thread {
                     nomNuevo, datoNomNuevo, apellidoNuevo, datoApellidoNuevo,
                     nomempresaNuevo, datoNomempresaNuevo,
                     departamentNuevo, datoDepartamentNuevo,
-                    codicardNuevo, Integer.parseInt(datoCodicardNuevo),
+                    codicardNuevo, datoCodicardNuevo,
                     mailNuevo, datoMailNuevo,
-                    telephonNuevo, Integer.parseInt(datoTelephonNuevo),
+                    telephonNuevo,datoTelephonNuevo,
                     dni, datoDni,
                     palabra, palabra, outObjeto, client);
         }

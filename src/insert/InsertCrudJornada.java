@@ -39,9 +39,8 @@ public class InsertCrudJornada {
                 insertJornada = InsertJornada.insertJornada(crud, nombreTabla, dni, datoDni, palabraAbuscar, outObjeto, client);
                 if (!insertJornada.isEmpty()) {
                     for (Jornada jornada : insertJornada) {
-                        System.out.println("Jornada creada correctamente:");
-                        System.out.println("____________________________________________________________________");
-                        System.out.println("Dni: " + jornada.getDni());
+                        System.out.println("\nJornada creada correctamente:");
+                        System.out.println("\nDni: " + jornada.getDni());
                         System.out.println("Nombre: " + jornada.getNom());
                         System.out.println("Apellido: " + jornada.getApellido());
                         System.out.println("Codigo tarjeta: " + jornada.getCodicard());
@@ -78,7 +77,7 @@ public class InsertCrudJornada {
      * @param client el socket del cliente al que se le envían los datos
      * @throws IOException controla los errores
      */
-    public static void handleInsertCodicardRequest(String crud, String nombreTabla, String codicard, int datoCodicard, String palabraAbuscar, ObjectOutputStream outObjeto,
+    public static void handleInsertCodicardRequest(String crud, String nombreTabla, String codicard, String datoCodicard, String palabraAbuscar, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
 
         if (crud.equals("1")) {

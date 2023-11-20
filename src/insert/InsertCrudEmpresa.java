@@ -46,10 +46,9 @@ public class InsertCrudEmpresa {
                         telephon, datoTelephon, palabraAbuscar, outObjeto, client);
 
                 if (!insertEmpresa.isEmpty()) {
-                    System.out.println("Empresa creada correctamente, sus datos son:\n");
-                    System.out.println("____________________________________________________________________");
-                    System.out.println("Nombre: " + datoNom + "\n" + "Address: " + datoAddress + "\n" + "Telefono: "
-                            + Integer.parseInt(datoTelephon) + "\n");
+                    System.out.println("\nEmpresa creada correctamente, sus datos son:\n");
+                    System.out.println("\nNombre: " + datoNom + "\n" + "Address: " + datoAddress + "\n" + "Telefono: "
+                            + datoTelephon + "\n");
                     System.out.println("____________________________________________________________________");
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
                     outObjeto.writeObject(insertEmpresa);

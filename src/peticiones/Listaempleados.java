@@ -35,9 +35,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleados.add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
             }
@@ -72,9 +72,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleadosDni
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
@@ -111,9 +111,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleadosNom
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
@@ -150,9 +150,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleadosApellido
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
@@ -189,9 +189,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleadosNomEmpresa
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
@@ -228,9 +228,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleadosDepart
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
@@ -267,9 +267,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleadosCodiCard
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
@@ -306,9 +306,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleadosMail
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
@@ -345,9 +345,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaTotalEmpleadosTelf
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 
@@ -386,9 +386,9 @@ public class Listaempleados {
                 String apellido = resultSet.getString("apellido");
                 String nomempresa = resultSet.getString("nomempresa");
                 String departament = resultSet.getString("departament");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String mail = resultSet.getString("mail");
-                int telephon = resultSet.getInt("telephon");
+                String telephon = resultSet.getString("telephon");
                 listaEmpleadosNomApellido
                         .add(new Empleados(dni, nom, apellido, nomempresa, departament, codicard, mail, telephon));
 

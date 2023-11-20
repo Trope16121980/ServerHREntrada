@@ -61,12 +61,12 @@ public class InsertEmpresa {
                 preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
                 preparedStatement.setString(1, datoNom);
                 preparedStatement.setString(2, datoAddress);
-                preparedStatement.setInt(3, Integer.parseInt(datoTelephon));
+                preparedStatement.setString(3, datoTelephon);
 
                 preparedStatement.executeUpdate();
                 preparedStatement.close();
 
-                Empresa nuevaEmpresa = new Empresa(datoNom, datoAddress, Integer.parseInt(datoTelephon));
+                Empresa nuevaEmpresa = new Empresa(datoNom, datoAddress, datoTelephon);
                 insertEmpresa.add(nuevaEmpresa);
 
                 return insertEmpresa;

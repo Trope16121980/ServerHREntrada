@@ -95,7 +95,7 @@ public class InsertJornada {
                         preparedStatement.close();
 
                         Jornada nuevaJornada = new Jornada(datoDni, datoNom, datoApellido,
-                                Integer.parseInt(datoCodicard), datoHoraentrada, datoHorasalida, datoTotal, datoFecha);
+                                datoCodicard, datoHoraentrada, datoHorasalida, datoTotal, datoFecha);
                         insertJornada.add(nuevaJornada);
 
                     }
@@ -137,14 +137,14 @@ public class InsertJornada {
      * corecto
      * @throws IOException controla los errores
      */
-    public static ArrayList<Jornada> insertJornadaCodicard(String crud, String nombreTabla, String codicard, int datoCodicard,
+    public static ArrayList<Jornada> insertJornadaCodicard(String crud, String nombreTabla, String codicard, String datoCodicard,
             String palabraAbuscar, ObjectOutputStream outObjeto, Socket client) throws IOException {
 
         ArrayList<Jornada> insertJornadaCodicard = new ArrayList<>();
         try {
             String consulta = "SELECT * FROM empleados where codicard = ?";
             PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
-            preparedStatement.setInt(1, datoCodicard);
+            preparedStatement.setString(1, datoCodicard);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (!resultSet.next()) {
                 Errores error = new Errores();
@@ -159,7 +159,7 @@ public class InsertJornada {
                 try {
                     String horasalidaNull = "SELECT * FROM jornada where codicard = ? and horasalida = ?";
                     PreparedStatement psHorasalida = controladores.Conexion.getconexion().prepareStatement(horasalidaNull);
-                    psHorasalida.setInt(1, datoCodicard);
+                    psHorasalida.setString(1, datoCodicard);
                     psHorasalida.setString(2, "nulo");
                     ResultSet rsHorasalida = psHorasalida.executeQuery();
                     if (rsHorasalida.next()) {
@@ -173,7 +173,7 @@ public class InsertJornada {
                         String datoDni = resultSet.getString("dni");
                         String datoNom = resultSet.getString("nom");
                         String datoApellido = resultSet.getString("apellido");
-                        datoCodicard = resultSet.getInt("codicard");
+                        datoCodicard = resultSet.getString("codicard");
                         String datoHoraentrada = fecha.hora();
                         String datoHorasalida = "nulo";
                         String datoTotal = "nulo";
@@ -184,7 +184,7 @@ public class InsertJornada {
                         preparedStatement.setString(1, datoDni);
                         preparedStatement.setString(2, datoNom);
                         preparedStatement.setString(3, datoApellido);
-                        preparedStatement.setInt(4, datoCodicard);
+                        preparedStatement.setString(4, datoCodicard);
                         preparedStatement.setString(5, datoHoraentrada);
                         preparedStatement.setString(6, datoHorasalida);
                         preparedStatement.setString(7, datoTotal);

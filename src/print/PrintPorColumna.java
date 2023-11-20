@@ -41,8 +41,7 @@ public class PrintPorColumna {
                             List<Empleados> listaEmpleados = new ArrayList<Empleados>();
                             listaEmpleados = Listaempleados.listaTotalEmpleados();
                             for (int i = 0; i < listaEmpleados.size(); i++) {
-                                System.out.println("____________________________________________________________________");
-                                System.out.println("Dni: " + listaEmpleados.get(i).getDni() + "\n"
+                                System.out.println("\nDni: " + listaEmpleados.get(i).getDni() + "\n"
                                         + "Nombre: " + listaEmpleados.get(i).getNom() + "\n"
                                         + "Apellido: " + listaEmpleados.get(i).getApellido() + "\n"
                                         + "Nombre empresa: " + listaEmpleados.get(i).getNomempresa() + "\n"
@@ -57,8 +56,7 @@ public class PrintPorColumna {
                             List<Users> listaToUsers = new ArrayList<Users>();
                             listaToUsers = Listausers.listaTotalUsers();
                             for (int i = 0; i < listaToUsers.size(); i++) {
-                                System.out.println("____________________________________________________________________");
-                                System.out.println("Login: " + listaToUsers.get(i).getLogin() + "\n"
+                                System.out.println("\nLogin: " + listaToUsers.get(i).getLogin() + "\n"
                                         + "Pass: " + listaToUsers.get(i).getPass() + "\n"
                                         + "Tipo de usuario: " + listaToUsers.get(i).getNumtipe() + "\n"
                                         + "Dni: " + listaToUsers.get(i).getDni() + "\n");
@@ -69,8 +67,7 @@ public class PrintPorColumna {
                             List<Empresa> listaEmpresas = new ArrayList<Empresa>();
                             listaEmpresas = Listaempresas.listaTotalEmpresas();
                             for (int i = 0; i < listaEmpresas.size(); i++) {
-                                System.out.println("____________________________________________________________________");
-                                System.out.println("Nombre empresa: " + listaEmpresas.get(i).getNom() + "\n"
+                                System.out.println("\nNombre empresa: " + listaEmpresas.get(i).getNom() + "\n"
                                         + "Direccion: " + listaEmpresas.get(i).getAddress() + "\n"
                                         + "Telefono: " + listaEmpresas.get(i).getTelephon());
                                 System.out.println("____________________________________________________________________");
@@ -80,8 +77,7 @@ public class PrintPorColumna {
                             List<Jornada> listaJornada = new ArrayList<Jornada>();
                             listaJornada = Listajornada.listaTotalJornada();
                             for (int i = 0; i < listaJornada.size(); i++) {
-                                System.out.println("____________________________________________________________________");
-                                System.out.println("Dni: " + listaJornada.get(i).getDni() + "\n"
+                                System.out.println("\nDni: " + listaJornada.get(i).getDni() + "\n"
                                         + "Nombre: " + listaJornada.get(i).getNom() + "\n"
                                         + "Apellido: " + listaJornada.get(i).getApellido() + "\n"
                                         + "Codigo tarjeta: " + listaJornada.get(i).getCodicard() + "\n"

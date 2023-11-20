@@ -70,9 +70,9 @@ public class UpdateEmpleados {
             String apellidoNuevo, String datoApellidoNuevo,
             String nomempresaNuevo, String datoNomempresaNuevo,
             String departamentNuevo, String datoDepartamentNuevo,
-            String codicardNuevo, int datoCodicardNuevo,
+            String codicardNuevo, String datoCodicardNuevo,
             String mailNuevo, String datoMailNuevo,
-            String telephonNuevo, int datoTelephonNuevo,
+            String telephonNuevo, String datoTelephonNuevo,
             String dni, String datoDni,
             String palabraAbuscar, String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
 
@@ -125,7 +125,7 @@ public class UpdateEmpleados {
                                 try {
                                     String consultaCodicard = "SELECT * FROM empleados where codicard = ?";
                                     PreparedStatement psCodicardNuevo = controladores.Conexion.getconexion().prepareStatement(consultaCodicard);
-                                    psCodicardNuevo.setInt(1, datoCodicardNuevo);
+                                    psCodicardNuevo.setString(1, datoCodicardNuevo);
                                     ResultSet rsCodicardNuevo = psCodicardNuevo.executeQuery();
                                     if (rsCodicardNuevo.next() && !String.valueOf(datoCodicardNuevo).equals(rsCodicardNuevo.getString("codicard"))) {
                                         Errores error = new Errores();
@@ -144,9 +144,9 @@ public class UpdateEmpleados {
                                         preparedStatement.setString(3, datoApellidoNuevo);
                                         preparedStatement.setString(4, datoNomempresaNuevo);
                                         preparedStatement.setString(5, datoDepartamentNuevo);
-                                        preparedStatement.setInt(6, datoCodicardNuevo);
+                                        preparedStatement.setString(6, datoCodicardNuevo);
                                         preparedStatement.setString(7, datoMailNuevo);
-                                        preparedStatement.setInt(8, datoTelephonNuevo);
+                                        preparedStatement.setString(8, datoTelephonNuevo);
                                         preparedStatement.setString(9, datoDni);
 
                                         preparedStatement.executeUpdate();

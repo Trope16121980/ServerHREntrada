@@ -350,5 +350,14 @@ public class Errores {
                 + "Revise la lista de empleados y vuelva a intentarlo.");
         return errorUpdateEmpleadoDni.toString();
     }
+    
+     public String errorUpdateUserDni() {
+        StringBuilder errorUpdateUserDni = new StringBuilder();
+        errorUpdateUserDni.append("\nEl dni del usuario esta sujeto\n"
+                + "aun empleado, para realizar este tipo de operaciones\n"
+                + "tiene que eliminar el usuario y modificar el empleado.\n"
+                + "Revise la lista de empleados y vuelva a intentarlo.");
+        return errorUpdateUserDni.toString();
+    }
 
 }

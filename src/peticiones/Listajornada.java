@@ -32,7 +32,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -70,7 +70,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -107,7 +107,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -144,7 +144,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -181,7 +181,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -218,7 +218,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -257,7 +257,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -296,7 +296,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -335,7 +335,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -374,7 +374,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -413,7 +413,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");
@@ -455,7 +455,7 @@ public class Listajornada {
                 String dni = resultSet.getString("dni");
                 String nom = resultSet.getString("nom");
                 String apellido = resultSet.getString("apellido");
-                int codicard = resultSet.getInt("codicard");
+                String codicard = resultSet.getString("codicard");
                 String horaentrada = resultSet.getString("horaentrada");
                 String horasalida = resultSet.getString("horasalida");
                 String total = resultSet.getString("total");

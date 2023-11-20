@@ -47,7 +47,7 @@ public class UpdateEmpresa {
      */
     public static ArrayList<Empresa> updateEmpresa(String crud, String nombreTabla, String nomNuevo,
             String datoNomnuevo, String addressNuevo, String datoAddressNuevo, String telephonNuevo,
-            int datoTelephonNuevo, String nom, String datoNom, String palabraAbuscar,
+            String datoTelephonNuevo, String nom, String datoNom, String palabraAbuscar,
             String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
 
         ArrayList<Empresa> empresa = new ArrayList<Empresa>();
@@ -70,7 +70,7 @@ public class UpdateEmpresa {
                 PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
                 preparedStatement.setString(1, datoNomnuevo);
                 preparedStatement.setString(2, datoAddressNuevo);
-                preparedStatement.setInt(3, datoTelephonNuevo);
+                preparedStatement.setString(3, datoTelephonNuevo);
                 preparedStatement.setString(4, datoNom);
 
                 preparedStatement.executeUpdate();

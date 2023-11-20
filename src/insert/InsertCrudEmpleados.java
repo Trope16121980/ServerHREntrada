@@ -45,7 +45,7 @@ public class InsertCrudEmpleados {
      */
     public static void handleInsertRequest(String crud, String nombreTabla, String dni, String datoDni, String nom,
             String datoNom, String apellido, String datoApellido, String nomempresa, String datoNomempresa,
-            String departament, String datoDepartament, String codicard, int datoCodicard, String mail,
+            String departament, String datoDepartament, String codicard, String datoCodicard, String mail,
             String datoMail, String telephon, String datoTelephon, String palabraAbuscar, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
 
@@ -57,9 +57,8 @@ public class InsertCrudEmpleados {
                         datoCodicard, mail, datoMail, telephon, datoTelephon, palabraAbuscar, outObjeto, client);
 
                 if (!insertEmpleados.isEmpty()) {
-                    System.out.println("Empleado creado correctamente, sus datos son:\n");
-                    System.out.println("____________________________________________________________________");
-                    System.out.println("Dni: " + datoDni + "\n" + "Nombre: " + datoNom + "\n" + "Apellido: "
+                    System.out.println("\nEmpleado creado correctamente, sus datos son:\n");
+                    System.out.println("\nDni: " + datoDni + "\n" + "Nombre: " + datoNom + "\n" + "Apellido: "
                             + datoApellido + "\n" + "Nombre empresa: " + datoNomempresa + "\n" + "Departamento: "
                             + datoDepartament + "\n" + "Codigo tarjeta: " + datoCodicard + "\n"
                             + "Mail: " + datoMail + "\n" + "Telefono: " + Integer.parseInt(datoTelephon) + "\n");

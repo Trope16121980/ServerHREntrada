@@ -22,10 +22,11 @@ public class InsertEmpleados {
 
     /**
      * Conecta con la BBDD HREntrad para realizar la inserción de los datos del
-     * empleado y envia los datos al cliente o un mensaje de error
-     * Objeto a recibir del cliente:  codiUser,1,0,dni,datoDni,nom,datoNom,apellido,datoApellido,nomempresa
+     * empleado y envia los datos al cliente o un mensaje de error Objeto a
+     * recibir del cliente:
+     * codiUser,1,0,dni,datoDni,nom,datoNom,apellido,datoApellido,nomempresa
      * ,datoNomempresa,departament,datoDepartament,codicard,datoCodicard,mail,datoMail,telephon,datoTelephon,0
-     * 
+     *
      * @param crud en este caso es 1 para el insert
      * @param nombreTabla el número de la tabla en este caso 0, ya que se
      * refiere al empleado
@@ -54,7 +55,7 @@ public class InsertEmpleados {
      */
     public static ArrayList<Empleados> insertEmpleados(String crud, String nombreTabla, String dni, String datoDni,
             String nom, String datoNom, String apellido, String datoApellido, String nomempresa, String datoNomempresa,
-            String departament, String datoDepartament, String codicard, int datoCodicard, String mail,
+            String departament, String datoDepartament, String codicard, String datoCodicard, String mail,
             String datoMail, String telephon, String datoTelephon, String palabraAbuscar, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
 
@@ -88,15 +89,17 @@ public class InsertEmpleados {
                     } else {
                         try {
 
-                            if (datoCodicard == 0) {
+                            if (datoCodicard.equals("0")) {
                                 Random random = new Random();
-                                datoCodicard = random.nextInt(100000);
+                                int numRandon = Integer.parseInt(datoCodicard);
+                                numRandon = random.nextInt(100000);
+                                datoCodicard = String.valueOf(numRandon);
                             }
 
                             String codicardEmpleado = "SELECT * FROM empleados where codicard = ?";
                             PreparedStatement psCodicard = controladores.Conexion.getconexion()
                                     .prepareStatement(codicardEmpleado);
-                            psCodicard.setInt(1, datoCodicard);
+                            psCodicard.setString(1, datoCodicard);
                             ResultSet rsCodicard = psCodicard.executeQuery();
                             if (rsCodicard.next()) {
                                 Errores error = new Errores();
@@ -115,7 +118,7 @@ public class InsertEmpleados {
                                 preparedStatement.setString(3, datoApellido);
                                 preparedStatement.setString(4, datoNomempresa);
                                 preparedStatement.setString(5, datoDepartament);
-                                preparedStatement.setInt(6, datoCodicard);
+                                preparedStatement.setString(6, datoCodicard);
                                 preparedStatement.setString(7, datoMail);
                                 preparedStatement.setInt(8, Integer.parseInt(datoTelephon));
 
@@ -124,7 +127,7 @@ public class InsertEmpleados {
 
                                 Empleados nuevoEmpleado = new Empleados(datoDni, datoNom, datoApellido, datoNomempresa,
                                         datoDepartament, datoCodicard, datoMail,
-                                        Integer.parseInt(datoTelephon));
+                                        datoTelephon);
                                 insertEmpleados.add(nuevoEmpleado);
                                 return insertEmpleados;
 

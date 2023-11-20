@@ -63,7 +63,7 @@ public class Mainserver {
             server = new ServerSocket(8888);
             HashMap<String, String> logins = new HashMap<String, String>();
             System.out.println(fecha.fecha_hora());
-            System.out.println("Esperando cliente...");
+            System.out.println("\nEsperando cliente...");
             boolean inicio = true;
             while (inicio) {
                 socket = server.accept();
