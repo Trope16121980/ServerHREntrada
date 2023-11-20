@@ -307,7 +307,7 @@ public class Errores {
      */
     public String errorInsertEmpleadoNumtipe() {
         StringBuilder errorInsertEmpleadoNumtipe = new StringBuilder();
-        errorInsertEmpleadoNumtipe.append("El tipo de usuario solo puede ser 0 o 1.\n"
+        errorInsertEmpleadoNumtipe.append("\nEl tipo de usuario solo puede ser 0 o 1.\n"
                 + "ejemplo:\nadmin = 0\nuser = 1.\n"
                 + "Revise bien en tipo de usuario y vuelva a intentarlo.");
         return errorInsertEmpleadoNumtipe.toString();
@@ -320,7 +320,7 @@ public class Errores {
      */
     public String errorInsertJornadaDentro() {
         StringBuilder errorInsertJornadaDentro = new StringBuilder();
-        errorInsertJornadaDentro.append("El empleado que intenta iniciar jornada\n"
+        errorInsertJornadaDentro.append("\nEl empleado que intenta iniciar jornada\n"
                 + "ya la tiene iniciada.\nRevise las jornada del dia de hoy.");
         return errorInsertJornadaDentro.toString();
     }

@@ -47,9 +47,9 @@ public class InsertCrudUsers {
                 insertUser = InsertUsers.insertUser(crud, nombreTabla, login, datoLogin, pass, datoPass, numTipe,
                         datoNumTipe, dni, datoDni, palabraAbuscar, outObjeto, client);
                 if (!insertUser.isEmpty()) {
-                    System.out.println(("\nUsuario creado correctamente, sus datos son: \n"));
-                    System.out.println("\nLogin: " + datoLogin + "\n" + "Pass: " + datoPass + "\n" + "Num Tipe: "
-                            + datoNumTipe + "\n" + "Dni: " + datoDni + "\n");
+                    System.out.println(("Usuario creado correctamente, sus datos son: \n"));
+                    System.out.println("Login: " + datoLogin + "\n" + "Pass: " + datoPass + "\n" + "Num Tipe: "
+                            + datoNumTipe + "\n" + "Dni: " + datoDni);
                     System.out.println("____________________________________________________________________");
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
                     outObjeto.writeObject(insertUser);

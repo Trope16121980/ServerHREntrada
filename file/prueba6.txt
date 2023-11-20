@@ -1,0 +1,121 @@
+20/11/2023-23:17:17
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+20/11/2023-23:17:25
+
+Datos de login recibidos:
+Login : user
+Pass: user
+20/11/2023-23:17:39
+____________________________________________________________________
+20/11/2023-23:17:39
+
+Jornada creada correctamente:
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez 
+Codigo tarjeta: 72774
+Hora entrada: 23:17
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/11/20
+____________________________________________________________________
+20/11/2023-23:17:52
+____________________________________________________________________
+20/11/2023-23:17:52
+El empleado que intenta iniciar jornada
+ya la tiene iniciada.
+Revise las jornada del dia de hoy.
+____________________________________________________________________
+20/11/2023-23:19:07
+____________________________________________________________________
+20/11/2023-23:19:07
+Jornada creada correctamente:
+____________________________________________________________________
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 5654987
+Hora entrada: 23:19
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/11/20
+____________________________________________________________________
+20/11/2023-23:19:21
+____________________________________________________________________
+20/11/2023-23:19:21
+
+El Dni no existe en el registro
+____________________________________________________________________
+20/11/2023-23:19:28
+____________________________________________________________________
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez 
+Codigo tarjeta: 72774
+Hora entrada: 23:17
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 5654987
+Hora entrada: 23:19
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+
+____________________________________________________________________
+20/11/2023-23:19:36
+____________________________________________________________________
+
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+____________________________________________________________________
+
+Login: anna
+Pass: anna
+Tipo de usuario: 1
+Dni: 78945215J
+
+____________________________________________________________________
+
+Login: pedro
+Pass: pedro
+Tipo de usuario: 0
+Dni: 87521456K
+
+____________________________________________________________________
+
+Login: user
+Pass: user
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+20/11/2023-23:19:43
+____________________________________________________________________
+
+Nombre empresa: HREntrada
+Direccion: Barcelona
+Telefono: 933123123
+____________________________________________________________________
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: +34933568956
+____________________________________________________________________
+
+Cliente con codigo U47121 que pertenece al usuario user
+se ha desconectado correctamente.
