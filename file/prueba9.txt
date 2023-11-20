@@ -1,0 +1,190 @@
+21/11/2023-00:24:32
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-00:24:41
+
+Datos de login recibidos:
+Login : user
+Pass: user
+21/11/2023-00:25:01
+____________________________________________________________________
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 5654987
+Mail: anna.sanchez@gmail.com
+Telefono: 0
+
+____________________________________________________________________
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez 
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 72774
+Mail: 0
+Telefono: 0
+
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: null
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+21/11/2023-00:25:19
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: null
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+21/11/2023-00:25:36
+____________________________________________________________________
+
+El Dni no existe en el registro
+21/11/2023-00:25:49
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: null
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+21/11/2023-00:26:01
+____________________________________________________________________
+
+El nombre no existe en el registro
+21/11/2023-00:26:21
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 5654987
+Mail: anna.sanchez@gmail.com
+Telefono: 0
+____________________________________________________________________
+
+21/11/2023-00:26:32
+____________________________________________________________________
+
+El apellido no existe en el registro
+21/11/2023-00:26:43
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 5654987
+Mail: anna.sanchez@gmail.com
+Telefono: 0
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez 
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 72774
+Mail: 0
+Telefono: 0
+____________________________________________________________________
+
+21/11/2023-00:26:59
+____________________________________________________________________
+
+El nombre de la empresa no existe en el registro
+21/11/2023-00:27:08
+____________________________________________________________________
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: null
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+21/11/2023-00:27:18
+____________________________________________________________________
+
+El departamento no existe en el registro
+21/11/2023-00:27:31
+____________________________________________________________________
+
+El codigo de tarjeta no existe en el registro
+21/11/2023-00:27:58
+____________________________________________________________________
+
+El codigo de tarjeta no existe en el registro
+21/11/2023-00:28:12
+____________________________________________________________________
+
+El codigo de tarjeta no existe en el registro
+21/11/2023-00:28:24
+____________________________________________________________________
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+____________________________________________________________________
+
+21/11/2023-00:28:34
+____________________________________________________________________
+
+El mail no existe en el registro
+21/11/2023-00:28:47
+____________________________________________________________________

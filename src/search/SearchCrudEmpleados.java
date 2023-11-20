@@ -139,7 +139,7 @@ public class SearchCrudEmpleados {
 
                 PrintEmpleados selector = new PrintEmpleados();
                 List<Empleados> listaTotalEmpleadosCodiCard = Listaempleados
-                        .listaTotalEmpleadosCodiCard(Integer.parseInt(palabraAbuscar));
+                        .listaTotalEmpleadosCodiCard(palabraAbuscar);
 
                 if (!listaTotalEmpleadosCodiCard.isEmpty()) {
                     String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosCodiCard, columna);
@@ -179,7 +179,7 @@ public class SearchCrudEmpleados {
                 if (nombreTabla.equals("0") && columna.equals("telephon")) {
                     PrintEmpleados selector = new PrintEmpleados();
                     List<Empleados> listaTotalEmpleadosTelf = Listaempleados
-                            .listaTotalEmpleadosTelf(Integer.parseInt(palabraAbuscar));
+                            .listaTotalEmpleadosTelf(palabraAbuscar);
 
                     if (!listaTotalEmpleadosTelf.isEmpty()) {
                         String datosEmpleados = selector.obtenerDatosEmpleados(listaTotalEmpleadosTelf, columna);

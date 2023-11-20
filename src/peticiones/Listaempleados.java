@@ -252,13 +252,13 @@ public class Listaempleados {
      * @return devuelve la listaTotalEmpleadosCodiCard, la lista que genera el
      * select a la BBDD HREntrada
      */
-    public static ArrayList<Empleados> listaTotalEmpleadosCodiCard(int palabraAbuscar) {
+    public static ArrayList<Empleados> listaTotalEmpleadosCodiCard(String palabraAbuscar) {
         ArrayList<Empleados> listaTotalEmpleadosCodiCard = new ArrayList<>();
         try {
 
             String consulta = "SELECT * FROM empleados where codicard = ? ORDER BY nom";
             PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
-            preparedStatement.setInt(1, palabraAbuscar);
+            preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -330,13 +330,13 @@ public class Listaempleados {
      * @return devuelve la listaTotalEmpleadosTelf, la lista que genera el
      * select a la BBDD HREntrada
      */
-    public static ArrayList<Empleados> listaTotalEmpleadosTelf(int palabraAbuscar) {
+    public static ArrayList<Empleados> listaTotalEmpleadosTelf(String palabraAbuscar) {
         ArrayList<Empleados> listaTotalEmpleadosTelf = new ArrayList<>();
         try {
 
             String consulta = "SELECT * FROM empleados where telephon = ? ORDER BY nom";
             PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
-            preparedStatement.setInt(1, palabraAbuscar);
+            preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
