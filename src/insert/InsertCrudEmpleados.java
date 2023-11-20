@@ -61,7 +61,7 @@ public class InsertCrudEmpleados {
                     System.out.println("\nDni: " + datoDni + "\n" + "Nombre: " + datoNom + "\n" + "Apellido: "
                             + datoApellido + "\n" + "Nombre empresa: " + datoNomempresa + "\n" + "Departamento: "
                             + datoDepartament + "\n" + "Codigo tarjeta: " + datoCodicard + "\n"
-                            + "Mail: " + datoMail + "\n" + "Telefono: " + Integer.parseInt(datoTelephon) + "\n");
+                            + "Mail: " + datoMail + "\n" + "Telefono: " + datoTelephon + "\n");
                     System.out.println("____________________________________________________________________");
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
                     outObjeto.writeObject(insertEmpleados);

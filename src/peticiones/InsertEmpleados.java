@@ -97,8 +97,7 @@ public class InsertEmpleados {
                             }
 
                             String codicardEmpleado = "SELECT * FROM empleados where codicard = ?";
-                            PreparedStatement psCodicard = controladores.Conexion.getconexion()
-                                    .prepareStatement(codicardEmpleado);
+                            PreparedStatement psCodicard = controladores.Conexion.getconexion().prepareStatement(codicardEmpleado);
                             psCodicard.setString(1, datoCodicard);
                             ResultSet rsCodicard = psCodicard.executeQuery();
                             if (rsCodicard.next()) {
@@ -111,8 +110,7 @@ public class InsertEmpleados {
                             } else {
 
                                 String insert = "INSERT INTO empleados (dni, nom, apellido, nomempresa, departament, codicard, mail, telephon) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                                PreparedStatement preparedStatement = controladores.Conexion.getconexion()
-                                        .prepareStatement(insert);
+                                PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
                                 preparedStatement.setString(1, datoDni);
                                 preparedStatement.setString(2, datoNom);
                                 preparedStatement.setString(3, datoApellido);
@@ -120,7 +118,7 @@ public class InsertEmpleados {
                                 preparedStatement.setString(5, datoDepartament);
                                 preparedStatement.setString(6, datoCodicard);
                                 preparedStatement.setString(7, datoMail);
-                                preparedStatement.setInt(8, Integer.parseInt(datoTelephon));
+                                preparedStatement.setString(8, datoTelephon);
 
                                 preparedStatement.executeUpdate();
                                 preparedStatement.close();

@@ -1,82 +1,48 @@
-20/11/2023-12:59:31
+20/11/2023-22:06:39
 
 Esperando cliente...
 
 Bienvenido al ServeHREntrada
-20/11/2023-12:59:37
+20/11/2023-22:06:54
 
 Datos de login recibidos:
 Login : user
 Pass: user
-20/11/2023-12:59:44
+20/11/2023-22:07:08
 ____________________________________________________________________
 
-Nombre empresa: HREntrada
-Direccion: Barcelona
-Telefono: 933123123
-____________________________________________________________________
-20/11/2023-12:59:54
-____________________________________________________________________
+Empresa creada correctamente, sus datos son:
 
-Login: admin
-Pass: admin
-Tipo de usuario: 0
-Dni: 12345678A
+
+Nombre: Toyota
+Address: El Prat
+Telefono: +34933568956
 
 ____________________________________________________________________
-
-Login: user
-Pass: user
-Tipo de usuario: 1
-Dni: 12345679B
-
-____________________________________________________________________
-20/11/2023-13:00:17
-____________________________________________________________________
-20/11/2023-13:00:17
-
-Usuario modificado correctamente:
-
-Pass: prueba
-Numtipe: 0
-____________________________________________________________________
-20/11/2023-13:00:29
+20/11/2023-22:08:19
 ____________________________________________________________________
 
-Login: admin
-Pass: prueba
-Tipo de usuario: 0
-Dni: 12345678A
+La empresa que intenta crear ya esta
+dada de alta.
+Revise la lista de empresas.
+____________________________________________________________________
+20/11/2023-22:09:59
+____________________________________________________________________
+20/11/2023-22:09:59
+
+Empleado creado correctamente, sus datos son:
+
+
+Dni: 12345678D
+Nombre: Gustavo
+Apellido: Senorans Varela
+Nombre empresa: Toyota
+Departamento: Informatica
+Codigo tarjeta: 1234645
+Mail: gustavo.senorans@gmail.com
+Telefono: 933654485
 
 ____________________________________________________________________
-
-Login: user
-Pass: user
-Tipo de usuario: 1
-Dni: 12345679B
-
+20/11/2023-22:11:54
 ____________________________________________________________________
-20/11/2023-13:04:10
-____________________________________________________________________
-20/11/2023-13:04:10
-
-Empleado modificado correctamente:
-
-Dni: 3545785C
-Nombre: Administrador
-Apellido: HREntrada
-Nombre empresa: HREntrada
-Departament: Informatica
-Codigo tarjeta: 65465654
-Mail: Administrador.HREntrada@gmail.com
-Telefono: +45 125 451 456
-____________________________________________________________________
-20/11/2023-13:04:45
-____________________________________________________________________
-
-Login: admin
-Pass: prueba
-Tipo de usuario: 0
-Dni: 3545785C
-____________________________________________________________________
-
+20/11/2023-22:11:54
