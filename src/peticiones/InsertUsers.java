@@ -1,5 +1,6 @@
 package peticiones;
 
+import encriptacion.HashPassword;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -97,7 +98,11 @@ public class InsertUsers {
                                 int numTipeValue = Integer.parseInt(datoNumTipe);
                                 if (numTipeValue == 0 || numTipeValue == 1) {
 
-                                    String hashedPassword = hashPassword(datoPass);
+                                    /**
+                                     * Envia el password a encriptar para
+                                     * despues insertar
+                                     */
+                                    String hashedPassword = HashPassword.hashPassword(datoPass);
 
                                     String insert = "INSERT INTO users (login, pass, numtipe, dni) VALUES (?, ?, ?, ?)";
                                     preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
@@ -153,27 +158,4 @@ public class InsertUsers {
         }
         return insertUser;
     }
-
-    private static String hashPassword(String password) throws UnsupportedEncodingException {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte[] encodedHash = md.digest(password.getBytes(StandardCharsets.UTF_8));
-
-            StringBuilder hexString = new StringBuilder(2 * encodedHash.length);
-            for (byte b : encodedHash) {
-                String hex = Integer.toHexString(0xff & b);
-                if (hex.length() == 1) {
-                    hexString.append('0');
-                }
-                hexString.append(hex);
-            }
-
-            return hexString.toString();
-        } catch (NoSuchAlgorithmException e) {
-            // Handle exception (e.g., log or throw it)
-            e.printStackTrace();
-            return null;
-        }
-    }
-
 }

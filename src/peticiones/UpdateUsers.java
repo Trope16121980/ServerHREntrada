@@ -1,5 +1,6 @@
 package peticiones;
 
+import encriptacion.HashPassword;
 import errores.Errores;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -71,7 +72,11 @@ public class UpdateUsers {
 
                 if (datoNumtipeNuevo == 0 || datoNumtipeNuevo == 1) {
 
-                    String hashedPassword = hashPassword(datoPassNuevo);
+                    /**
+                     * Envia el password a encriptar para despues modificarlo
+                     */
+                    String hashedPassword = HashPassword.hashPassword(datoPassNuevo);
+
                     String consulta = "UPDATE users SET pass = ?, numtipe = ? WHERE login = ?";
                     PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
                     preparedStatement.setString(1, hashedPassword);
@@ -102,27 +107,4 @@ public class UpdateUsers {
         }
         return users;
     }
-
-    private static String hashPassword(String password) throws UnsupportedEncodingException {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte[] encodedHash = md.digest(password.getBytes(StandardCharsets.UTF_8));
-
-            StringBuilder hexString = new StringBuilder(2 * encodedHash.length);
-            for (byte b : encodedHash) {
-                String hex = Integer.toHexString(0xff & b);
-                if (hex.length() == 1) {
-                    hexString.append('0');
-                }
-                hexString.append(hex);
-            }
-
-            return hexString.toString();
-        } catch (NoSuchAlgorithmException e) {
-            // Handle exception (e.g., log or throw it)
-            e.printStackTrace();
-            return null;
-        }
-    }
-
 }

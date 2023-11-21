@@ -11,13 +11,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.*;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.util.concurrent.ConcurrentHashMap;
 import modelo.*;
 import peticiones.*;
+import encriptacion.HashPassword;
 import update.UpdateCrudEmpresa;
 
 /**
@@ -119,7 +116,10 @@ public class Threadllogin extends Thread {
                      */
                     System.out.println("\nDatos de login recibidos:\nLogin : " + login + "\nPass: " + pass);
 
-                    String hashedPassword = hashPassword(pass);
+                    /**
+                     * Envia el password a encriptar para despues verificar
+                     */
+                    String hashedPassword = HashPassword.hashPassword(pass);
                     peticiones.Login dvLogin = new peticiones.Login();
                     user = dvLogin.comprobarCredencialesBD(login, hashedPassword);
 
@@ -333,29 +333,7 @@ public class Threadllogin extends Thread {
             }
         }
     }
-
-    private static String hashPassword(String password) throws UnsupportedEncodingException {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte[] encodedHash = md.digest(password.getBytes(StandardCharsets.UTF_8));
-
-            StringBuilder hexString = new StringBuilder(2 * encodedHash.length);
-            for (byte b : encodedHash) {
-                String hex = Integer.toHexString(0xff & b);
-                if (hex.length() == 1) {
-                    hexString.append('0');
-                }
-                hexString.append(hex);
-            }
-
-            return hexString.toString();
-        } catch (NoSuchAlgorithmException e) {
-            // Handle exception (e.g., log or throw it)
-            e.printStackTrace();
-            return null;
-        }
-    }
-
+    
     /**
      * Este método envia los datos recibido del cliente a verificar
      *
