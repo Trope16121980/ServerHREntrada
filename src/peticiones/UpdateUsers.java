@@ -89,10 +89,10 @@ public class UpdateUsers {
             }
         } catch (SQLException e) {
             Errores error = new Errores();
-            String errorDni = error.errorDni();
-            System.out.println(errorDni);
+            String erroLoginUser = error.erroLoginUser();
+            System.out.println(erroLoginUser);
             outObjeto = new ObjectOutputStream(client.getOutputStream());
-            outObjeto.writeObject(errorDni);
+            outObjeto.writeObject(erroLoginUser);
             outObjeto.flush();
         }
         return users;

@@ -127,7 +127,8 @@ public class UpdateEmpleados {
                                     PreparedStatement psCodicardNuevo = controladores.Conexion.getconexion().prepareStatement(consultaCodicard);
                                     psCodicardNuevo.setString(1, datoCodicardNuevo);
                                     ResultSet rsCodicardNuevo = psCodicardNuevo.executeQuery();
-                                    if (rsCodicardNuevo.next() && !String.valueOf(datoCodicardNuevo).equals(rsCodicardNuevo.getString("codicard"))) {
+                                    
+                                    if (rsCodicardNuevo.next() && !datoDni.equals(rsCodicardNuevo.getString("dni"))) {
                                         Errores error = new Errores();
                                         String errorInsertEmpleadoCodicard = error.errorInsertEmpleadoCodicard();
                                         System.out.println(errorInsertEmpleadoCodicard);
