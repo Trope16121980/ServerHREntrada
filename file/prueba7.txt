@@ -1,0 +1,40 @@
+21/11/2023-16:03:14
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-16:03:21
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+
+
+El empleado que utilizara este usuario
+no esta dado de alta como empleado.
+Revise la lista de empleados y cree
+el empleado antes de crear el usuario.
+____________________________________________________________________
+
+
+Usuario creado correctamente, sus datos son: 
+
+Login: user
+Pass: user
+Num Tipe: 1
+Dni: 12345679B
+____________________________________________________________________
+
+Bienvenido al ServeHREntrada
+21/11/2023-16:05:05
+
+Datos de login recibidos:
+Login : user
+Pass: user
+21/11/2023-16:05:05
+
+Cliente desconectado, error en el login
+
+Cliente con codigo A93070 que pertenece al usuario admin
+se ha desconectado correctamente.

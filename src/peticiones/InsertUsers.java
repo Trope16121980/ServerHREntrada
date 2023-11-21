@@ -9,6 +9,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import errores.Errores;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import modelo.Users;
 
 /**
@@ -20,9 +24,10 @@ public class InsertUsers {
 
     /**
      * Conecta con la BBDD HREntrad para realizar la inserción de los datos del
-     * usuario y envia los datos al cliente o un mensaje de error
-     * Objeto a recibir del cliente: codiUser,1,1,login,datoLogin,pass,datoPass,numTipe,datooNumTipe,dni,datoDni,0
-     * 
+     * usuario y envia los datos al cliente o un mensaje de error Objeto a
+     * recibir del cliente:
+     * codiUser,1,1,login,datoLogin,pass,datoPass,numTipe,datooNumTipe,dni,datoDni,0
+     *
      * @param crud en este caso es 1 para el insert
      * @param nombreTabla el número de la tabla en este caso 1, ya que se
      * refiere al usuario
@@ -92,10 +97,12 @@ public class InsertUsers {
                                 int numTipeValue = Integer.parseInt(datoNumTipe);
                                 if (numTipeValue == 0 || numTipeValue == 1) {
 
+                                    String hashedPassword = hashPassword(datoPass);
+
                                     String insert = "INSERT INTO users (login, pass, numtipe, dni) VALUES (?, ?, ?, ?)";
                                     preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
                                     preparedStatement.setString(1, datoLogin);
-                                    preparedStatement.setString(2, datoPass);
+                                    preparedStatement.setString(2, hashedPassword);
                                     preparedStatement.setInt(3, Integer.parseInt(datoNumTipe));
                                     preparedStatement.setString(4, datoDni);
 
@@ -146,4 +153,27 @@ public class InsertUsers {
         }
         return insertUser;
     }
+
+    private static String hashPassword(String password) throws UnsupportedEncodingException {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] encodedHash = md.digest(password.getBytes(StandardCharsets.UTF_8));
+
+            StringBuilder hexString = new StringBuilder(2 * encodedHash.length);
+            for (byte b : encodedHash) {
+                String hex = Integer.toHexString(0xff & b);
+                if (hex.length() == 1) {
+                    hexString.append('0');
+                }
+                hexString.append(hex);
+            }
+
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            // Handle exception (e.g., log or throw it)
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

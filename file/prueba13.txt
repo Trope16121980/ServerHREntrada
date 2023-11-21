@@ -1,0 +1,76 @@
+21/11/2023-16:29:35
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-16:29:46
+
+Datos de login recibidos:
+Login : user
+Pass: user
+
+
+Usuario creado correctamente, sus datos son: 
+
+Login: admin
+Pass: admin
+Num Tipe: 0
+Dni: 12345678A
+____________________________________________________________________
+
+Bienvenido al ServeHREntrada
+21/11/2023-16:31:16
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Bienvenido al ServeHREntrada
+21/11/2023-16:31:29
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Cliente desconectado, ya esta conectado este usuario.
+
+Bienvenido al ServeHREntrada
+21/11/2023-16:31:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Cliente desconectado, ya esta conectado este usuario.
+
+Bienvenido al ServeHREntrada
+21/11/2023-16:31:45
+
+Datos de login recibidos:
+Login : asdf
+Pass: asdf
+21/11/2023-16:31:45
+
+Cliente desconectado, error en el login
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________

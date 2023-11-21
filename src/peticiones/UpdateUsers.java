@@ -3,7 +3,11 @@ package peticiones;
 import errores.Errores;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -54,7 +58,7 @@ public class UpdateUsers {
             PreparedStatement psUserNuevo = controladores.Conexion.getconexion().prepareStatement(consultaUsers);
             psUserNuevo.setString(1, datoLogin);
             ResultSet rsUserNuevo = psUserNuevo.executeQuery();
-            
+
             if (!rsUserNuevo.next()) {
                 Errores error = new Errores();
                 String erroLoginUser = error.erroLoginUser();
@@ -67,16 +71,17 @@ public class UpdateUsers {
 
                 if (datoNumtipeNuevo == 0 || datoNumtipeNuevo == 1) {
 
+                    String hashedPassword = hashPassword(datoPassNuevo);
                     String consulta = "UPDATE users SET pass = ?, numtipe = ? WHERE login = ?";
                     PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
-                    preparedStatement.setString(1, datoPassNuevo);
+                    preparedStatement.setString(1, hashedPassword);
                     preparedStatement.setInt(2, datoNumtipeNuevo);
                     preparedStatement.setString(3, datoLogin);
 
                     preparedStatement.executeUpdate();
                     preparedStatement.close();
 
-                    Users nuevoUsers = new Users(rsUserNuevo.getString("login"),datoPassNuevo, datoNumtipeNuevo,rsUserNuevo.getString("dni"));
+                    Users nuevoUsers = new Users(rsUserNuevo.getString("login"), datoPassNuevo, datoNumtipeNuevo, rsUserNuevo.getString("dni"));
                     users.add(nuevoUsers);
                 } else {
                     Errores error = new Errores();
@@ -96,6 +101,28 @@ public class UpdateUsers {
             outObjeto.flush();
         }
         return users;
+    }
+
+    private static String hashPassword(String password) throws UnsupportedEncodingException {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] encodedHash = md.digest(password.getBytes(StandardCharsets.UTF_8));
+
+            StringBuilder hexString = new StringBuilder(2 * encodedHash.length);
+            for (byte b : encodedHash) {
+                String hex = Integer.toHexString(0xff & b);
+                if (hex.length() == 1) {
+                    hexString.append('0');
+                }
+                hexString.append(hex);
+            }
+
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            // Handle exception (e.g., log or throw it)
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

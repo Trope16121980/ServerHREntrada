@@ -1,0 +1,10 @@
+21/11/2023-15:44:17
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-15:44:24
+
+Datos de login recibidos:
+Login : user
+Pass: user

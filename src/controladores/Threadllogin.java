@@ -11,6 +11,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.*;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.concurrent.ConcurrentHashMap;
 import modelo.*;
 import peticiones.*;
@@ -115,8 +119,9 @@ public class Threadllogin extends Thread {
                      */
                     System.out.println("\nDatos de login recibidos:\nLogin : " + login + "\nPass: " + pass);
 
+                    String hashedPassword = hashPassword(pass);
                     peticiones.Login dvLogin = new peticiones.Login();
-                    user = dvLogin.comprobarCredencialesBD(login, pass);
+                    user = dvLogin.comprobarCredencialesBD(login, hashedPassword);
 
                     try {
                         /**
@@ -257,7 +262,7 @@ public class Threadllogin extends Thread {
                                         } else if (insertUsuarios[1].equals("1") && insertUsuarios[9].equals("dni") && insertUsuarios[11].equals("0")
                                                 || insertUsuarios[1].equals("1") && insertUsuarios[9].equals("dni") && insertUsuarios[11].equals("1")) {
                                             handleUsersInsert(insertUsuarios, palabra, outObjeto, client);
-                                            
+
                                         } else if (insertUsuarios[1].equals("2") && insertUsuarios[2].equals("2") && insertUsuarios[11].equals("0")
                                                 || insertUsuarios[1].equals("2") && insertUsuarios[1].equals("2") && insertUsuarios[11].equals("1")) {
                                             handleUpdateEmpresaRequest(insertUsuarios, palabra, outObjeto, client);
@@ -326,6 +331,28 @@ public class Threadllogin extends Thread {
             } catch (IOException e) {
                 System.out.println("Error al cerrar recursos de comunicación: " + e.getMessage());
             }
+        }
+    }
+
+    private static String hashPassword(String password) throws UnsupportedEncodingException {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] encodedHash = md.digest(password.getBytes(StandardCharsets.UTF_8));
+
+            StringBuilder hexString = new StringBuilder(2 * encodedHash.length);
+            for (byte b : encodedHash) {
+                String hex = Integer.toHexString(0xff & b);
+                if (hex.length() == 1) {
+                    hexString.append('0');
+                }
+                hexString.append(hex);
+            }
+
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            // Handle exception (e.g., log or throw it)
+            e.printStackTrace();
+            return null;
         }
     }
 
@@ -690,7 +717,7 @@ public class Threadllogin extends Thread {
                     departamentNuevo, datoDepartamentNuevo,
                     codicardNuevo, datoCodicardNuevo,
                     mailNuevo, datoMailNuevo,
-                    telephonNuevo,datoTelephonNuevo,
+                    telephonNuevo, datoTelephonNuevo,
                     dni, datoDni,
                     palabra, palabra, outObjeto, client);
         }
@@ -752,7 +779,7 @@ public class Threadllogin extends Thread {
             System.out.println(fecha.fecha_hora());
 
             if (nombreTabla.equals("3") && codicard.equals("codicard") && fechas.equals("fecha")) {
-                SearchCrudCodicardFechaJornada.handleSearchRequest(crud, nombreTabla, codicard,datoCodicard, fechas, datoFecha, palabra, outObjeto, client);
+                SearchCrudCodicardFechaJornada.handleSearchRequest(crud, nombreTabla, codicard, datoCodicard, fechas, datoFecha, palabra, outObjeto, client);
             }
         }
     }
@@ -840,8 +867,10 @@ public class Threadllogin extends Thread {
         if (!codigo.equals(codigoUserRecibido)) {
             try {
                 verificarCodigoCliente(codigoUserRecibido);
+
             } catch (IOException ex) {
-                Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Threadllogin.class
+                        .getName()).log(Level.SEVERE, null, ex);
             }
         } else if (orden.equals("0") || orden.equals("1")) {
             if (crud.equals("0")) {
@@ -911,7 +940,8 @@ public class Threadllogin extends Thread {
             client.close();
 
         } catch (IOException ex) {
-            Logger.getLogger(Threadllogin.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Threadllogin.class
+                    .getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
