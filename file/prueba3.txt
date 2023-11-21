@@ -1,0 +1,210 @@
+21/11/2023-13:33:36
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-13:33:43
+
+Datos de login recibidos:
+Login : user
+Pass: user
+21/11/2023-13:34:55
+
+Nombre de empresa modificado correctamente:
+Nombre: Pascual
+Direccion: Lugo
+Telefono: +34983652847
+____________________________________________________________________
+21/11/2023-13:35:00
+
+Nombre de empresa modificado correctamente:
+Nombre: Toyota
+Direccion: Lugo
+Telefono: +34983652847
+____________________________________________________________________
+21/11/2023-13:35:05
+
+Nombre de empresa modificado correctamente:
+Nombre: Toyota
+Direccion: Martorell
+Telefono: +34983652847
+____________________________________________________________________
+21/11/2023-13:35:10
+
+Nombre de empresa modificado correctamente:
+Nombre: Toyota
+Direccion: El Prat
+Telefono: +34933568956
+____________________________________________________________________
+21/11/2023-13:35:14
+
+El nombre de la empresa no existe en el registro
+____________________________________________________________________
+21/11/2023-13:35:20
+
+El Dni no existe en el registro
+____________________________________________________________________
+21/11/2023-13:35:20
+
+El Dni no existe en el registro
+____________________________________________________________________
+21/11/2023-13:35:30
+
+Empleado modificado correctamente:
+
+Dni: 12345679Z
+Nombre: Usuarios
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departament: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+21/11/2023-13:35:39
+
+Empleado modificado correctamente:
+
+Dni: 12345679Z
+Nombre: Usuarios
+Apellido: Perez
+Nombre empresa: HREntrada
+Departament: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+21/11/2023-13:35:54
+
+Empleado modificado correctamente:
+
+Dni: 12345679Z
+Nombre: Usuarios
+Apellido: Perez
+Nombre empresa: Toyota
+Departament: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+21/11/2023-13:36:04
+
+Empleado modificado correctamente:
+
+Dni: 12345679Z
+Nombre: Usuarios
+Apellido: Perez
+Nombre empresa: Toyota
+Departament: IT
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+21/11/2023-13:36:08
+
+Empleado modificado correctamente:
+
+Dni: 12345679Z
+Nombre: Usuarios
+Apellido: Perez
+Nombre empresa: Toyota
+Departament: IT
+Codigo tarjeta: 72776
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+21/11/2023-13:36:19
+
+Empleado modificado correctamente:
+
+Dni: 12345679Z
+Nombre: Usuarios
+Apellido: Perez
+Nombre empresa: Toyota
+Departament: IT
+Codigo tarjeta: 72776
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+21/11/2023-13:36:23
+
+Empleado modificado correctamente:
+
+Dni: 12345679Z
+Nombre: Usuarios
+Apellido: Perez
+Nombre empresa: Toyota
+Departament: IT
+Codigo tarjeta: 72776
+Mail: User.HREntrada@gmail.com
+Telefono: +34933456789
+____________________________________________________________________
+21/11/2023-13:36:28
+
+Empleado modificado correctamente:
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departament: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+21/11/2023-13:36:38
+
+El Dni no existe en el registro
+____________________________________________________________________
+21/11/2023-13:36:44
+
+El nuevo dni del empleado que quiere utilizar
+ya esta en la lista de empleados
+Revise la lista de empleados y vuelva a intentarlo.
+____________________________________________________________________
+21/11/2023-13:36:48
+
+El nombre de la empresa no existe en el registro
+____________________________________________________________________
+21/11/2023-13:36:53
+
+El codigo de tarjeta que intenta añadir
+ya existe en la lista de empleados.
+Revise la lista de empleados y vuelva a intentarlo.
+____________________________________________________________________
+21/11/2023-13:36:59
+
+Usuario modificado correctamente:
+
+Pass: prueba
+Numtipe: 0
+____________________________________________________________________
+21/11/2023-13:37:03
+
+Usuario modificado correctamente:
+
+Pass: pedro
+Numtipe: 0
+____________________________________________________________________
+21/11/2023-13:37:08
+
+Usuario modificado correctamente:
+
+Pass: pedro
+Numtipe: 1
+____________________________________________________________________
+21/11/2023-13:37:13
+
+El login no existe en el registro
+____________________________________________________________________
+21/11/2023-13:37:17
+
+El tipo de usuario solo puede ser 0 o 1.
+ejemplo:
+admin = 0
+user = 1.
+Revise bien en tipo de usuario y vuelva a intentarlo.
+____________________________________________________________________
+
+Cliente con codigo U45431 que pertenece al usuario user
+se ha desconectado correctamente.

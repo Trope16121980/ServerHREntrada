@@ -1,0 +1,482 @@
+21/11/2023-13:23:33
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-13:23:40
+
+Datos de login recibidos:
+Login : user
+Pass: user
+
+Nombre empresa: HREntrada
+Direccion: Barcelona
+Telefono: 933123123
+____________________________________________________________________
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: +34933568956
+____________________________________________________________________
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: +34933568956
+____________________________________________________________________
+
+
+El nombre de la empresa no existe en el registro
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: +34933568956
+____________________________________________________________________
+
+
+La direccion de la empresa no existe en el registro
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 72774
+Mail: anna.sanchez@gmail.com
+Telefono: 0
+
+____________________________________________________________________
+
+Dni: 12345678D
+Nombre: Gustavo
+Apellido: Senorans Varela
+Nombre empresa: Toyota
+Departamento: Informatica
+Codigo tarjeta: 1234645
+Mail: gustavo.senorans@gmail.com
+Telefono: 933654485
+
+____________________________________________________________________
+
+Dni: 89765412D
+Nombre: Juan Carlos
+Apellido: Gomez
+Nombre empresa: Toyota
+Departamento: Mecanico
+Codigo tarjeta: 29528
+Mail: juancarlos.gomez@gmail.com
+Telefono: +34658956852
+
+____________________________________________________________________
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 52053
+Mail: 0
+Telefono: 0
+
+____________________________________________________________________
+
+Dni: 12345679Z
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+
+El Dni no existe en el registro
+
+El Dni no existe en el registro
+
+Dni: 12345679Z
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+
+El nombre no existe en el registro
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 72774
+Mail: anna.sanchez@gmail.com
+Telefono: 0
+____________________________________________________________________
+
+
+El apellido no existe en el registro
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 72774
+Mail: anna.sanchez@gmail.com
+Telefono: 0
+
+Dni: 12345678D
+Nombre: Gustavo
+Apellido: Senorans Varela
+Nombre empresa: Toyota
+Departamento: Informatica
+Codigo tarjeta: 1234645
+Mail: gustavo.senorans@gmail.com
+Telefono: 933654485
+
+Dni: 89765412D
+Nombre: Juan Carlos
+Apellido: Gomez
+Nombre empresa: Toyota
+Departamento: Mecanico
+Codigo tarjeta: 29528
+Mail: juancarlos.gomez@gmail.com
+Telefono: +34658956852
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 52053
+Mail: 0
+Telefono: 0
+____________________________________________________________________
+
+
+El nombre de la empresa no existe en el registro
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+
+Dni: 12345678D
+Nombre: Gustavo
+Apellido: Senorans Varela
+Nombre empresa: Toyota
+Departamento: Informatica
+Codigo tarjeta: 1234645
+Mail: gustavo.senorans@gmail.com
+Telefono: 933654485
+
+Dni: 12345679Z
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+
+El departamento no existe en el registro
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+____________________________________________________________________
+
+
+El codigo de tarjeta no existe en el registro
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+____________________________________________________________________
+
+
+El mail no existe en el registro
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 65465654
+Mail: Administrador.HREntrada@gmail.com
+Telefono: +45 125 451 456
+____________________________________________________________________
+
+
+El telefono no existe en el registro
+21/11/2023-13:27:48
+
+El nombre o el apellido no existe en el registro
+21/11/2023-13:27:52
+
+El nombre o el apellido no existe en el registro
+21/11/2023-13:27:57
+
+El nombre o el apellido no existe en el registro
+
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+____________________________________________________________________
+
+Login: pedro
+Pass: pedro
+Tipo de usuario: 0
+Dni: 87521456K
+
+____________________________________________________________________
+
+Login: user
+Pass: user
+Tipo de usuario: 1
+Dni: 12345679Z
+
+____________________________________________________________________
+
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+____________________________________________________________________
+
+
+El Dni no existe en el registro
+
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+Login: pedro
+Pass: pedro
+Tipo de usuario: 0
+Dni: 87521456K
+____________________________________________________________________
+
+
+El tipo de numero de usuario no existe en el registro
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez
+Codigo tarjeta: 52053
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+
+El Dni no existe en el registro
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+
+El nombre no existe en el registro
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+
+El apellido no existe en el registro
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+
+El codigo de tarjeta no existe en el registro
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez
+Codigo tarjeta: 52053
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+
+La fecha no existe en el registro
+21/11/2023-13:29:10
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+21/11/2023-13:29:13
+
+El nombre o el apellido no existe en el registro
+21/11/2023-13:29:17
+
+El nombre o el apellido no existe en el registro
+21/11/2023-13:29:23
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez
+Codigo tarjeta: 52053
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+21/11/2023-13:29:31
+
+El dni o la fecha no existe en el registro
+21/11/2023-13:29:35
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez
+Codigo tarjeta: 52053
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+21/11/2023-13:29:39
+
+El nombre o la fecha no existe en el registro
+21/11/2023-13:29:43
+
+El nombre o la fecha no existe en el registro
+21/11/2023-13:29:47
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+21/11/2023-13:29:51
+
+El apellido o la fecha no existe en el registro
+21/11/2023-13:29:54
+
+El apellido o la fecha no existe en el registro
+21/11/2023-13:29:58
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+21/11/2023-13:30:04
+
+El codigo de la tarjeta o la fecha no existe en el registro
+21/11/2023-13:30:08
+
+El codigo de la tarjeta o la fecha no existe en el registro
+21/11/2023-13:30:12
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/21
+____________________________________________________________________
+
+21/11/2023-13:30:16
+
+El nombre, apellido o la fecha no existe en el registro
+21/11/2023-13:30:20
+
+El nombre, apellido o la fecha no existe en el registro
+21/11/2023-13:30:25
+
+El nombre, apellido o la fecha no existe en el registro
+
+____________________________________________________________________
+
+Cliente con codigo U71329 que pertenece al usuario user
+se ha desconectado correctamente.

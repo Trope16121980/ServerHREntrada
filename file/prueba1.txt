@@ -1,0 +1,179 @@
+21/11/2023-13:08:05
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-13:08:22
+
+Datos de login recibidos:
+Login : user
+Pass: user
+
+Empresa creada correctamente, sus datos son:
+
+
+Nombre: Toyota
+Address: El Prat
+Telefono: +34933568956
+
+____________________________________________________________________
+
+La empresa que intenta crear ya esta
+dada de alta.
+Revise la lista de empresas.
+____________________________________________________________________
+21/11/2023-13:09:19
+
+Empleado creado correctamente, sus datos son:
+
+
+Dni: 12345678D
+Nombre: Gustavo
+Apellido: Senorans Varela
+Nombre empresa: Toyota
+Departamento: Informatica
+Codigo tarjeta: 1234645
+Mail: gustavo.senorans@gmail.com
+Telefono: 933654485
+
+____________________________________________________________________
+21/11/2023-13:09:25
+
+Empleado creado correctamente, sus datos son:
+
+
+Dni: 89765412D
+Nombre: Juan Carlos
+Apellido: Gomez
+Nombre empresa: Toyota
+Departamento: Mecanico
+Codigo tarjeta: 0
+Mail: juancarlos.gomez@gmail.com
+Telefono: +34658956852
+
+____________________________________________________________________
+21/11/2023-13:09:29
+
+Empleado creado correctamente, sus datos son:
+
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 72774
+Mail: anna.sanchez@gmail.com
+Telefono: 0
+
+____________________________________________________________________
+21/11/2023-13:09:33
+
+Empleado creado correctamente, sus datos son:
+
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez
+Nombre empresa: Toyota
+Departamento: 0
+Codigo tarjeta: 0
+Mail: 0
+Telefono: 0
+
+____________________________________________________________________
+21/11/2023-13:09:41
+
+El dni que intenta utilizar ya
+se esta utilizando por otro empleado.
+Revise la lista de empleados y vuelva a intentarlo.
+____________________________________________________________________
+21/11/2023-13:09:47
+
+La empresa en la que intenta añadir
+el empleado no existe.
+Revise la lista de empresas y vuelva a intentarlo.
+____________________________________________________________________
+21/11/2023-13:09:53
+
+El codigo de tarjeta que intenta añadir
+ya existe en la lista de empleados.
+Revise la lista de empleados y vuelva a intentarlo.
+____________________________________________________________________
+
+
+Usuario creado correctamente, sus datos son: 
+
+Login: pedro
+Pass: pedro
+Num Tipe: 0
+Dni: 87521456K
+____________________________________________________________________
+
+
+
+El dni que intenta utilizar ya
+se esta utilizando por otro usuario.
+Revise la lista de usuarios y vuelva a intentarlo.
+____________________________________________________________________
+
+
+
+El dni que intenta utilizar ya
+se esta utilizando por otro usuario.
+Revise la lista de usuarios y vuelva a intentarlo.
+____________________________________________________________________
+
+
+
+El login que intenta utilizar ya
+se esta utilizando por otro usuario.
+Revise la lista de usuarios y vuelva a intentarlo.
+____________________________________________________________________
+
+
+
+El tipo de usuario solo puede ser 0 o 1.
+ejemplo:
+admin = 0
+user = 1.
+Revise bien en tipo de usuario y vuelva a intentarlo.
+____________________________________________________________________
+21/11/2023-13:10:24
+
+Jornada creada correctamente:
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez
+Codigo tarjeta: 52053
+Hora entrada: 13:10
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/11/21
+____________________________________________________________________
+21/11/2023-13:10:29
+Jornada creada correctamente:
+____________________________________________________________________
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 72774
+Hora entrada: 13:10
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/11/21
+____________________________________________________________________
+21/11/2023-13:10:33
+
+El Dni no existe en el registro
+____________________________________________________________________
+21/11/2023-13:10:37
+
+El empleado que intenta iniciar jornada
+ya la tiene iniciada.
+Revise las jornada del dia de hoy.
+____________________________________________________________________
+
+Cliente con codigo U67749 que pertenece al usuario user
+se ha desconectado correctamente.
