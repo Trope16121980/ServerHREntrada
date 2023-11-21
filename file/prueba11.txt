@@ -1,0 +1,84 @@
+21/11/2023-00:48:08
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-00:48:17
+
+Datos de login recibidos:
+Login : user
+Pass: use
+21/11/2023-00:48:17
+
+Cliente desconectado, error en el login
+
+Bienvenido al ServeHREntrada
+21/11/2023-00:48:25
+
+Datos de login recibidos:
+Login : user
+Pass: user
+21/11/2023-00:48:34
+____________________________________________________________________
+
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+____________________________________________________________________
+
+Login: anna
+Pass: anna
+Tipo de usuario: 1
+Dni: 78945215J
+
+____________________________________________________________________
+
+Login: pedro
+Pass: pedro
+Tipo de usuario: 0
+Dni: 87521456K
+
+____________________________________________________________________
+
+Login: user
+Pass: user
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+21/11/2023-00:48:49
+____________________________________________________________________
+
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+____________________________________________________________________
+
+21/11/2023-00:49:01
+____________________________________________________________________
+
+El Dni no existe en el registro
+21/11/2023-00:49:31
+____________________________________________________________________
+
+Login: admin
+Pass: admin
+Tipo de usuario: 0
+Dni: 12345678A
+
+Login: pedro
+Pass: pedro
+Tipo de usuario: 0
+Dni: 87521456K
+____________________________________________________________________
+
+21/11/2023-00:49:52
+____________________________________________________________________
+
+El tipo de numero de usuario no existe en el registro
+
+Cliente con codigo U59920 que pertenece al usuario user
+se ha desconectado correctamente.

@@ -1,0 +1,98 @@
+21/11/2023-01:23:06
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-01:23:17
+
+Datos de login recibidos:
+Login : user
+Pass: user
+21/11/2023-01:23:44
+____________________________________________________________________
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez 
+Codigo tarjeta: 72774
+Hora entrada: 23:17
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 5654987
+Hora entrada: 23:19
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+
+____________________________________________________________________
+21/11/2023-01:23:58
+____________________________________________________________________
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez 
+Codigo tarjeta: 72774
+Hora entrada: 23:17
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+____________________________________________________________________
+
+21/11/2023-01:24:12
+____________________________________________________________________
+
+El Dni no existe en el registro
+21/11/2023-01:24:25
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 5654987
+Hora entrada: 23:19
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+____________________________________________________________________
+
+21/11/2023-01:24:43
+____________________________________________________________________
+
+El nombre no existe en el registro
+21/11/2023-01:25:01
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 5654987
+Hora entrada: 23:19
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+____________________________________________________________________
+
+21/11/2023-01:25:12
+____________________________________________________________________
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 5654987
+Hora entrada: 23:19
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+____________________________________________________________________
+
+21/11/2023-01:25:25
+____________________________________________________________________
+
+El codigo de tarjeta no existe en el registro

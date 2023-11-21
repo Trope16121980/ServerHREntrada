@@ -168,13 +168,13 @@ public class Listajornada {
      * @return devuelve la listaJornadaCodiCard, la lista que genera el select a
      * la BBDD HREntrada
      */
-    public static ArrayList<Jornada> listaJornadaCodiCard(int palabraAbuscar) {
+    public static ArrayList<Jornada> listaJornadaCodiCard(String palabraAbuscar) {
         ArrayList<Jornada> listaJornadaCodiCard = new ArrayList<>();
         try {
 
             String consulta = "SELECT * FROM jornada where codicard = ? ORDER BY fecha";
             PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
-            preparedStatement.setInt(1, palabraAbuscar);
+            preparedStatement.setString(1, palabraAbuscar);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -399,13 +399,13 @@ public class Listajornada {
      * @return devuelve la listaJornadaCodiCardFecha, la lista que genera el
      * select a la BBDD HREntrada
      */
-    public static ArrayList<Jornada> listaJornadaCodiCardFecha(int codicardDato, String datoFecha) {
+    public static ArrayList<Jornada> listaJornadaCodiCardFecha(String codicardDato, String datoFecha) {
         ArrayList<Jornada> listaJornadaCodiCardFecha = new ArrayList<>();
         try {
 
             String consulta = "SELECT * FROM jornada where codicard = ? and fecha = ? ORDER BY fecha";
             PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
-            preparedStatement.setInt(1, codicardDato);
+            preparedStatement.setString(1, codicardDato);
             preparedStatement.setString(2, datoFecha);
             ResultSet resultSet = preparedStatement.executeQuery();
 

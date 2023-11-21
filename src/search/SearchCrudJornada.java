@@ -93,8 +93,7 @@ public class SearchCrudJornada {
 
             } else if (nombreTabla.equals("3") && columna.equals("codicard")) {
                 PrintJornada jornada = new PrintJornada();
-                List<Jornada> listaJornadaCodiCard = Listajornada
-                        .listaJornadaCodiCard(Integer.parseInt(palabraAbuscar));
+                List<Jornada> listaJornadaCodiCard = Listajornada.listaJornadaCodiCard(palabraAbuscar);
 
                 if (!listaJornadaCodiCard.isEmpty()) {
                     String datosJornadaCodicard = jornada.obtenerDatosJornada(listaJornadaCodiCard, columna);

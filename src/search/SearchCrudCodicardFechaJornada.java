@@ -32,7 +32,7 @@ public class SearchCrudCodicardFechaJornada {
      * @param client el socket del cliente
      * @throws IOException controla los errores
      */
-    public static void handleSearchRequest(String crud, String nombreTabla, String codicard, int datoCodicard,
+    public static void handleSearchRequest(String crud, String nombreTabla, String codicard, String datoCodicard,
             String fecha, String datoFecha, String palabraAbuscar, ObjectOutputStream outObjeto, Socket client)
             throws IOException {
 

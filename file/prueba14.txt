@@ -1,0 +1,66 @@
+21/11/2023-01:32:57
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+21/11/2023-01:33:03
+
+Datos de login recibidos:
+Login : user
+Pass: user
+21/11/2023-01:33:12
+____________________________________________________________________
+21/11/2023-01:33:12
+
+Dni: 87521456K
+Nombre: Pedro
+Apellido: Martinez 
+Codigo tarjeta: 72774
+Hora entrada: 23:17
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+____________________________________________________________________
+
+21/11/2023-01:33:26
+____________________________________________________________________
+21/11/2023-01:33:26
+
+El codigo de la tarjeta o la fecha no existe en el registro
+21/11/2023-01:33:36
+____________________________________________________________________
+21/11/2023-01:33:36
+
+El codigo de la tarjeta o la fecha no existe en el registro
+21/11/2023-01:33:48
+____________________________________________________________________
+21/11/2023-01:33:48
+
+Dni: 78945215J
+Nombre: Anna
+Apellido: Sanchez
+Codigo tarjeta: 5654987
+Hora entrada: 23:19
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/20
+____________________________________________________________________
+
+21/11/2023-01:34:00
+____________________________________________________________________
+21/11/2023-01:34:00
+
+El nombre, apellido o la fecha no existe en el registro
+21/11/2023-01:34:11
+____________________________________________________________________
+21/11/2023-01:34:11
+
+El nombre, apellido o la fecha no existe en el registro
+21/11/2023-01:34:25
+____________________________________________________________________
+21/11/2023-01:34:25
+
+El nombre, apellido o la fecha no existe en el registro
+
+Cliente con codigo U45252 que pertenece al usuario user
+se ha desconectado correctamente.

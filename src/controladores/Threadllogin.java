@@ -755,8 +755,7 @@ public class Threadllogin extends Thread {
             System.out.println(fecha.fecha_hora());
 
             if (nombreTabla.equals("3") && codicard.equals("codicard") && fechas.equals("fecha")) {
-                SearchCrudCodicardFechaJornada.handleSearchRequest(crud, nombreTabla, codicard,
-                        Integer.parseInt(datoCodicard), fechas, datoFecha, palabra, outObjeto, client);
+                SearchCrudCodicardFechaJornada.handleSearchRequest(crud, nombreTabla, codicard,datoCodicard, fechas, datoFecha, palabra, outObjeto, client);
             }
         }
     }
