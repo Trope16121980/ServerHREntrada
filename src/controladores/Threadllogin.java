@@ -179,9 +179,6 @@ public class Threadllogin extends Thread {
                                         client.close();
 
                                     } else {
-                                        System.out.println(fecha.fecha_hora());
-                                        System.out.println(
-                                                "____________________________________________________________________");
 
                                         PrintPorColumna verificar = new PrintPorColumna();
                                         verificar.selectColumna(palabra);
