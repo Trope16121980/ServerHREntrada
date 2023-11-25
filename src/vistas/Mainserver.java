@@ -11,6 +11,9 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -40,6 +43,11 @@ public class Mainserver {
         try {
             WindowServer WindowServer = new WindowServer();
             WindowServer.setVisible(true);
+
+            Path folderPath = Paths.get("file");
+            if (!Files.exists(folderPath)) {
+                Files.createDirectories(folderPath);
+            }
 
             do {
                 String nombreArchivo = nombreBase + contador + extension;
