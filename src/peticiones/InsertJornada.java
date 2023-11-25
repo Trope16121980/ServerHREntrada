@@ -23,8 +23,8 @@ public class InsertJornada {
 
     /**
      * Conecta con la BBDD HREntrada para realizar la inserción de los datos de
-     * la jornada y envia los datos al cliente o un mensaje de error
-     * Objeto a recibir del cliente:  codiUser,1,3,dni,datoDni,0
+     * la jornada y envia los datos al cliente o un mensaje de error Objeto a
+     * recibir del cliente: codiUser,1,3,dni,datoDni,0
      *
      * @param crud en este caso es 1 para el insert
      * @param nombreTabla el número de la tabla en este caso 3, ya que se
@@ -74,28 +74,27 @@ public class InsertJornada {
                         datoDni = resultSet.getString("dni");
                         String datoNom = resultSet.getString("nom");
                         String datoApellido = resultSet.getString("apellido");
-                        String datoCodicard = resultSet.getString("codicard");
                         String datoHoraentrada = fecha.hora();
                         String datoHorasalida = "nulo";
                         String datoTotal = "nulo";
                         String datoFecha = fecha.fecha_Jornada();
+                        String datoCodicard = resultSet.getString("codicard");
 
-                        String insert = "INSERT INTO jornada (dni,nom,apellido,codicard,horaentrada,horasalida,total,fecha) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                        String insert = "INSERT INTO jornada (dni,nom,apellido,horaentrada,horasalida,total,fecha,codicard) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                         preparedStatement = controladores.Conexion.getconexion().prepareStatement(insert);
                         preparedStatement.setString(1, datoDni);
                         preparedStatement.setString(2, datoNom);
                         preparedStatement.setString(3, datoApellido);
-                        preparedStatement.setInt(4, Integer.parseInt(datoCodicard));
-                        preparedStatement.setString(5, datoHoraentrada);
-                        preparedStatement.setString(6, datoHorasalida);
-                        preparedStatement.setString(7, datoTotal);
-                        preparedStatement.setString(8, datoFecha);
+                        preparedStatement.setString(4, datoHoraentrada);
+                        preparedStatement.setString(5, datoHorasalida);
+                        preparedStatement.setString(6, datoTotal);
+                        preparedStatement.setString(7, datoFecha);
+                        preparedStatement.setInt(8, Integer.parseInt(datoCodicard));
 
                         preparedStatement.executeUpdate();
                         preparedStatement.close();
 
-                        Jornada nuevaJornada = new Jornada(datoDni, datoNom, datoApellido,
-                                datoCodicard, datoHoraentrada, datoHorasalida, datoTotal, datoFecha);
+                        Jornada nuevaJornada = new Jornada(datoDni, datoNom, datoApellido, datoHoraentrada, datoHorasalida, datoTotal, datoFecha,datoCodicard);
                         insertJornada.add(nuevaJornada);
 
                     }
@@ -122,8 +121,8 @@ public class InsertJornada {
 
     /**
      * Conecta con la BBDD HREntrada para realizar la inserción de los datos de
-     * la jornada y envia los datos al cliente o un mensaje de error
-     * Objeto a recibir del cliente:  codiUser,1,3,codicard,datoCodicard,0
+     * la jornada y envia los datos al cliente o un mensaje de error Objeto a
+     * recibir del cliente: codiUser,1,3,codicard,datoCodicard,0
      *
      * @param crud en este caso es 1 para el insert
      * @param nombreTabla el número de la tabla en este caso 3, ya que se

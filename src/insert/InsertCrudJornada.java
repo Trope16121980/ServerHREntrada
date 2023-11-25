@@ -43,11 +43,11 @@ public class InsertCrudJornada {
                         System.out.println("\nDni: " + jornada.getDni());
                         System.out.println("Nombre: " + jornada.getNom());
                         System.out.println("Apellido: " + jornada.getApellido());
-                        System.out.println("Codigo tarjeta: " + jornada.getCodicard());
                         System.out.println("Hora entrada: " + jornada.getHoraentrada());
                         System.out.println("Hora salida: " + jornada.getHorasalida());
                         System.out.println("Total: " + jornada.getTotal());
                         System.out.println("Fecha: " + jornada.getFecha());
+                        System.out.println("Codigo tarjeta: " + jornada.getCodicard());
                         System.out.println("____________________________________________________________________");
                     }
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
@@ -91,11 +91,11 @@ public class InsertCrudJornada {
                         System.out.println("Dni: " + jornada.getDni());
                         System.out.println("Nombre: " + jornada.getNom());
                         System.out.println("Apellido: " + jornada.getApellido());
-                        System.out.println("Codigo tarjeta: " + jornada.getCodicard());
                         System.out.println("Hora entrada: " + jornada.getHoraentrada());
                         System.out.println("Hora salida: " + jornada.getHorasalida());
                         System.out.println("Total: " + jornada.getTotal());
                         System.out.println("Fecha: " + jornada.getFecha());
+                        System.out.println("Codigo tarjeta: " + jornada.getCodicard());
                         System.out.println("____________________________________________________________________");
                     }
                     outObjeto = new ObjectOutputStream(client.getOutputStream());

@@ -209,16 +209,17 @@ public class Threadllogin extends Thread {
 
                                         if (frase[1].equals("1") && frase[5].equals("0") && frase[3].equals("dni")
                                                 || frase[5].equals("1") && frase[3].equals("dni")) {
-
                                             handleDniJornadaInsert(frase, palabra, outObjeto, client);
 
                                         } else if (frase[1].equals("1") && frase[5].equals("0") && frase[3].equals("codicard")
                                                 || frase[5].equals("1") && frase[3].equals("codicard")) {
-
                                             handleDniJornadaCodicardInsert(frase, palabra, outObjeto, client);
 
+                                        } else if (frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")
+                                                || frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")) {
+                                            handleUpdateJornada(frase, palabra, outObjeto, client);
+                                            
                                         } else if (frase[5].equals("0") || frase[5].equals("1")) {
-
                                             handleSearchRequest(frase, outObjeto, client);
 
                                         } else if (nomApellido[7].equals("0") || nomApellido[7].equals("1")) {
@@ -333,7 +334,29 @@ public class Threadllogin extends Thread {
             }
         }
     }
-    
+
+    private void handleDniJornadaInsert(String[] insertJornada, String palabra, ObjectOutputStream outObjeto,
+            Socket client) throws IOException {
+        String codigoUserRecibido = insertJornada[0];
+        String crud = insertJornada[1];
+        String nombreTabla = insertJornada[2];
+        String dni = insertJornada[3];
+        String datoDni = insertJornada[4];
+        String orden = insertJornada[5];
+
+        if (!codigo.equals(codigoUserRecibido)) {
+            verificarCodigoCliente(codigoUserRecibido);
+
+        } else if (orden.equals("0") || orden.equals("1")) {
+            System.out.println(fecha.fecha_hora());
+            if (crud.equals("1")) {
+                if (nombreTabla.equals("3")) {
+                    InsertCrudJornada.handleInsertRequest(crud, nombreTabla, dni, datoDni, palabra, outObjeto, client);
+                }
+            }
+        }
+    }
+
     /**
      * Este método envia los datos recibido del cliente a verificar
      *
@@ -374,23 +397,23 @@ public class Threadllogin extends Thread {
      * @param client socket del cliente
      * @throws IOException controla los errores
      */
-    private void handleDniJornadaInsert(String[] insertJornada, String palabra, ObjectOutputStream outObjeto,
+    private void handleUpdateJornada(String[] frase, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
-        String codigoUserRecibido = insertJornada[0];
-        String crud = insertJornada[1];
-        String nombreTabla = insertJornada[2];
-        String dni = insertJornada[3];
-        String datoDni = insertJornada[4];
-        String orden = insertJornada[5];
+        String codigoUserRecibido = frase[0];
+        String crud = frase[1];
+        String nombreTabla = frase[2];
+        String dni = frase[3];
+        String datoDni = frase[4];
+        String orden = frase[5];
 
         if (!codigo.equals(codigoUserRecibido)) {
             verificarCodigoCliente(codigoUserRecibido);
 
         } else if (orden.equals("0") || orden.equals("1")) {
             System.out.println(fecha.fecha_hora());
-            if (crud.equals("1")) {
+            if (crud.equals("2")) {
                 if (nombreTabla.equals("3")) {
-                    InsertCrudJornada.handleInsertRequest(crud, nombreTabla, dni, datoDni, palabra, outObjeto, client);
+                    UpdateCrudJornada.handleSearchRequest(crud, nombreTabla, dni, datoDni, palabra, palabra, outObjeto, client);
                 }
             }
         }

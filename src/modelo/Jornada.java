@@ -1,4 +1,3 @@
-
 package modelo;
 
 import java.io.Serializable;
@@ -8,14 +7,13 @@ import java.io.Serializable;
  * @version 1.4, 15/11/2023
  * @since jdk 17
  */
+public class Jornada implements Serializable {
 
-public class Jornada implements Serializable{
-    
     /**
      * @param serialVersionUID número de identificación de la clase Jornada
      */
     private static final long serialVersionUID = 6529685098267757690L;
-    
+
     private String dni;
     private String nom;
     private String apellido;
@@ -27,10 +25,10 @@ public class Jornada implements Serializable{
 
     /**
      * Clase Jornada
-     * @param dni dni del empleado que quiere
-     * iniciar la jornada y para que esto se pueda
-     * llevar a caba anteriomente hay que insertar el 
-     * empleado en la tabla empleado
+     *
+     * @param dni dni del empleado que quiere iniciar la jornada y para que esto
+     * se pueda llevar a caba anteriomente hay que insertar el empleado en la
+     * tabla empleado
      * @param nom nombre del empleado
      * @param apellido apellido del empleado
      * @param codicard codigo de tarjeta del empleado
@@ -45,12 +43,11 @@ public class Jornada implements Serializable{
         this.horaentrada = horaentrada;
         this.fecha = fecha;
     }
-    
+
     /**
-      * @param dni dni del empleado que quiere
-     * iniciar la jornada y para que esto se pueda
-     * llevar a caba anteriomente hay que insertar el 
-     * empleado en la tabla empleado
+     * @param dni dni del empleado que quiere iniciar la jornada y para que esto
+     * se pueda llevar a caba anteriomente hay que insertar el empleado en la
+     * tabla empleado
      * @param nom nombre del empleado
      * @param apellido apellido del empleado
      * @param codicard codigo de tarjeta del empleado
@@ -59,17 +56,16 @@ public class Jornada implements Serializable{
      * @param total tiempo total de la jornada laboral
      * @param fecha fecha de inicio de jornada del empleado
      */
-    public Jornada(String dni, String nom, String apellido, String codicard, String horaentrada, String horasalida, String total, String fecha) {
+    public Jornada(String dni, String nom, String apellido, String horaentrada, String horasalida, String total, String fecha, String codicard) {
         this.dni = dni;
         this.nom = nom;
         this.apellido = apellido;
-        this.codicard = codicard;
         this.horaentrada = horaentrada;
         this.horasalida = horasalida;
         this.total = total;
         this.fecha = fecha;
+        this.codicard = codicard;
     }
-    
 
     public String getDni() {
         return dni;

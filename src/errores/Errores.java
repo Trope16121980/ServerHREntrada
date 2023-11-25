@@ -350,4 +350,15 @@ public class Errores {
                 + "Revise la lista de empleados y vuelva a intentarlo.");
         return errorUpdateEmpleadoDni.toString();
     }
+    
+     /**
+     * Genera un String con el error del update del dni del empleado
+     *
+     * @return devuelve el mensaje de error
+     */
+    public String errorUpdateJornadaDni() {
+        StringBuilder errorUpdateJornadaDni = new StringBuilder();
+        errorUpdateJornadaDni.append("\nLa jornada ya esta finalizada con anterioridad.");
+        return errorUpdateJornadaDni.toString();
+    }
 }
