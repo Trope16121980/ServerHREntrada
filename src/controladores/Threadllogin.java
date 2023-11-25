@@ -217,7 +217,11 @@ public class Threadllogin extends Thread {
 
                                         } else if (frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")
                                                 || frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")) {
-                                            handleUpdateJornada(frase, palabra, outObjeto, client);
+                                            handleUpdateJornadaDni(frase, palabra, outObjeto, client);
+                                        
+                                        } else if (frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("codicard")
+                                                || frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("codicard")) {
+                                            handleUpdateJornadaCodicard(frase, palabra, outObjeto, client);    
                                             
                                         } else if (frase[5].equals("0") || frase[5].equals("1")) {
                                             handleSearchRequest(frase, outObjeto, client);
@@ -397,7 +401,7 @@ public class Threadllogin extends Thread {
      * @param client socket del cliente
      * @throws IOException controla los errores
      */
-    private void handleUpdateJornada(String[] frase, String palabra, ObjectOutputStream outObjeto,
+    private void handleUpdateJornadaDni(String[] frase, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = frase[0];
         String crud = frase[1];
@@ -413,7 +417,29 @@ public class Threadllogin extends Thread {
             System.out.println(fecha.fecha_hora());
             if (crud.equals("2")) {
                 if (nombreTabla.equals("3")) {
-                    UpdateCrudJornada.handleSearchRequest(crud, nombreTabla, dni, datoDni, palabra, palabra, outObjeto, client);
+                    UpdateCrudJornada.handleSearchRequestDni(crud, nombreTabla, dni, datoDni, palabra, palabra, outObjeto, client);
+                }
+            }
+        }
+    }
+    
+     private void handleUpdateJornadaCodicard(String[] frase, String palabra, ObjectOutputStream outObjeto,
+            Socket client) throws IOException {
+        String codigoUserRecibido = frase[0];
+        String crud = frase[1];
+        String nombreTabla = frase[2];
+        String codicard = frase[3];
+        String datoCodicard = frase[4];
+        String orden = frase[5];
+
+        if (!codigo.equals(codigoUserRecibido)) {
+            verificarCodigoCliente(codigoUserRecibido);
+
+        } else if (orden.equals("0") || orden.equals("1")) {
+            System.out.println(fecha.fecha_hora());
+            if (crud.equals("2")) {
+                if (nombreTabla.equals("3")) {
+                    UpdateCrudJornada.handleSearchRequestCodicard(crud, nombreTabla, codicard, datoCodicard, palabra, palabra, outObjeto, client);
                 }
             }
         }

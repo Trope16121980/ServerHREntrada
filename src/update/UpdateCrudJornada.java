@@ -17,25 +17,59 @@ import peticiones.*;
  */
 public class UpdateCrudJornada {
 
-    public static void handleSearchRequest(String crud, String nombreTabla, String dni, String datoDni, String palabraAbuscar, String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
+    public static void handleSearchRequestDni(String crud, String nombreTabla, String dni, String datoDni, String palabraAbuscar, String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
 
         if (crud.equals("2")) {
             if (nombreTabla.equals("3")) {
                 try {
                     List<Jornada> updateJornada = new ArrayList<Jornada>();
-                    updateJornada = UpdateJornada.updateJornada(crud, nombreTabla, dni, datoDni, palabra, palabra, outObjeto, client);
+                    updateJornada = UpdateJornada.updateJornadaDni(crud, nombreTabla, dni, datoDni, palabra, palabra, outObjeto, client);
 
                     if (!updateJornada.isEmpty()) {
-                        System.out.println("\nJornada modificado correctamente:");
+                        System.out.println("\nJornada modificada correctamente:");
                         Jornada jornada = updateJornada.get(0);
                         System.out.println("\nDni: " + datoDni);
-                        System.out.println("Nombre: " + jornada.getNom()); // Reemplaza getNombre con el nombre del getter correspondiente
-                        System.out.println("Apellido: " + jornada.getApellido()); // Reemplaza getApellido con el nombre del getter correspondiente
-                        System.out.println("Hora entrada: " + jornada.getHoraentrada()); // Reemplaza getHoraEntrada con el nombre del getter correspondiente
-                        System.out.println("Hora salida: " + jornada.getHorasalida()); // Reemplaza getHoraSalida con el nombre del getter correspondiente
-                        System.out.println("Total: " + jornada.getTotal()); // Reemplaza getTotal con el nombre del getter correspondiente
-                        System.out.println("Fecha: " + jornada.getFecha()); // Reemplaza getFecha con el nombre del getter correspondiente
-                        System.out.println("Codigo tarjeta: " + jornada.getCodicard()); // Reemplaza getCodigoTarjeta con el nombre del getter correspondiente
+                        System.out.println("Nombre: " + jornada.getNom());
+                        System.out.println("Apellido: " + jornada.getApellido());
+                        System.out.println("Hora entrada: " + jornada.getHoraentrada());
+                        System.out.println("Hora salida: " + jornada.getHorasalida());
+                        System.out.println("Total: " + jornada.getTotal());
+                        System.out.println("Fecha: " + jornada.getFecha());
+                        System.out.println("Codigo tarjeta: " + jornada.getCodicard());
+                        System.out.println("____________________________________________________________________");
+
+                        outObjeto = new ObjectOutputStream(client.getOutputStream());
+                        outObjeto.writeObject(updateJornada);
+                        outObjeto.flush();
+                    } else {
+                        System.out.println("____________________________________________________________________");
+                    }
+                } catch (SQLException ex) {
+                    Logger.getLogger(UpdateCrudJornada.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+
+    public static void handleSearchRequestCodicard(String crud, String nombreTabla, String codicard, String datoCodicard, String palabraAbuscar, String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
+
+        if (crud.equals("2")) {
+            if (nombreTabla.equals("3")) {
+                try {
+                    List<Jornada> updateJornada = new ArrayList<Jornada>();
+                    updateJornada = UpdateJornada.updateJornadaCodicard(crud, nombreTabla, codicard, datoCodicard, palabra, palabra, outObjeto, client);
+
+                    if (!updateJornada.isEmpty()) {
+                        System.out.println("\nJornada modificada correctamente:");
+                        Jornada jornada = updateJornada.get(0);
+                        System.out.println("\nDni: " + jornada.getDni());
+                        System.out.println("Nombre: " + jornada.getNom());
+                        System.out.println("Apellido: " + jornada.getApellido());
+                        System.out.println("Hora entrada: " + jornada.getHoraentrada());
+                        System.out.println("Hora salida: " + jornada.getHorasalida());
+                        System.out.println("Total: " + jornada.getTotal());
+                        System.out.println("Fecha: " + jornada.getFecha());
+                        System.out.println("Codigo tarjeta: " + datoCodicard);
                         System.out.println("____________________________________________________________________");
 
                         outObjeto = new ObjectOutputStream(client.getOutputStream());

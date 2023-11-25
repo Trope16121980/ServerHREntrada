@@ -356,7 +356,7 @@ public class Errores {
      *
      * @return devuelve el mensaje de error
      */
-    public String errorUpdateJornadaDni() {
+    public String errorUpdateJornada() {
         StringBuilder errorUpdateJornadaDni = new StringBuilder();
         errorUpdateJornadaDni.append("\nLa jornada ya esta finalizada con anterioridad.");
         return errorUpdateJornadaDni.toString();
