@@ -5,6 +5,7 @@ import update.*;
 import insert.*;
 import print.*;
 import controladores.Codigo;
+import delete.DeleteCrudEmpresa;
 import fecha.Fechas;
 import java.net.Socket;
 import java.util.logging.Level;
@@ -215,14 +216,17 @@ public class Threadllogin extends Thread {
                                                 || frase[5].equals("1") && frase[3].equals("codicard")) {
                                             handleDniJornadaCodicardInsert(frase, palabra, outObjeto, client);
 
+                                        } else if (frase[1].equals("3") && frase[2].equals("2") && frase[3].equals("nom")) {
+                                            handleDeleteEmpresa(frase, palabra, outObjeto, client);
+
                                         } else if (frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")
                                                 || frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")) {
                                             handleUpdateJornadaDni(frase, palabra, outObjeto, client);
-                                        
+
                                         } else if (frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("codicard")
                                                 || frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("codicard")) {
-                                            handleUpdateJornadaCodicard(frase, palabra, outObjeto, client);    
-                                            
+                                            handleUpdateJornadaCodicard(frase, palabra, outObjeto, client);
+
                                         } else if (frase[5].equals("0") || frase[5].equals("1")) {
                                             handleSearchRequest(frase, outObjeto, client);
 
@@ -339,6 +343,28 @@ public class Threadllogin extends Thread {
         }
     }
 
+    private void handleDeleteEmpresa(String[] frase, String palabra, ObjectOutputStream outObjeto,
+            Socket client) throws IOException {
+        String codigoUserRecibido = frase[0];
+        String crud = frase[1];
+        String nombreTabla = frase[2];
+        String nom = frase[3];
+        String datoNom = frase[4];
+        String orden = frase[5];
+
+        if (!codigo.equals(codigoUserRecibido)) {
+            verificarCodigoCliente(codigoUserRecibido);
+
+        } else if (orden.equals("0") || orden.equals("1")) {
+            System.out.println(fecha.fecha_hora());
+            if (crud.equals("3")) {
+                if (nombreTabla.equals("2")) {
+                    DeleteCrudEmpresa.handleDeleteEmpresa(crud, nombreTabla, nom, datoNom, palabra, outObjeto, client);
+                }
+            }
+        }
+    }
+
     private void handleDniJornadaInsert(String[] insertJornada, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = insertJornada[0];
@@ -422,8 +448,8 @@ public class Threadllogin extends Thread {
             }
         }
     }
-    
-     private void handleUpdateJornadaCodicard(String[] frase, String palabra, ObjectOutputStream outObjeto,
+
+    private void handleUpdateJornadaCodicard(String[] frase, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = frase[0];
         String crud = frase[1];

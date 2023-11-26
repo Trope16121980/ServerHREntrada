@@ -7,6 +7,19 @@ package errores;
  */
 public class Errores {
 
+    
+     /**
+     * Genera un String con el error de la lectura de Dni
+     *
+     * @return devuelve el mensaje de error
+     */
+    public String deleteEmpresaYes() {
+        StringBuilder deleteEmpresaYes = new StringBuilder();
+        deleteEmpresaYes.append("\nEmpresa eliminada correctamente\n"
+                + "y a los empleados se le ha dado de baja la empresa");
+        return deleteEmpresaYes.toString();
+    }
+    
     /**
      * Genera un String con el error de la lectura de Dni
      *
