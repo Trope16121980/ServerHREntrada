@@ -5,6 +5,7 @@ import update.*;
 import insert.*;
 import print.*;
 import controladores.Codigo;
+import delete.DeleteCrudEmpleado;
 import delete.DeleteCrudEmpresa;
 import fecha.Fechas;
 import java.net.Socket;
@@ -218,6 +219,9 @@ public class Threadllogin extends Thread {
 
                                         } else if (frase[1].equals("3") && frase[2].equals("2") && frase[3].equals("nom")) {
                                             handleDeleteEmpresa(frase, palabra, outObjeto, client);
+                                            
+                                        } else if (frase[1].equals("3") && frase[2].equals("0") && frase[3].equals("dni")) {
+                                            handleDeleteEmpleado(frase, palabra, outObjeto, client);    
 
                                         } else if (frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")
                                                 || frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")) {
@@ -343,6 +347,29 @@ public class Threadllogin extends Thread {
         }
     }
 
+     private void handleDeleteEmpleado(String[] frase, String palabra, ObjectOutputStream outObjeto,
+            Socket client) throws IOException {
+        String codigoUserRecibido = frase[0];
+        String crud = frase[1];
+        String nombreTabla = frase[2];
+        String dni = frase[3];
+        String datoDni = frase[4];
+        String orden = frase[5];
+
+        if (!codigo.equals(codigoUserRecibido)) {
+            verificarCodigoCliente(codigoUserRecibido);
+
+        } else if (orden.equals("0") || orden.equals("1")) {
+            System.out.println(fecha.fecha_hora());
+            if (crud.equals("3")) {
+                if (nombreTabla.equals("0")) {
+                    DeleteCrudEmpleado.handleDeleteEmpleado(crud, nombreTabla, dni, datoDni, palabra, outObjeto, client);
+                }
+            }
+        }
+    }
+    
+    
     private void handleDeleteEmpresa(String[] frase, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = frase[0];

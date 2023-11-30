@@ -21,7 +21,7 @@ public class UpdateEmpleados {
     /**
      * Este método conecta con la BBDD HREntrada para realizar la modificación
      * de los datos del empleado y realizar el envío de los mismo o un error
-     * 
+     *
      * codiUser,2,0,dniNuevo,datoDniNuevo,nomNuevo,datoNomNuevo,apellidoNuevo,datoApellidoNuevo
      * nomempresaNuevo,datoNomempresaNuevo,departamentNuevo,datoDepartamentNuevo,codicarNuevo,
      * datoCodicardNuevo,mailNuevo,datoMailNuevo,telephonNuevo,datoTelephonNuevo,dni,datoDni,0
@@ -127,7 +127,7 @@ public class UpdateEmpleados {
                                     PreparedStatement psCodicardNuevo = controladores.Conexion.getconexion().prepareStatement(consultaCodicard);
                                     psCodicardNuevo.setString(1, datoCodicardNuevo);
                                     ResultSet rsCodicardNuevo = psCodicardNuevo.executeQuery();
-                                    
+
                                     if (rsCodicardNuevo.next() && !datoDni.equals(rsCodicardNuevo.getString("dni"))) {
                                         Errores error = new Errores();
                                         String errorInsertEmpleadoCodicard = error.errorInsertEmpleadoCodicard();

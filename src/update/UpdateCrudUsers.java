@@ -53,9 +53,9 @@ public class UpdateCrudUsers {
                     System.out.println("\nUsuario modificado correctamente:");
                     Users users = updateUsers.get(0);
                     System.out.println("\nLogin: " + users.getLogin());
-                    System.out.println("\nPass: " + datoPassNuevo);
+                    System.out.println("Pass: " + datoPassNuevo);
                     System.out.println("Numtipe: " + datoNumtipeNuevo);
-                    System.out.println("\nDni: " + users.getDni());
+                    System.out.println("Dni: " + users.getDni());
                     System.out.println("____________________________________________________________________");
 
                     outObjeto = new ObjectOutputStream(client.getOutputStream());

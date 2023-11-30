@@ -7,6 +7,13 @@ package errores;
  */
 public class Errores {
 
+     public String deleteJornadaYes() {
+        StringBuilder deleteJornadaYes = new StringBuilder();
+        deleteJornadaYes.append("\nJornadas que pernecen al empleado\n"
+                + "a eliminar se ha elimado correctamente");
+        return deleteJornadaYes.toString();
+    }
+    
     
      /**
      * Genera un String con el error de la lectura de Dni
@@ -18,6 +25,17 @@ public class Errores {
         deleteEmpresaYes.append("\nEmpresa eliminada correctamente\n"
                 + "y a los empleados se le ha dado de baja la empresa");
         return deleteEmpresaYes.toString();
+    }
+    
+     /**
+     * Genera un String con el error de la lectura de Dni
+     *
+     * @return devuelve el mensaje de error
+     */
+    public String deleteEmpleadoYes() {
+        StringBuilder deleteEmpleadoYes = new StringBuilder();
+        deleteEmpleadoYes.append("\nEmpleado eliminado correctamente");
+        return deleteEmpleadoYes.toString();
     }
     
     /**

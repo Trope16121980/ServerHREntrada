@@ -8,8 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import modelo.Empleados;
-import modelo.Empresa;
+import modelo.*;
 
 /**
  * @author Gustavo Senoráns Varela
@@ -30,6 +29,7 @@ public class DeleteEmpresa {
                 psNom.setString(1, datoNom);
                 try (ResultSet rsNom = psNom.executeQuery()) {
                     if (rsNom.next()) {
+                        
                         String consulta = "UPDATE empleados SET nomempresa = 'EmpresaBaja' WHERE nomempresa = ?";
                         try (PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta)) {
                             preparedStatement.setString(1, datoNom);
