@@ -1,0 +1,37 @@
+30/11/2023-10:02:15
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+30/11/2023-10:02:25
+
+Datos de login recibidos:
+Login : user
+Pass: user
+
+Nombre empresa: EmpresaBaja
+Direccion: EmpresaBaja
+Telefono: EmpresaBaja
+____________________________________________________________________
+
+Nombre empresa: HREntrada
+Direccion: Barcelona
+Telefono: 452156235
+____________________________________________________________________
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: 856859865
+____________________________________________________________________
+30/11/2023-10:10:27
+
+Empresa eliminada correctamente
+y a los empleados se le ha dado de baja la empresa
+____________________________________________________________________
+30/11/2023-10:18:09
+
+Jornadas que pernecen al empleado
+a eliminar se ha elimado correctamente
+
+El Dni no existe en el registro
+____________________________________________________________________

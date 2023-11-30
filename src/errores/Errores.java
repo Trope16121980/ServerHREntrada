@@ -34,7 +34,8 @@ public class Errores {
      */
     public String deleteEmpleadoYes() {
         StringBuilder deleteEmpleadoYes = new StringBuilder();
-        deleteEmpleadoYes.append("\nEmpleado eliminado correctamente");
+        deleteEmpleadoYes.append("\nEmpleado eliminado correctamente y ademas se ha\n"
+                + "eliminado el usuario y sus jornadas correctamente.");
         return deleteEmpleadoYes.toString();
     }
     

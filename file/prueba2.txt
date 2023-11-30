@@ -1,0 +1,109 @@
+30/11/2023-10:32:46
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+30/11/2023-10:33:46
+
+Datos de login recibidos:
+Login : user
+Pass: user
+30/11/2023-10:33:59
+
+Nombre de empresa modificado correctamente:
+Nombre: Toyota
+Direccion: Martorell
+Telefono: +34983652847
+____________________________________________________________________
+30/11/2023-10:35:11
+
+Empleado modificado correctamente:
+
+Dni: 12345679Z
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departament: Informatica
+Codigo tarjeta: 72775
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+30/11/2023-10:36:20
+
+Usuario modificado correctamente:
+
+Login: admin
+Pass: prueba
+Numtipe: 0
+Dni: 12345678A
+____________________________________________________________________
+30/11/2023-10:36:43
+
+Usuario modificado correctamente:
+
+Login: admin
+Pass: admin
+Numtipe: 0
+Dni: 12345678A
+____________________________________________________________________
+
+Bienvenido al ServeHREntrada
+30/11/2023-10:36:58
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Cliente con codigo A67340 que pertenece al usuario admin
+se ha desconectado correctamente.
+30/11/2023-10:37:39
+
+Jornada modificada correctamente:
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Hora entrada: 08:00
+Hora salida: 10:37
+Total: 2:37
+Fecha: 2023/11/26
+Codigo tarjeta: 1
+____________________________________________________________________
+30/11/2023-10:38:07
+
+Jornada creada correctamente:
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Hora entrada: 10:38
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/11/30
+Codigo tarjeta: 1
+____________________________________________________________________
+30/11/2023-10:38:46
+
+Empresa eliminada correctamente
+y a los empleados se le ha dado de baja la empresa
+____________________________________________________________________
+30/11/2023-10:42:19
+
+Empleado modificado correctamente:
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Nombre empresa: Toyota
+Departament: Informatica
+Codigo tarjeta: 3
+Mail: Juan.Toyota@gmail.com
+Telefono: 852146985
+____________________________________________________________________
+30/11/2023-10:44:30
+
+Jornadas que pernecen al empleado
+a eliminar se ha elimado correctamente
+
+Empleado eliminado correctamente
+____________________________________________________________________

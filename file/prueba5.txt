@@ -1,0 +1,19 @@
+30/11/2023-11:08:47
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+30/11/2023-11:08:56
+
+Datos de login recibidos:
+Login : user
+Pass: user
+30/11/2023-11:09:10
+
+Empleado eliminado correctamente y además se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna.
+____________________________________________________________________
+30/11/2023-11:12:04
+
+Empresa eliminada correctamente
+y a los empleados se le ha dado de baja la empresa

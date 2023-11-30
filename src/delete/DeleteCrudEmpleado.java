@@ -23,17 +23,9 @@ public class DeleteCrudEmpleado {
                 List<Empleados> deleteEmpleado = new ArrayList<Empleados>();
                 deleteEmpleado = DeleteEmpleado.deleteEmpleado(crud, nombreTabla, dni, datoDni, palabraAbuscar, datoDni, outObjeto, client);
 
-                if (!deleteEmpleado.isEmpty()) {
-                    System.out.println("\nEmpresa eliminada correctamente, sus datos son:\n");
-                    Empleados empleados = deleteEmpleado.get(0);
-                    System.out.println("\nDni: " + datoDni + "\n"
-                            + "Nombre: " + empleados.getNom() + "\n"
-                            + "Apellido: " + empleados.getApellido() + "\n"
-                            + "Nombre empresa: " + empleados.getNomempresa() + "\n"
-                            + "Departamento: " + empleados.getDepartament() + "\n"
-                            + "Codigo tarjeta: " + empleados.getCodicard() + "\n"
-                            + "Mail: " + empleados.getMail() + "\n"
-                            + "Telefono: " + empleados.getTelephon());
+                if (deleteEmpleado.isEmpty()) {
+                    System.out.println("\nEmpleado eliminado correctamente y ademas se ha\n"
+                            + "eliminado el usuario y sus jornadas correctamente si es que existe alguna.");
                     System.out.println("____________________________________________________________________");
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
                     outObjeto.writeObject(deleteEmpleado);
