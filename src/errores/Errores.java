@@ -7,10 +7,15 @@ package errores;
  */
 public class Errores {
 
+     public String deleteUsersYes() {
+        StringBuilder deleteJornadaYes = new StringBuilder();
+        deleteJornadaYes.append("\nUsuario eliminado correctamente");
+        return deleteJornadaYes.toString();
+    }
+    
      public String deleteJornadaYes() {
         StringBuilder deleteJornadaYes = new StringBuilder();
-        deleteJornadaYes.append("\nJornadas que pernecen al empleado\n"
-                + "a eliminar se ha elimado correctamente");
+        deleteJornadaYes.append("\nJornada eliminada correctamente");
         return deleteJornadaYes.toString();
     }
     

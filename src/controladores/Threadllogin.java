@@ -5,8 +5,7 @@ import update.*;
 import insert.*;
 import print.*;
 import controladores.Codigo;
-import delete.DeleteCrudEmpleado;
-import delete.DeleteCrudEmpresa;
+import delete.*;
 import fecha.Fechas;
 import java.net.Socket;
 import java.util.logging.Level;
@@ -219,9 +218,12 @@ public class Threadllogin extends Thread {
 
                                         } else if (frase[1].equals("3") && frase[2].equals("2") && frase[3].equals("nom")) {
                                             handleDeleteEmpresa(frase, palabra, outObjeto, client);
-                                            
+
+                                        } else if (frase[1].equals("3") && frase[2].equals("1") && frase[3].equals("dni")) {
+                                            handleDeleteUsers(frase, palabra, outObjeto, client);
+
                                         } else if (frase[1].equals("3") && frase[2].equals("0") && frase[3].equals("dni")) {
-                                            handleDeleteEmpleado(frase, palabra, outObjeto, client);    
+                                            handleDeleteEmpleado(frase, palabra, outObjeto, client);
 
                                         } else if (frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")
                                                 || frase[1].equals("2") && frase[2].equals("3") && frase[3].equals("dni")) {
@@ -236,7 +238,11 @@ public class Threadllogin extends Thread {
 
                                         } else if (nomApellido[7].equals("0") || nomApellido[7].equals("1")) {
 
-                                            if (nomApellido[3].equals("dni") && nomApellido[5].equals("fecha")) {
+                                            if (nomApellido[1].equals("3") && nomApellido[2].equals("3")) {
+
+                                                handleJornadaDeleteRequest(nomApellido, palabra, outObjeto, client);
+
+                                            } else if (nomApellido[3].equals("dni") && nomApellido[5].equals("fecha")) {
 
                                                 handleDniFechaRequest(nomApellido, palabra, outObjeto, client);
 
@@ -244,8 +250,7 @@ public class Threadllogin extends Thread {
 
                                                 handleNomFechaRequest(nomApellido, palabra, outObjeto, client);
 
-                                            } else if (nomApellido[3].equals("apellido")
-                                                    && nomApellido[5].equals("fecha")) {
+                                            } else if (nomApellido[3].equals("apellido") && nomApellido[5].equals("fecha")) {
 
                                                 handleApellidoFechaRequest(nomApellido, palabra, outObjeto, client);
 
@@ -347,7 +352,7 @@ public class Threadllogin extends Thread {
         }
     }
 
-     private void handleDeleteEmpleado(String[] frase, String palabra, ObjectOutputStream outObjeto,
+    private void handleDeleteEmpleado(String[] frase, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = frase[0];
         String crud = frase[1];
@@ -368,8 +373,29 @@ public class Threadllogin extends Thread {
             }
         }
     }
-    
-    
+
+    private void handleDeleteUsers(String[] frase, String palabra, ObjectOutputStream outObjeto,
+            Socket client) throws IOException {
+        String codigoUserRecibido = frase[0];
+        String crud = frase[1];
+        String nombreTabla = frase[2];
+        String dni = frase[3];
+        String datoDni = frase[4];
+        String orden = frase[5];
+
+        if (!codigo.equals(codigoUserRecibido)) {
+            verificarCodigoCliente(codigoUserRecibido);
+
+        } else if (orden.equals("0") || orden.equals("1")) {
+            System.out.println(fecha.fecha_hora());
+            if (crud.equals("3")) {
+                if (nombreTabla.equals("1")) {
+                    DeleteCrudUsers.handleDeleteUsers(crud, nombreTabla, dni, datoDni, palabra, outObjeto, client);
+                }
+            }
+        }
+    }
+
     private void handleDeleteEmpresa(String[] frase, String palabra, ObjectOutputStream outObjeto,
             Socket client) throws IOException {
         String codigoUserRecibido = frase[0];
@@ -681,6 +707,28 @@ public class Threadllogin extends Thread {
             } else if (nombreTabla.equals("3") && nom.equals("nom") && apellido.equals("apellido")) {
                 SearchCrudNomApellidoJornada.handleSearchRequest(crud, nombreTabla, nom, datoNom, apellido,
                         datoApellido, palabra, outObjeto, client);
+            }
+        }
+    }
+
+    private void handleJornadaDeleteRequest(String[] NomApellido, String palabra, ObjectOutputStream outObjeto,
+            Socket client) throws IOException {
+        String codigoUserRecibido = NomApellido[0];
+        String crud = NomApellido[1];
+        String nombreTabla = NomApellido[2];
+        String dni = NomApellido[3];
+        String datoDni = NomApellido[4];
+        String fechas = NomApellido[5];
+        String datoFecha = NomApellido[6];
+        String orden = NomApellido[7];
+        if (!codigo.equals(codigoUserRecibido)) {
+            verificarCodigoCliente(codigoUserRecibido);
+        } else if (orden.equals("0") || orden.equals("1")) {
+            System.out.println(fecha.fecha_hora());
+
+            if (nombreTabla.equals("3") && dni.equals("dni") && fechas.equals("fecha")) {
+                DeleteCrudJornada.handleSearchRequest(crud, nombreTabla, dni, datoDni, fechas, datoFecha,
+                        palabra, outObjeto, client);
             }
         }
     }
