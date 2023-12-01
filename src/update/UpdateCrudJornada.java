@@ -12,11 +12,27 @@ import modelo.Jornada;
 import peticiones.*;
 
 /**
- *
- * @author gsenorans
+ * @author Gustavo Senoráns Varela
+ * @version 1.4, 15/11/2023
+ * @since jdk 17
  */
 public class UpdateCrudJornada {
 
+    /**
+     * Este metodo envia los datos al metodo UpdateJornada.updateJornada para
+     * ser modificado y después enviar el objeto al cliente e imprir en el text
+     * area del servidor
+     *
+     * @param crud en este caso es el 2 de update
+     * @param nombreTabla en este caso es el 2, ya que se refiere a empresa
+     * @param dni el nombre de la columna de la tabla nombretabla
+     * @param datoDni el dni del empleado que tiene la jornada iniciada
+     * @param palabraAbuscar al array que contiene los datos
+     * @param palabra variable necesaria para las modificaciones
+     * @param outObjeto el objeto que contiene el array
+     * @param client el socket del cliente al que se le envían los datos
+     * @throws IOException controla los errores
+     */
     public static void handleSearchRequestDni(String crud, String nombreTabla, String dni, String datoDni, String palabraAbuscar, String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
 
         if (crud.equals("2")) {
@@ -51,6 +67,19 @@ public class UpdateCrudJornada {
         }
     }
 
+    /**
+     *
+     * @param crud en este caso es el 2 de update
+     * @param nombreTabla en este caso es el 2, ya que se refiere a empresa
+     * @param codicard el nombre de la columna de la tabla nombretabla
+     * @param datoCodicard el codigo de tarjeta del empleado que tiene la
+     * jornada iniciada
+     * @param palabraAbuscar al array que contiene los datos
+     * @param palabra variable necesaria para las modificaciones
+     * @param outObjeto el objeto que contiene el array
+     * @param client el socket del cliente al que se le envían los datos
+     * @throws IOException controla los errores
+     */
     public static void handleSearchRequestCodicard(String crud, String nombreTabla, String codicard, String datoCodicard, String palabraAbuscar, String palabra, ObjectOutputStream outObjeto, Socket client) throws IOException {
 
         if (crud.equals("2")) {
