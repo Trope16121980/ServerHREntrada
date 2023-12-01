@@ -1,0 +1,47 @@
+01/12/2023-08:44:15
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+01/12/2023-08:44:25
+
+Datos de login recibidos:
+Login : user
+Pass: user
+01/12/2023-08:44:41
+
+Usuario eliminado correctamente
+____________________________________________________________________
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Codigo tarjeta: 3
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Codigo tarjeta: 2
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+____________________________________________________________________
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 22:05
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/30
+
+____________________________________________________________________

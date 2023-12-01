@@ -25,37 +25,50 @@ public class DeleteEmpresa {
 
         try {
             String nombreNuevo = "SELECT * FROM empresa where nom = ?";
-            try (PreparedStatement psNom = controladores.Conexion.getconexion().prepareStatement(nombreNuevo)) {
-                psNom.setString(1, datoNom);
-                try (ResultSet rsNom = psNom.executeQuery()) {
-                    if (rsNom.next()) {
-                        
-                        String consulta = "UPDATE empleados SET nomempresa = 'EmpresaBaja' WHERE nomempresa = ?";
-                        try (PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta)) {
-                            preparedStatement.setString(1, datoNom);
-                            preparedStatement.executeUpdate();
-                        }
+            PreparedStatement psNom = controladores.Conexion.getconexion().prepareStatement(nombreNuevo);
+            psNom.setString(1, datoNom);
+            ResultSet rsNom = psNom.executeQuery();
+            if (rsNom.next()) {
 
-                        String deleteConsulta = "DELETE FROM empresa WHERE nom = ?";
-                        try (PreparedStatement deleteEmpresa = controladores.Conexion.getconexion().prepareStatement(deleteConsulta)) {
-                            deleteEmpresa.setString(1, datoNom);
-                            deleteEmpresa.executeUpdate();
-                            Errores error = new Errores();
-                            String deleteEmpresaYes = error.deleteEmpresaYes();
-                            System.out.println(deleteEmpresaYes);
-                            outObjeto = new ObjectOutputStream(client.getOutputStream());
-                            outObjeto.writeObject(deleteEmpresaYes);
-                            outObjeto.flush();
-                        }
-                    } else {
-                        Errores error = new Errores();
-                        String erroNomEmpresa = error.erroNomEmpresa();
-                        System.out.println(erroNomEmpresa);
-                        outObjeto = new ObjectOutputStream(client.getOutputStream());
-                        outObjeto.writeObject(erroNomEmpresa);
-                        outObjeto.flush();
-                    }
+                String consulta = "UPDATE empleados SET nomempresa = 'EmpresaBaja' WHERE nomempresa = ?";
+                try {
+                    PreparedStatement preparedStatement = controladores.Conexion.getconexion().prepareStatement(consulta);
+                    preparedStatement.setString(1, datoNom);
+                    preparedStatement.executeUpdate();
+                } catch (SQLException e) {
+                    Errores error = new Errores();
+                    String erroNomEmpresa = error.erroNomEmpresa();
+                    System.out.println(erroNomEmpresa);
+                    outObjeto = new ObjectOutputStream(client.getOutputStream());
+                    outObjeto.writeObject(erroNomEmpresa);
+                    outObjeto.flush();
                 }
+                try {
+                    String deleteConsulta = "DELETE FROM empresa WHERE nom = ?";
+                    PreparedStatement deleteEmpresa = controladores.Conexion.getconexion().prepareStatement(deleteConsulta);
+                    deleteEmpresa.setString(1, datoNom);
+                    deleteEmpresa.executeUpdate();
+                    Errores error = new Errores();
+                    String deleteEmpresaYes = error.deleteEmpresaYes();
+                    System.out.println(deleteEmpresaYes);
+                    outObjeto = new ObjectOutputStream(client.getOutputStream());
+                    outObjeto.writeObject(deleteEmpresaYes);
+                    outObjeto.flush();
+                } catch (SQLException e) {
+                    Errores error = new Errores();
+                    String erroNomEmpresa = error.erroNomEmpresa();
+                    System.out.println(erroNomEmpresa);
+                    outObjeto = new ObjectOutputStream(client.getOutputStream());
+                    outObjeto.writeObject(erroNomEmpresa);
+                    outObjeto.flush();
+                }
+            } else {
+                Errores error = new Errores();
+                String erroNomEmpresa = error.erroNomEmpresa();
+                System.out.println(erroNomEmpresa);
+                outObjeto = new ObjectOutputStream(client.getOutputStream());
+                outObjeto.writeObject(erroNomEmpresa);
+                outObjeto.flush();
             }
         } catch (SQLException e) {
             Errores error = new Errores();

@@ -1,0 +1,58 @@
+01/12/2023-09:02:03
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+01/12/2023-09:02:09
+
+Datos de login recibidos:
+Login : user
+Pass: user
+01/12/2023-09:02:22
+
+El Dni no existe en el registro
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna.
+____________________________________________________________________
+01/12/2023-09:02:46
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna.
+____________________________________________________________________
+01/12/2023-09:02:56
+
+El Dni no existe en el registro
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna.
+____________________________________________________________________
+01/12/2023-09:03:01
+
+El Dni no existe en el registro
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna.
+____________________________________________________________________
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
