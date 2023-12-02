@@ -1,0 +1,57 @@
+02/12/2023-21:49:55
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+02/12/2023-21:50:07
+
+Datos de login recibidos:
+Login : user
+Pass: user
+02/12/2023-21:50:21
+____________________________________________________________________
+
+Nombre empresa: EmpresaBaja
+Direccion: EmpresaBaja
+Telefono: EmpresaBaja
+____________________________________________________________________
+
+Nombre empresa: HREntrada
+Direccion: Barcelona
+Telefono: 452156235
+____________________________________________________________________
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: 856859865
+____________________________________________________________________
+
+Login: user
+Pass: 04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+02/12/2023-21:51:09
+____________________________________________________________________
+
+Login: user
+Pass: 04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Codigo tarjeta: 2
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+____________________________________________________________________
+
+Cliente con codigo U91630 que pertenece al usuario user
+se ha desconectado correctamente.

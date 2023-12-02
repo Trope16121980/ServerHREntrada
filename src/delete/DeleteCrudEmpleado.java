@@ -38,7 +38,7 @@ public class DeleteCrudEmpleado {
                 List<Empleados> deleteEmpleado = new ArrayList<Empleados>();
                 deleteEmpleado = DeleteEmpleado.deleteEmpleado(crud, nombreTabla, dni, datoDni, palabraAbuscar, datoDni, outObjeto, client);
 
-                if (deleteEmpleado.isEmpty()) {
+                if (!deleteEmpleado.isEmpty()) {
                     System.out.println("\nEmpleado eliminado correctamente y ademas se ha\n"
                             + "eliminado el usuario y sus jornadas correctamente si es que existe alguna.");
                     System.out.println("____________________________________________________________________");
