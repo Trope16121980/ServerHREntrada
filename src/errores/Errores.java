@@ -7,23 +7,32 @@ package errores;
  */
 public class Errores {
 
-     public String deleteUsersYes() {
-        StringBuilder deleteJornadaYes = new StringBuilder();
-        deleteJornadaYes.append("\nUsuario eliminado correctamente");
-        return deleteJornadaYes.toString();
+    /**
+     * Genera un String con el mensaje de la eliminacion del usuario
+     *
+     * @return devuelve el mensaje de exisito
+     */
+    public String deleteUsersYes() {
+        StringBuilder deleteUsersYes = new StringBuilder();
+        deleteUsersYes.append("\nUsuario eliminado correctamente");
+        return deleteUsersYes.toString();
     }
-    
-     public String deleteJornadaYes() {
+
+    /**
+     * Genera un String con el mensaje de la eliminacion del jornada
+     *
+     * @return devuelve el mensaje de exisito
+     */
+    public String deleteJornadaYes() {
         StringBuilder deleteJornadaYes = new StringBuilder();
         deleteJornadaYes.append("\nJornada eliminada correctamente");
         return deleteJornadaYes.toString();
     }
-    
-    
-     /**
-     * Genera un String con el error de la lectura de Dni
+
+    /**
+     * Genera un String con el mensaje de la eliminacion del empresa
      *
-     * @return devuelve el mensaje de error
+     * @return devuelve el mensaje de exisito
      */
     public String deleteEmpresaYes() {
         StringBuilder deleteEmpresaYes = new StringBuilder();
@@ -31,11 +40,11 @@ public class Errores {
                 + "y a los empleados se le ha dado de baja la empresa");
         return deleteEmpresaYes.toString();
     }
-    
-     /**
-     * Genera un String con el error de la lectura de Dni
+
+    /**
+     * Genera un String con el mensaje de la eliminacion del empleado
      *
-     * @return devuelve el mensaje de error
+     * @return devuelve el mensaje de exisito
      */
     public String deleteEmpleadoYes() {
         StringBuilder deleteEmpleadoYes = new StringBuilder();
@@ -43,7 +52,7 @@ public class Errores {
                 + "eliminado el usuario y sus jornadas correctamente.");
         return deleteEmpleadoYes.toString();
     }
-    
+
     /**
      * Genera un String con el error de la lectura de Dni
      *
@@ -387,8 +396,8 @@ public class Errores {
                 + "Revise la lista de empleados y vuelva a intentarlo.");
         return errorUpdateEmpleadoDni.toString();
     }
-    
-     /**
+
+    /**
      * Genera un String con el error del update del dni del empleado
      *
      * @return devuelve el mensaje de error
