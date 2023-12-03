@@ -42,12 +42,12 @@ public class DeleteCrudJornada {
                 deleteJornada = DeleteJornada.deleteJornada(crud, nombreTabla, dni, datoDni, fecha, datoFecha, palabraAbuscar, datoDni, outObjeto, client);
 
                 if (!deleteJornada.isEmpty()) {
-                    System.out.println("\nJornada eliminada correctamente");
                     System.out.println("____________________________________________________________________");
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
                     outObjeto.writeObject(deleteJornada);
                     outObjeto.flush();
                 } else {
+                    System.out.println("\nJornada eliminada correctamente");
                     System.out.println("____________________________________________________________________");
                 }
             }

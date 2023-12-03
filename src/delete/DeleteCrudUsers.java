@@ -39,12 +39,12 @@ public class DeleteCrudUsers {
                 deleteUsers = DeleteUsers.deleteUsers(crud, nombreTabla, dni, datoDni, palabraAbuscar, datoDni, outObjeto, client);
 
                 if (!deleteUsers.isEmpty()) {
-                    System.out.println("\nUsuario eliminado correctamente");
                     System.out.println("____________________________________________________________________");
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
                     outObjeto.writeObject(deleteUsers);
                     outObjeto.flush();
                 } else {
+                    System.out.println("\nUsusario eliminado correctamente");
                     System.out.println("____________________________________________________________________");
                 }
             }

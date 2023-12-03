@@ -38,10 +38,6 @@ public class DeleteCrudEmpresa {
                 deleteEmpresa = DeleteEmpresa.deleteEmpresa(crud, nombreTabla, nom, datoNom, palabraAbuscar, datoNom, outObjeto, client);
 
                 if (!deleteEmpresa.isEmpty()) {
-                    System.out.println("\nEmpresa eliminada correctamente, sus datos son:\n");
-                    Empresa empresa = deleteEmpresa.get(0);
-                    System.out.println("\nNombre: " + datoNom + "\n" + "Address: " + empresa.getAddress() + "\n" + "Telefono: "
-                            + empresa.getTelephon() + "\n");
                     System.out.println("____________________________________________________________________");
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
                     outObjeto.writeObject(deleteEmpresa);

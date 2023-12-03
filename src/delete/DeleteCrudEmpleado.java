@@ -39,13 +39,13 @@ public class DeleteCrudEmpleado {
                 deleteEmpleado = DeleteEmpleado.deleteEmpleado(crud, nombreTabla, dni, datoDni, palabraAbuscar, datoDni, outObjeto, client);
 
                 if (!deleteEmpleado.isEmpty()) {
-                    System.out.println("\nEmpleado eliminado correctamente y ademas se ha\n"
-                            + "eliminado el usuario y sus jornadas correctamente si es que existe alguna.");
                     System.out.println("____________________________________________________________________");
                     outObjeto = new ObjectOutputStream(client.getOutputStream());
                     outObjeto.writeObject(deleteEmpleado);
                     outObjeto.flush();
                 } else {
+                    System.out.println("\nEmpleado eliminado correctamente y ademas se ha\n"
+                            + "eliminado el usuario y sus jornadas correctamente si es que existe alguna\n");
                     System.out.println("____________________________________________________________________");
                 }
             }
