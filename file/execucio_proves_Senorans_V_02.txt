@@ -1,0 +1,1129 @@
+16/12/2023-11:12:57
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:08
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El nombre no existe en el registro
+
+Cliente con codigo A20294 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:17
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Nombre empresa: Toyota
+Departamento: Mecanico
+Codigo tarjeta: 3
+Mail: Juan.Toyota@gmail.com
+Telefono: 852146985
+____________________________________________________________________
+
+
+Cliente con codigo A94233 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:25
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El nombre no existe en el registro
+
+Cliente con codigo A63173 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:33
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:33
+
+El codigo de la tarjeta o la fecha no existe en el registro
+
+Cliente con codigo A59659 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:33
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:33
+
+El nombre o el apellido no existe en el registro
+
+Cliente con codigo A60712 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:33
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:33
+
+El codigo de la tarjeta o la fecha no existe en el registro
+
+Cliente con codigo A62117 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:33
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:33
+
+El nombre, apellido o la fecha no existe en el registro
+
+Cliente con codigo A838 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:33
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:33
+
+El apellido o la fecha no existe en el registro
+
+Cliente con codigo A70374 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:33
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:33
+
+El apellido o la fecha no existe en el registro
+
+Cliente con codigo A91367 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:34
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:34
+
+El nombre, apellido o la fecha no existe en el registro
+
+Cliente con codigo A44738 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:34
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:34
+
+El nombre, apellido o la fecha no existe en el registro
+
+Cliente con codigo A21517 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:34
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:34
+
+El nombre o el apellido no existe en el registro
+
+Cliente con codigo A2057 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:34
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+
+Cliente con codigo A51250 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:35
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Login: admin
+Pass: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+Tipo de usuario: 0
+Dni: 12345678A
+____________________________________________________________________
+
+
+Cliente con codigo A15503 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:36
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Login: user
+Pass: 04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb
+Tipo de usuario: 1
+Dni: 12345679B
+____________________________________________________________________
+
+
+Cliente con codigo A75556 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:36
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+
+Cliente con codigo A60511 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:36
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: 856859865
+____________________________________________________________________
+
+
+Cliente con codigo A91908 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:36
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Codigo tarjeta: 3
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A92446 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A99401 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Codigo tarjeta: 3
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Codigo tarjeta: 2
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A68287 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El nombre no existe en el registro
+
+Cliente con codigo A28254 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El apellido no existe en el registro
+
+Cliente con codigo A57621 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Nombre empresa: Toyota
+Departamento: Mecanico
+Codigo tarjeta: 3
+Mail: Juan.Toyota@gmail.com
+Telefono: 852146985
+____________________________________________________________________
+
+
+Cliente con codigo A38808 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:38
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Nombre empresa: Toyota
+Departamento: Mecanico
+Codigo tarjeta: 3
+Mail: Juan.Toyota@gmail.com
+Telefono: 852146985
+____________________________________________________________________
+
+
+Cliente con codigo A67273 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El departamento no existe en el registro
+
+Cliente con codigo A63032 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+
+Cliente con codigo A29645 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: 856859865
+____________________________________________________________________
+
+
+Cliente con codigo A10556 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El codigo de tarjeta no existe en el registro
+
+Cliente con codigo A13956 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El nombre de la empresa no existe en el registro
+
+Cliente con codigo A20859 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:39
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El mail no existe en el registro
+
+Cliente con codigo A59573 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:39
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:39
+
+El nombre o el apellido no existe en el registro
+
+Cliente con codigo A56832 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:39
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Login: admin
+Pass: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+Tipo de usuario: 0
+Dni: 12345678A
+
+____________________________________________________________________
+
+Login: user
+Pass: 04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+
+Cliente con codigo A35041 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:39
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+
+Cliente con codigo A69716 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:40
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El Dni no existe en el registro
+
+Cliente con codigo A89606 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:40
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El tipo de numero de usuario no existe en el registro
+
+Cliente con codigo A86980 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:40
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+
+Cliente con codigo A16552 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:40
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Codigo tarjeta: 3
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Codigo tarjeta: 2
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+____________________________________________________________________
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+____________________________________________________________________
+
+Cliente con codigo A21882 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:40
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Codigo tarjeta: 2
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A30505 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:41
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A63715 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:41
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Nombre empresa: Toyota
+Departamento: Mecanico
+Codigo tarjeta: 3
+Mail: Juan.Toyota@gmail.com
+Telefono: 852146985
+____________________________________________________________________
+
+
+Cliente con codigo A1705 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:41
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El telefono no existe en el registro
+
+Cliente con codigo A91999 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:41
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Nombre empresa: EmpresaBaja
+Direccion: EmpresaBaja
+Telefono: EmpresaBaja
+____________________________________________________________________
+
+Nombre empresa: HREntrada
+Direccion: Barcelona
+Telefono: 452156235
+____________________________________________________________________
+
+Nombre empresa: Toyota
+Direccion: El Prat
+Telefono: 856859865
+____________________________________________________________________
+
+Cliente con codigo A76735 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:41
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+La direccion de la empresa no existe en el registro
+
+Cliente con codigo A75182 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:42
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+____________________________________________________________________
+
+
+Cliente con codigo A72071 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:42
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 1
+Mail: Administrado.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Nombre empresa: Toyota
+Departamento: Mecanico
+Codigo tarjeta: 3
+Mail: Juan.Toyota@gmail.com
+Telefono: 852146985
+
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Nombre empresa: HREntrada
+Departamento: Informatica
+Codigo tarjeta: 2
+Mail: User.HREntrada@gmail.com
+Telefono: 933456789
+
+____________________________________________________________________
+
+Cliente con codigo A47804 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:42
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El nombre de la empresa no existe en el registro
+
+Cliente con codigo A88484 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:42
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El Dni no existe en el registro
+
+Cliente con codigo A40408 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:42
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:42
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A82446 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:42
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:42
+
+El nombre o la fecha no existe en el registro
+
+Cliente con codigo A18514 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:42
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El codigo de tarjeta no existe en el registro
+
+Cliente con codigo A26518 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:43
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:43
+
+El nombre o el apellido no existe en el registro
+
+Cliente con codigo A23669 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:43
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El Dni no existe en el registro
+
+Cliente con codigo A12760 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:43
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:43
+
+El nombre o la fecha no existe en el registro
+
+Cliente con codigo A27466 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:43
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:43
+
+Dni: 12345678A
+Nombre: Administrador
+Apellido: HREntrada
+Codigo tarjeta: 1
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A29768 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:43
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:44
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Codigo tarjeta: 2
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A83279 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:44
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+La fecha no existe en el registro
+
+Cliente con codigo A90104 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:44
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El apellido no existe en el registro
+
+Cliente con codigo A88822 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:44
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:44
+
+El dni o la fecha no existe en el registro
+
+Cliente con codigo A76164 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:44
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+El nombre no existe en el registro
+
+Cliente con codigo A51999 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:44
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:45
+
+El dni o la fecha no existe en el registro
+
+Cliente con codigo A20594 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:45
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:45
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Codigo tarjeta: 3
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A53447 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:45
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:45
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Codigo tarjeta: 3
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A64779 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:13:45
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:13:45
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Codigo tarjeta: 3
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+____________________________________________________________________
+
+
+Cliente con codigo A39973 que pertenece al usuario admin
+se ha desconectado correctamente.

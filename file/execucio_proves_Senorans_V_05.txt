@@ -1,0 +1,150 @@
+16/12/2023-11:25:21
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:33
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:34
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna
+
+____________________________________________________________________
+
+Cliente con codigo A89870 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:34
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:34
+
+El dni o la fecha no existe en el registro
+
+Jornada eliminada correctamente
+____________________________________________________________________
+
+Cliente con codigo A27339 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:34
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:34
+
+El dni o la fecha no existe en el registro
+
+Jornada eliminada correctamente
+____________________________________________________________________
+
+Cliente con codigo A21780 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:34
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:34
+
+El dni o la fecha no existe en el registro
+
+Jornada eliminada correctamente
+____________________________________________________________________
+
+Cliente con codigo A58670 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:35
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:35
+
+El Dni no existe en el registro
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna
+
+____________________________________________________________________
+
+Cliente con codigo A91276 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:35
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:35
+
+Empresa eliminada correctamente
+y a los empleados se le ha dado de baja la empresa
+____________________________________________________________________
+
+Cliente con codigo A80487 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:35
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:35
+
+El nombre de la empresa no existe en el registro
+____________________________________________________________________
+
+Cliente con codigo A67501 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:35
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:35
+
+El Dni no existe en el registro
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna
+
+____________________________________________________________________
+
+Cliente con codigo A83718 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:25:35
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:25:36
+
+El Dni no existe en el registro
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna
+
+____________________________________________________________________
+
+Cliente con codigo A1768 que pertenece al usuario admin
+se ha desconectado correctamente.

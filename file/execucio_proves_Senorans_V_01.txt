@@ -1,0 +1,62 @@
+16/12/2023-11:08:36
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:08:57
+
+Datos de login recibidos:
+Login : error
+Pass: user
+16/12/2023-11:08:58
+
+Cliente desconectado, error en el login
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:08:58
+
+Datos de login recibidos:
+Login : user
+Pass: user
+
+Cliente con codigo U29610 que pertenece al usuario user
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:08:58
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Cliente con codigo A51695 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:08:58
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:08:58
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Cliente desconectado, ya esta conectado este usuario.
+
+Cliente con codigo A25318 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:08:58
+
+Datos de login recibidos:
+Login : admin
+Pass: error
+16/12/2023-11:08:58
+
+Cliente desconectado, error en el login

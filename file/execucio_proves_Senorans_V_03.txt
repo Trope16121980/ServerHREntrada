@@ -1,0 +1,346 @@
+16/12/2023-11:16:04
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:35
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:35
+
+El Dni no existe en el registro
+____________________________________________________________________
+
+Cliente con codigo A31990 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:35
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:35
+
+El Dni no existe en el registro
+
+Ususario eliminado correctamente
+____________________________________________________________________
+
+Cliente con codigo A65414 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:36
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+
+
+El empleado que utilizara este usuario
+no esta dado de alta como empleado.
+Revise la lista de empleados y cree
+el empleado antes de crear el usuario.
+____________________________________________________________________
+
+Cliente con codigo A75809 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:36
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:36
+
+El nombre de la empresa no existe en el registro
+____________________________________________________________________
+
+Cliente con codigo A15712 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:36
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+Empresa creada correctamente, sus datos son:
+
+
+Nombre: Puleva
+Address: Oviedo
+Telefono: +34933568956
+
+____________________________________________________________________
+
+Cliente con codigo A13004 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:36
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:36
+
+Empleado creado correctamente, sus datos son:
+
+
+Dni: 12345678D
+Nombre: Gustavo
+Apellido: Senorans Varela
+Nombre empresa: Toyota
+Departamento: Informatica
+Codigo tarjeta: 1234645
+Mail: gustavo.senorans@gmail.com
+Telefono: 933654485
+
+____________________________________________________________________
+
+Cliente con codigo A50439 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+
+
+El empleado que utilizara este usuario
+no esta dado de alta como empleado.
+Revise la lista de empleados y cree
+el empleado antes de crear el usuario.
+____________________________________________________________________
+
+Cliente con codigo A89734 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:37
+
+Jornada creada correctamente:
+
+Dni: 12345678D
+Nombre: Gustavo
+Apellido: Senorans Varela
+Hora entrada: 11:16
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/12/16
+Codigo tarjeta: 1234645
+____________________________________________________________________
+
+Cliente con codigo A1708 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+
+
+El empleado que utilizara este usuario
+no esta dado de alta como empleado.
+Revise la lista de empleados y cree
+el empleado antes de crear el usuario.
+____________________________________________________________________
+
+Cliente con codigo A22844 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+La empresa que intenta crear ya esta
+dada de alta.
+Revise la lista de empresas.
+____________________________________________________________________
+
+Cliente con codigo A77730 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:37
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:37
+
+El codigo de tarjeta no existe en el registro
+____________________________________________________________________
+
+Cliente con codigo A85933 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+
+
+El empleado que utilizara este usuario
+no esta dado de alta como empleado.
+Revise la lista de empleados y cree
+el empleado antes de crear el usuario.
+____________________________________________________________________
+
+Cliente con codigo A35104 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:38
+
+Empleado creado correctamente, sus datos son:
+
+
+Dni: 159845854C
+Nombre: Pedro
+Apellido: Varela
+Nombre empresa: Toyota
+Departamento: Informatica
+Codigo tarjeta: 65
+Mail: pedro.varela@gmail.com
+Telefono: 856958654
+
+____________________________________________________________________
+
+Cliente con codigo A4473 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+
+
+Usuario creado correctamente, sus datos son: 
+
+Login: gsv
+Pass: gsv
+Num Tipe: 0
+Dni: 12345678D
+____________________________________________________________________
+
+Cliente con codigo A55429 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:38
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:39
+
+Empleado eliminado correctamente y ademas se ha
+eliminado el usuario y sus jornadas correctamente si es que existe alguna
+
+____________________________________________________________________
+
+Cliente con codigo A79282 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:39
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:39
+
+La empresa en la que intenta añadir
+el empleado no existe.
+Revise la lista de empresas y vuelva a intentarlo.
+____________________________________________________________________
+
+Cliente con codigo A20048 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:39
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:39
+
+El Dni no existe en el registro
+____________________________________________________________________
+
+Cliente con codigo A97441 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:39
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:39
+
+Empleado creado correctamente, sus datos son:
+
+
+Dni: 12345678D
+Nombre: Gustavo
+Apellido: Senorans Varela
+Nombre empresa: Toyota
+Departamento: Informatica
+Codigo tarjeta: 1234645
+Mail: gustavo.senorans@gmail.com
+Telefono: 933654485
+
+____________________________________________________________________
+
+Cliente con codigo A27135 que pertenece al usuario admin
+se ha desconectado correctamente.
+
+Bienvenido al ServeHREntrada
+16/12/2023-11:16:40
+
+Datos de login recibidos:
+Login : admin
+Pass: admin
+16/12/2023-11:16:40
+
+El dni que intenta utilizar ya
+se esta utilizando por otro empleado.
+Revise la lista de empleados y vuelva a intentarlo.
+____________________________________________________________________
+
+Cliente con codigo A73250 que pertenece al usuario admin
+se ha desconectado correctamente.

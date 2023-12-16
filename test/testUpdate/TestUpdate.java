@@ -205,41 +205,40 @@ public class TestUpdate {
         }
     }
 
-    @Test
-    public void updateEmpresaRecuperacion() throws ClassNotFoundException {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-
-        try {
-            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
-            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
-            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
-                    .getDefault();
-            socket = clientFactory.createSocket(ip, puerto);
-            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-
-            mensajeServer = lector.readLine();
-            escriptor.write("admin,admin");
-            escriptor.newLine();
-            escriptor.flush();
-            codigo = lector.readLine();
-
-            String palabra = codigo + ",2," + empresaTabla + ",nomNuevo,Toyota,addressNuevo,El Prat,telephonNuevo,856859865,nom,Pascual," + orden;
-            escriptor.write(palabra);
-            escriptor.newLine();
-            escriptor.flush();
-
-            escriptor.write("exit");
-            escriptor.newLine();
-            escriptor.flush();
-
-            mensajeServer = lector.readLine();
-            socket.close();
-        } catch (IOException e) {
-        }
-    }
-
+//    @Test
+//    public void updateEmpresaRecuperacion() throws ClassNotFoundException {
+//        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+//        System.setOut(new PrintStream(outContent));
+//
+//        try {
+//            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
+//            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
+//            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
+//                    .getDefault();
+//            socket = clientFactory.createSocket(ip, puerto);
+//            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+//
+//            mensajeServer = lector.readLine();
+//            escriptor.write("admin,admin");
+//            escriptor.newLine();
+//            escriptor.flush();
+//            codigo = lector.readLine();
+//
+//            String palabra = codigo + ",2," + empresaTabla + ",nomNuevo,Toyota,addressNuevo,El Prat,telephonNuevo,856859865,nom,Pascual," + orden;
+//            escriptor.write(palabra);
+//            escriptor.newLine();
+//            escriptor.flush();
+//
+//            escriptor.write("exit");
+//            escriptor.newLine();
+//            escriptor.flush();
+//
+//            mensajeServer = lector.readLine();
+//            socket.close();
+//        } catch (IOException e) {
+//        }
+//    }
     @Test
     public void test6_updateEmpleadoCompletoPorDni() throws ClassNotFoundException {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -660,41 +659,40 @@ public class TestUpdate {
         }
     }
 
-    @Test
-    public void updateEmpleadoRecuperacion() throws ClassNotFoundException {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-
-        try {
-            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
-            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
-            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
-                    .getDefault();
-            socket = clientFactory.createSocket(ip, puerto);
-            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-
-            mensajeServer = lector.readLine();
-            escriptor.write("admin,admin");
-            escriptor.newLine();
-            escriptor.flush();
-            codigo = lector.readLine();
-
-            String palabra = codigo + ",2," + empleadoTabla + ",dniNuevo,84574589A,nomNuevo,Juan,apellidoNuevo,Perez,nomempresaNuevo,Toyota,departamentNuevo,Mecanico,codicardNuevo,3,mailNuevo,Juan.Toyota@gmail.com,telephonNuevo,852146985,dni,84574589A," + orden;
-            escriptor.write(palabra);
-            escriptor.newLine();
-            escriptor.flush();
-
-            escriptor.write("exit");
-            escriptor.newLine();
-            escriptor.flush();
-
-            mensajeServer = lector.readLine();
-            socket.close();
-        } catch (IOException e) {
-        }
-    }
-
+//    @Test
+//    public void updateEmpleadoRecuperacion() throws ClassNotFoundException {
+//        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+//        System.setOut(new PrintStream(outContent));
+//
+//        try {
+//            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
+//            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
+//            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
+//                    .getDefault();
+//            socket = clientFactory.createSocket(ip, puerto);
+//            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+//
+//            mensajeServer = lector.readLine();
+//            escriptor.write("admin,admin");
+//            escriptor.newLine();
+//            escriptor.flush();
+//            codigo = lector.readLine();
+//
+//            String palabra = codigo + ",2," + empleadoTabla + ",dniNuevo,84574589A,nomNuevo,Juan,apellidoNuevo,Perez,nomempresaNuevo,Toyota,departamentNuevo,Mecanico,codicardNuevo,3,mailNuevo,Juan.Toyota@gmail.com,telephonNuevo,852146985,dni,84574589A," + orden;
+//            escriptor.write(palabra);
+//            escriptor.newLine();
+//            escriptor.flush();
+//
+//            escriptor.write("exit");
+//            escriptor.newLine();
+//            escriptor.flush();
+//
+//            mensajeServer = lector.readLine();
+//            socket.close();
+//        } catch (IOException e) {
+//        }
+//    }
     @Test
     public void test18_updateUsersPass() throws ClassNotFoundException {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -835,42 +833,41 @@ public class TestUpdate {
         }
     }
 
+//    @Test
+//    public void updateUsersRecuperacion() throws ClassNotFoundException {
+//        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+//        System.setOut(new PrintStream(outContent));
+//
+//        try {
+//            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
+//            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
+//            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
+//                    .getDefault();
+//            socket = clientFactory.createSocket(ip, puerto);
+//            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+//
+//            mensajeServer = lector.readLine();
+//            escriptor.write("admin,admin");
+//            escriptor.newLine();
+//            escriptor.flush();
+//            codigo = lector.readLine();
+//
+//            String palabra = codigo + ",2," + usersTabla + ",passNuevo,user,numtipeNuevo,1,login,user," + orden;
+//            escriptor.write(palabra);
+//            escriptor.newLine();
+//            escriptor.flush();
+//
+//            escriptor.write("exit");
+//            escriptor.newLine();
+//            escriptor.flush();
+//
+//            mensajeServer = lector.readLine();
+//            socket.close();
+//        } catch (IOException e) {
+//        }
+//    }
     @Test
-    public void updateUsersRecuperacion() throws ClassNotFoundException {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-
-        try {
-            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
-            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
-            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
-                    .getDefault();
-            socket = clientFactory.createSocket(ip, puerto);
-            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-
-            mensajeServer = lector.readLine();
-            escriptor.write("admin,admin");
-            escriptor.newLine();
-            escriptor.flush();
-            codigo = lector.readLine();
-
-            String palabra = codigo + ",2," + usersTabla + ",passNuevo,user,numtipeNuevo,1,login,user," + orden;
-            escriptor.write(palabra);
-            escriptor.newLine();
-            escriptor.flush();
-
-            escriptor.write("exit");
-            escriptor.newLine();
-            escriptor.flush();
-
-            mensajeServer = lector.readLine();
-            socket.close();
-        } catch (IOException e) {
-        }
-    }
-
-     @Test
     public void test22_updateJornadaDni() throws ClassNotFoundException {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -890,7 +887,7 @@ public class TestUpdate {
             escriptor.flush();
             codigo = lector.readLine();
 
-            String palabra = codigo + ",2," + jornadaTabla + ",dni,12345679B," + orden;
+            String palabra = codigo + ",2," + jornadaTabla + ",dni,84574589A," + orden;
             escriptor.write(palabra);
             escriptor.newLine();
             escriptor.flush();
@@ -905,7 +902,7 @@ public class TestUpdate {
         }
     }
 
-     @Test
+    @Test
     public void test23_updateJornadaCodicard() throws ClassNotFoundException {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -939,9 +936,9 @@ public class TestUpdate {
         } catch (IOException e) {
         }
     }
-    
+
     @Test
-    public void updateJornadaRecuperacion() throws ClassNotFoundException {
+    public void test24_updateJornadaErrorDni() throws ClassNotFoundException {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
@@ -955,7 +952,77 @@ public class TestUpdate {
             escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
             mensajeServer = lector.readLine();
-            escriptor.write("user,user");
+            escriptor.write("admin,admin");
+            escriptor.newLine();
+            escriptor.flush();
+            codigo = lector.readLine();
+
+            String palabra = codigo + ",2," + jornadaTabla + ",dni,error," + orden;
+            escriptor.write(palabra);
+            escriptor.newLine();
+            escriptor.flush();
+
+            escriptor.write("exit");
+            escriptor.newLine();
+            escriptor.flush();
+
+            mensajeServer = lector.readLine();
+            socket.close();
+        } catch (IOException e) {
+        }
+    }
+
+    @Test
+    public void test25_updateJornadaErrorCodicard() throws ClassNotFoundException {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        try {
+            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
+            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
+            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
+                    .getDefault();
+            socket = clientFactory.createSocket(ip, puerto);
+            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+
+            mensajeServer = lector.readLine();
+            escriptor.write("admin,admin");
+            escriptor.newLine();
+            escriptor.flush();
+            codigo = lector.readLine();
+
+            String palabra = codigo + ",2," + jornadaTabla + ",codicard,15467," + orden;
+            escriptor.write(palabra);
+            escriptor.newLine();
+            escriptor.flush();
+
+            escriptor.write("exit");
+            escriptor.newLine();
+            escriptor.flush();
+
+            mensajeServer = lector.readLine();
+            socket.close();
+        } catch (IOException e) {
+        }
+    }
+
+    @Test
+    public void test26_updateJornadaErrorJornadaFinDni() throws ClassNotFoundException {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        try {
+            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
+            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
+            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
+                    .getDefault();
+            socket = clientFactory.createSocket(ip, puerto);
+            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+
+            mensajeServer = lector.readLine();
+            escriptor.write("admin,admin");
             escriptor.newLine();
             escriptor.flush();
             codigo = lector.readLine();
@@ -974,4 +1041,74 @@ public class TestUpdate {
         } catch (IOException e) {
         }
     }
+
+    @Test
+    public void test27_updateJornadaErrorJornadaFinCodicard() throws ClassNotFoundException {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        try {
+            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
+            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
+            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
+                    .getDefault();
+            socket = clientFactory.createSocket(ip, puerto);
+            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+
+            mensajeServer = lector.readLine();
+            escriptor.write("admin,admin");
+            escriptor.newLine();
+            escriptor.flush();
+            codigo = lector.readLine();
+
+            String palabra = codigo + ",2," + jornadaTabla + ",codicard,1," + orden;
+            escriptor.write(palabra);
+            escriptor.newLine();
+            escriptor.flush();
+
+            escriptor.write("exit");
+            escriptor.newLine();
+            escriptor.flush();
+
+            mensajeServer = lector.readLine();
+            socket.close();
+        } catch (IOException e) {
+        }
+    }
+
+//    @Test
+//    public void updateJornadaRecuperacion() throws ClassNotFoundException {
+//        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+//        System.setOut(new PrintStream(outContent));
+//
+//        try {
+//            System.setProperty("javax.net.ssl.trustStore", "certificados/client/clientTrustedCerts.jks");
+//            System.setProperty("javax.net.ssl.trustStorePassword", "254535fd32_A");
+//            SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory
+//                    .getDefault();
+//            socket = clientFactory.createSocket(ip, puerto);
+//            lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//            escriptor = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+//
+//            mensajeServer = lector.readLine();
+//            escriptor.write("admin,admin");
+//            escriptor.newLine();
+//            escriptor.flush();
+//            codigo = lector.readLine();
+//
+//            String palabra = codigo + ",1," + jornadaTabla + ",dni,84574589A," + orden;
+//            escriptor.write(palabra);
+//            escriptor.newLine();
+//            escriptor.flush();
+//
+//            escriptor.write("exit");
+//            escriptor.newLine();
+//            escriptor.flush();
+//
+//            mensajeServer = lector.readLine();
+//            socket.close();
+//        } catch (IOException e) {
+//        }
+//    }
 }
