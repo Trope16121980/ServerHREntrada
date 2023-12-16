@@ -17,6 +17,7 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.net.ssl.SSLServerSocketFactory;
 
 /**
  * @author Gustavo Senoráns Varela
@@ -30,7 +31,7 @@ public class Mainserver {
      * thread para el inicio del socket con el cliente
      */
     public static void main(String[] args) {
-        ServerSocket server;
+        ServerSocket server = null;
         Socket socket;
         Fechas fecha = new Fechas();
         String nombreBase = "prueba";
@@ -39,6 +40,10 @@ public class Mainserver {
         File archivo;
         FileOutputStream fileOutputStream;
         int i = 0;
+
+        System.setProperty("javax.net.ssl.keyStore", "certificados/server/serverKey.jks");
+        System.setProperty("javax.net.ssl.keyStorePassword", "1225atcdF_B");
+        SSLServerSocketFactory serverFactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
 
         try {
             WindowServer WindowServer = new WindowServer();
@@ -68,7 +73,12 @@ public class Mainserver {
             PrintStream printStream = new PrintStream(outputStream);
             System.setOut(printStream);
 
-            server = new ServerSocket(8888);
+            try {
+                server = serverFactory.createServerSocket(8888, 1000);
+            } catch (IOException ex) {
+                System.out.println("Error al crear el socket del server\n" + ex);
+
+            }
             HashMap<String, String> logins = new HashMap<String, String>();
             System.out.println(fecha.fecha_hora());
             System.out.println("\nEsperando cliente...");

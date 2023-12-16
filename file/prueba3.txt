@@ -1,0 +1,85 @@
+15/12/2023-23:08:18
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+15/12/2023-23:08:30
+
+Datos de login recibidos:
+Login : user
+Pass: user
+15/12/2023-23:08:58
+
+Jornada modificada correctamente:
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Hora entrada: 08:00
+Hora salida: 23:08
+Total: 15:8
+Fecha: 2023/11/26
+Codigo tarjeta: 3
+____________________________________________________________________
+15/12/2023-23:09:25
+
+La jornada ya esta finalizada con anterioridad.
+____________________________________________________________________
+15/12/2023-23:09:57
+
+Jornada modificada correctamente:
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Hora entrada: 22:06
+Hora salida: 23:09
+Total: 1:3
+Fecha: 2023/12/15
+Codigo tarjeta: 2
+____________________________________________________________________
+15/12/2023-23:10:12
+
+Jornada creada correctamente:
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Hora entrada: 23:10
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/12/15
+Codigo tarjeta: 2
+____________________________________________________________________
+15/12/2023-23:11:41
+
+El empleado que intenta iniciar jornada
+ya la tiene iniciada.
+Revise las jornada del dia de hoy.
+____________________________________________________________________
+15/12/2023-23:11:51
+
+Jornada modificada correctamente:
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Hora entrada: 23:10
+Hora salida: 23:11
+Total: 0:1
+Fecha: 2023/12/15
+Codigo tarjeta: 2
+____________________________________________________________________
+15/12/2023-23:12:19
+
+Jornada creada correctamente:
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Hora entrada: 23:12
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/12/15
+Codigo tarjeta: 2
+____________________________________________________________________

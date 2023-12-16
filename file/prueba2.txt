@@ -1,0 +1,78 @@
+15/12/2023-21:19:03
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+15/12/2023-21:19:22
+
+Datos de login recibidos:
+Login : user
+Pass: user
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Codigo tarjeta: 3
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+____________________________________________________________________
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Codigo tarjeta: 2
+Hora entrada: 08:00
+Hora salida: nulo
+Total horas: nulo
+Fehca: 2023/11/26
+
+____________________________________________________________________
+15/12/2023-21:19:43
+
+Jornada modificada correctamente:
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Hora entrada: 08:00
+Hora salida: 21:19
+Total: 13:19
+Fecha: 2023/11/26
+Codigo tarjeta: 2
+____________________________________________________________________
+15/12/2023-21:20:39
+
+Jornada creada correctamente:
+
+Dni: 12345679B
+Nombre: Users
+Apellido: HREntrada
+Hora entrada: 21:20
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/12/15
+Codigo tarjeta: 2
+____________________________________________________________________
+
+Nombre empresa: EmpresaBaja
+Direccion: EmpresaBaja
+Telefono: EmpresaBaja
+____________________________________________________________________
+
+Nombre empresa: HREntrada
+Direccion: Barcelona
+Telefono: 452156235
+____________________________________________________________________
+
+Login: user
+Pass: 04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb
+Tipo de usuario: 1
+Dni: 12345679B
+
+____________________________________________________________________
+
+Cliente con codigo U17763 que pertenece al usuario user
+se ha desconectado correctamente.

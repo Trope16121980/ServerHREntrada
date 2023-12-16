@@ -1,0 +1,52 @@
+16/12/2023-09:26:16
+
+Esperando cliente...
+
+Bienvenido al ServeHREntrada
+16/12/2023-09:26:24
+
+Datos de login recibidos:
+Login : user
+Pass: user
+16/12/2023-09:26:37
+
+Jornada modificada correctamente:
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Hora entrada: 08:00
+Hora salida: 09:26
+Total: 1:26
+Fecha: 2023/11/26
+Codigo tarjeta: 3
+____________________________________________________________________
+16/12/2023-09:26:51
+
+Jornada creada correctamente:
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Hora entrada: 09:26
+Hora salida: nulo
+Total: nulo
+Fecha: 2023/12/16
+Codigo tarjeta: 3
+____________________________________________________________________
+16/12/2023-09:26:54
+
+Jornada modificada correctamente:
+
+Dni: 84574589A
+Nombre: Juan
+Apellido: Perez
+Hora entrada: 09:26
+Hora salida: 09:26
+Total: 0:0
+Fecha: 2023/12/16
+Codigo tarjeta: 3
+____________________________________________________________________
+
+Cliente con codigo U29855 que pertenece al usuario user
+se ha desconectado correctamente.
